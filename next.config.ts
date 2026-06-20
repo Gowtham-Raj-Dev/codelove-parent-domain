@@ -1,12 +1,10 @@
 import type { NextConfig } from "next";
 
-const isGithubActions = process.env.GITHUB_ACTIONS || false;
-const repo = "codelove-parent-domain";
+const isGithubActions = process.env.GITHUB_ACTIONS === "true";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: isGithubActions ? `/${repo}` : "",
-  assetPrefix: isGithubActions ? `/${repo}/` : "",
+  basePath: isGithubActions ? "/codelove-parent-domain" : "",
   images: {
     unoptimized: true,
   },
