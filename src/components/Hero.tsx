@@ -28,18 +28,20 @@ export default function Hero() {
 
       {/* Floating product cards (desktop) */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-0 hidden 2xl:block">
-        {floating.map(({ p, className, delay, anim }) => (
-          <div key={p.slug} className={`absolute ${className} ${anim}`} style={{ animationDelay: delay }}>
-            <div className="surface flex w-52 items-center gap-3 rounded-2xl p-3 shadow-[var(--shadow-soft)]">
-              <span className={`grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gradient-to-br ${p.gradient} text-white`}>
-                <Icon name={p.icon} size={20} />
-              </span>
-              <span className="min-w-0">
-                <span className="block truncate text-sm font-semibold">{p.name}</span>
-                <span className="block truncate text-xs text-[var(--text-faint)]">{p.tagline}</span>
-              </span>
+        {floating.map(({ p, className, delay, anim }, i) => (
+          <Reveal key={p.slug} className={`absolute ${className}`} delay={400 + i * 200}>
+            <div className={anim} style={{ animationDelay: delay }}>
+              <div className="surface flex w-52 items-center gap-3 rounded-2xl p-3 shadow-[var(--shadow-soft)]">
+                <span className={`grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gradient-to-br ${p.gradient} text-white`}>
+                  <Icon name={p.icon} size={20} />
+                </span>
+                <span className="min-w-0">
+                  <span className="block truncate text-sm font-semibold">{p.name}</span>
+                  <span className="block truncate text-xs text-[var(--text-faint)]">{p.tagline}</span>
+                </span>
+              </div>
             </div>
-          </div>
+          </Reveal>
         ))}
       </div>
 

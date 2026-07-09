@@ -10,13 +10,12 @@ function ThemeToggle() {
   const [dark, setDark] = useState(false);
 
   useEffect(() => {
-    // Sync toggle icon with the theme the no-FOUC script already applied.
     const sync = () => setDark(document.documentElement.classList.contains("dark"));
     const id = requestAnimationFrame(sync);
     return () => cancelAnimationFrame(id);
   }, []);
 
-  const toggle = (e: React.MouseEvent) => {
+  const toggle = () => {
     const next = !dark;
 
     if (!document.startViewTransition) {
@@ -28,10 +27,7 @@ function ThemeToggle() {
       return;
     }
 
-    const x = e.clientX;
-    const y = e.clientY;
-
-    const transition = document.startViewTransition(() => {
+    document.startViewTransition(() => {
       flushSync(() => {
         setDark(next);
         document.documentElement.classList.toggle("dark", next);
@@ -40,39 +36,20 @@ function ThemeToggle() {
         } catch {}
       });
     });
-
-    transition.ready.then(() => {
-      // PURE & CLEAN CIRCLE WIPE
-      // Expands a perfect, crisp circle from the exact mouse click location.
-      // No blurs, no scaling, no rotation - mathematically perfect and clean.
-      const radius = Math.hypot(
-        Math.max(x, innerWidth - x),
-        Math.max(y, innerHeight - y)
-      );
-
-      document.documentElement.animate(
-        {
-          clipPath: [
-            `circle(0px at ${x}px ${y}px)`,
-            `circle(${radius}px at ${x}px ${y}px)`,
-          ],
-        },
-        {
-          duration: 500,
-          easing: "ease-out",
-          pseudoElement: "::view-transition-new(root)",
-        }
-      );
-    });
   };
 
   return (
     <button
       onClick={toggle}
       aria-label="Toggle dark mode"
-      className="cursor-pointer grid h-10 w-10 place-items-center rounded-xl border border-[var(--surface-border)] bg-[var(--surface)] text-[var(--text-muted)] transition hover:text-[var(--text)] hover:shadow-sm"
+      className="relative flex h-10 w-10 cursor-pointer items-center justify-center rounded-xl border border-[var(--surface-border)] bg-[var(--surface)] text-[var(--text-muted)] outline-none transition-all duration-300 hover:bg-[var(--surface-border)] hover:text-[var(--text)] hover:shadow-[var(--shadow-soft)] focus-visible:ring-2 focus-visible:ring-primary"
     >
-      <Icon name={dark ? "sun" : "moon"} size={18} />
+      <div className={`absolute transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${dark ? "rotate-0 scale-100 opacity-100" : "-rotate-90 scale-50 opacity-0"}`}>
+        <Icon name="sun" size={18} />
+      </div>
+      <div className={`absolute transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${dark ? "rotate-90 scale-50 opacity-0" : "rotate-0 scale-100 opacity-100"}`}>
+        <Icon name="moon" size={18} />
+      </div>
     </button>
   );
 }

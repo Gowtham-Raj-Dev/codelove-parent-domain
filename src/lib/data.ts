@@ -210,27 +210,6 @@ export const products: Product[] = [
     image: "/images/bgremove.png",
   },
   {
-    slug: "ytautomate",
-    name: "YouTube Automation",
-    icon: "play",
-    domain: "ytautomate.codelove.in",
-    url: "https://ytautomate.codelove.in",
-    tagline: "Grow channels on autopilot",
-    description:
-      "A complete YouTube automation toolkit and educational hub — learn faceless channels, workflows and monetisation the right way.",
-    features: [
-      "Channel & content workflows",
-      "Automation playbooks",
-      "Monetisation guides",
-      "Growth & SEO strategies",
-    ],
-    gradient: "from-red-500 to-rose-600",
-    accent: "#ef4444",
-    status: "Soon",
-    category: "Growth",
-    image: "/images/ytautomate.png",
-  },
-  {
     slug: "favicon",
     name: "Favicon Generator",
     icon: "star",
@@ -432,22 +411,6 @@ export const productDetails: Record<string, ProductDetail> = {
       { q: "How does it remove backgrounds?", a: "It uses AI segmentation to identify the subject, then refines the edges for a clean, transparent result." },
       { q: "What format do I get back?", a: "A transparent PNG, so you can place your subject onto any background or design." },
       { q: "Do I need to sign up?", a: "No. You can remove backgrounds instantly without creating an account." },
-    ],
-  },
-  ytautomate: {
-    overview:
-      "YouTube Automation is a toolkit and educational hub for building a channel the legitimate, sustainable way. Learn faceless channel workflows, content and automation playbooks, SEO strategies and real monetisation paths — with practical, ethical guidance that focuses on lasting growth rather than shortcuts.",
-    highlights: ["Content workflows", "Automation playbooks", "SEO & growth", "Monetisation guides"],
-    steps: [
-      { icon: "rocket", title: "Learn the fundamentals", text: "Start with how faceless and automated channels actually work — the legitimate models behind them." },
-      { icon: "workflow", title: "Build a workflow", text: "Use content and automation playbooks to plan, produce and publish videos consistently." },
-      { icon: "search", title: "Optimise for growth", text: "Apply SEO, titling and thumbnail strategies so your videos get discovered and keep viewers watching." },
-      { icon: "briefcase", title: "Monetise sustainably", text: "Follow monetisation guides to turn a growing channel into real, lasting revenue the right way." },
-    ],
-    faqs: [
-      { q: "Is this a shortcut to going viral?", a: "No. It teaches sustainable, legitimate workflows and strategies for building a channel that lasts." },
-      { q: "What does it cover?", a: "Channel and content workflows, automation playbooks, SEO and growth strategies, and monetisation guides." },
-      { q: "Is it for beginners?", a: "Yes. It starts from the fundamentals and builds up to advanced growth and monetisation topics." },
     ],
   },
   favicon: {
@@ -900,54 +863,6 @@ export const articles: Article[] = [
     ],
   },
   {
-    slug: "youtube-automation-myths-vs-reality",
-    title: "YouTube Automation Explained: Myths vs Reality",
-    excerpt:
-      "What faceless YouTube automation actually involves, the legitimate workflows behind it, and how to build a sustainable channel the right way.",
-    category: "Automation",
-    readingTime: "12 min read",
-    author: "Gowtham",
-    published: "Jun 5, 2026",
-    updated: "Jun 24, 2026",
-    gradient: "from-red-500 to-rose-600",
-    icon: "play",
-    image: "/images/ytautomation.png",
-    intro:
-      "'YouTube automation' is one of the most hyped — and most misunderstood — terms in the creator economy. Strip away the get-rich-quick noise and there's a legitimate production model underneath. Here's the honest picture.",
-    takeaways: [
-      "Automation means systemised production, not passive income.",
-      "'Faceless' channels still require real research, scripting and editing.",
-      "Sustainable growth comes from genuine value, not shortcuts.",
-      "Outsourcing works only with strong systems and quality control.",
-    ],
-    content: [
-      {
-        heading: "What 'automation' really means",
-        image: "/images/base64_practice.png",
-        paragraphs: [
-          "Despite the name, YouTube automation doesn't mean a hands-off money machine. It refers to building a repeatable production system — for research, scripting, voiceover, editing and publishing — where each step can be delegated or streamlined. The channel runs like a small content studio rather than a solo hobby.",
-          "The 'faceless' part simply means you don't appear on camera; instead the channel uses stock footage, screen recordings, animation or AI-assisted visuals over a scripted voiceover.",
-        ],
-      },
-      {
-        heading: "The myths that trip people up",
-        image: "/images/base64_practice.png",
-        paragraphs: [
-          "The biggest myth is that automation equals effortless passive income. In reality, someone still has to research topics, write compelling scripts, edit well and understand what audiences want. Poor-quality, mass-produced videos get ignored by both viewers and the algorithm.",
-          "The second myth is that you can fully outsource from day one. Without your own understanding of what makes a good video, you can't direct freelancers or maintain quality — and quality is what actually drives growth.",
-        ],
-      },
-      {
-        heading: "Building a channel that lasts",
-        image: "/images/base64_practice.png",
-        paragraphs: [
-          "The sustainable path is to master the fundamentals yourself first: a niche you understand, titles and thumbnails that earn clicks honestly, and content that genuinely helps or entertains. Once you have a proven formula, you build systems and gradually delegate the repeatable parts.",
-          "Done this way, automation is a legitimate scaling strategy — not a scheme, but a disciplined content business built on real value.",
-        ],
-      },
-    ],
-  },
-  {
     slug: "how-link-in-bio-pages-boost-your-presence",
     title: "How Link in Bio Pages Boost Your Online Presence",
     excerpt:
@@ -1348,7 +1263,6 @@ export const faqs: Faq[] = [
   { group: "Products", q: "How does the Background Remover work?", a: "The Background Remover uses AI segmentation to detect the subject of your image and separate it from the background, giving you a clean, transparent PNG in a single click — perfect for products, portraits and profile pictures." },
   { group: "Products", q: "What PDF tools are available?", a: "PDF Tools lets you merge, split, compress and rotate PDFs, extract pages, convert images to PDF and convert PDF pages to images — all processed privately in your browser." },
   { group: "Products", q: "What is the Favicon Generator?", a: "The Favicon Generator creates favicons and app icons in every size and format modern browsers and devices require, including iOS, Android and PWA icons, from an image, emoji or text." },
-  { group: "Products", q: "What is YouTube Automation on CodeLove?", a: "YouTube Automation is a toolkit and educational hub that teaches legitimate, sustainable ways to run and grow a channel — covering content workflows, automation playbooks, SEO and monetisation." },
   { group: "Products", q: "What templates does CodeLove offer?", a: "Templates provides ready-made, customisable kits for portfolios, landing pages, businesses, resumes, invoices, dashboards and developers — all fully responsive and easy to edit." },
 
   { group: "Privacy & Security", q: "Is my data safe with CodeLove?", a: "Yes. Many CodeLove tools process your files entirely inside your browser, meaning your data never touches a server. Everything is served over encrypted HTTPS and our infrastructure is regularly reviewed for security." },
@@ -2006,8 +1920,8 @@ export const blogCategories = ["All", "Announcements", "Updates", "Engineering",
 /* ------------------------------------------------------------------ */
 export const stats: Stat[] = [
   { get value() { return products.length; }, suffix: "+", label: "Products & tools" },
-  { get value() { return articles.length + blogs.length; }, suffix: "+", label: "Guides & articles" },
+  { get value() { return articles.length; }, suffix: "+", label: "Guides & articles" },
   { value: 10, suffix: "K+", label: "Monthly users" },
-  { value: 150, suffix: "K+", label: "Tasks completed" },
-  { value: 25, suffix: "+", label: "Countries reached" },
+  { value: 1.5, suffix: "M+", label: "Files processed" },
+  { value: 2, suffix: "M+", label: "Hours saved" },
 ];
