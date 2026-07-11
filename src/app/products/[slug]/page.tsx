@@ -68,7 +68,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         {/* ============================================================ */}
         {/*  HERO                                                        */}
         {/* ============================================================ */}
-        <section className="relative overflow-hidden pt-[50px] pb-[50px] sm:pt-32 sm:pb-[50px]">
+        <section className="relative overflow-hidden pt-28 pb-[50px] sm:pt-32 sm:pb-[50px]">
           {/* backdrop */}
           <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
             <div className={`absolute -left-32 top-10 h-[26rem] w-[26rem] rounded-full bg-gradient-to-br ${product.gradient} opacity-25 blur-[120px]`} />

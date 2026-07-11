@@ -84,7 +84,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         {/*  HERO                                                        */}
         {/* ============================================================ */}
         <article>
-          <header className="relative overflow-hidden pt-[50px] pb-[50px] sm:pt-32">
+          <header className="relative overflow-hidden pt-28 pb-[50px] sm:pt-32">
             <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
               <div className={`absolute -left-20 top-0 h-[24rem] w-[24rem] rounded-full bg-gradient-to-br ${article.gradient} opacity-20 blur-[120px]`} />
               <div className="absolute inset-0 bg-grid opacity-50 [mask-image:radial-gradient(ellipse_at_top,#000_30%,transparent_70%)]" />
