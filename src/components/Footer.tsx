@@ -3,14 +3,6 @@ import Icon from "./Icon";
 import HeartButton from "./HeartButton";
 import { footerColumns } from "@/lib/data";
 
-const socials: { name: Parameters<typeof Icon>[0]["name"]; label: string }[] = [
-  { name: "x", label: "X" },
-  { name: "instagram", label: "Instagram" },
-  { name: "youtube", label: "YouTube" },
-  { name: "github", label: "GitHub" },
-  { name: "linkedin", label: "LinkedIn" },
-];
-
 export default function Footer() {
   return (
     <footer className="relative overflow-hidden border-t border-[var(--surface-border)] bg-[var(--bg-elevated)]">
@@ -28,27 +20,9 @@ export default function Footer() {
               </span>
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-[var(--text-muted)]">
-              Powerful online applications, developer utilities, media tools, AI content platforms and creative web
-              experiences that help millions save time.
+              Free online tools for creators and developers — a media downloader, video and image tools, a
+              link-in-bio builder and a 3D model library.
             </p>
-            <div className="mt-5">
-              <div className="flex gap-2">
-                {socials.map((s) => (
-                  <span
-                    key={s.label}
-                    aria-label={`${s.label} — coming soon`}
-                    title={`${s.label} — coming soon`}
-                    className="grid h-9 w-9 cursor-not-allowed place-items-center rounded-lg border border-dashed border-[var(--surface-border)] bg-[var(--surface)] text-[var(--text-faint)] opacity-60"
-                  >
-                    <Icon name={s.name} size={17} />
-                  </span>
-                ))}
-              </div>
-              <p className="mt-2.5 inline-flex items-center gap-1.5 text-xs text-[var(--text-faint)]">
-                <span className="h-1.5 w-1.5 rounded-full bg-amber-400" />
-                Social channels coming soon
-              </p>
-            </div>
           </div>
 
           {/* Link columns */}

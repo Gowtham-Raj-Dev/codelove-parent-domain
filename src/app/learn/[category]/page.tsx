@@ -7,6 +7,7 @@ import Reveal from "@/components/Reveal";
 import Icon from "@/components/Icon";
 import ArticleCard from "@/components/ArticleCard";
 import { categories, activeCategories, getCategory, articlesByCategory } from "@/lib/data";
+import { pageMetadata } from "@/lib/seo";
 
 /* Pre-render every category page at build time. */
 export function generateStaticParams() {
@@ -18,12 +19,12 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
   const cat = getCategory(category);
   if (!cat) return { title: "Category not found · CodeLove" };
   
-  const title = `${cat.title} Tutorials & Guides | CodeLove Learning Center`;
   const description = `${cat.blurb} Browse ${cat.title.toLowerCase()} tutorials, explainers and guides in the CodeLove Learning Center.`;
-  
-  return {
-    title,
+
+  return pageMetadata({
+    title: `${cat.title} Tutorials & Guides | Learning Center`,
     description,
+    path: `/learn/${cat.slug}`,
     keywords: [
       "CodeLove",
       "codelove",
@@ -31,22 +32,11 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
       `${cat.title} tutorials`,
       `${cat.title} guides`,
       "CodeLove Learning Center",
-      "learn to code",
+      "how-to guides",
     ],
-    alternates: { canonical: `/learn/${cat.slug}` },
-    openGraph: {
-      title,
-      description,
-      url: `https://codelove.in/learn/${cat.slug}`,
-      siteName: "CodeLove",
-      type: "website",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-    }
-  };
+    // Categories with no guides yet are thin pages: keep them out of the index until they have content.
+    index: articlesByCategory(cat.title).length > 0,
+  });
 }
 
 export default async function CategoryPage({ params }: { params: Promise<{ category: string }> }) {

@@ -4,9 +4,9 @@ import { products } from "@/lib/data";
 
 const floating = [
   { p: products[0], className: "left-[8%] top-[20%]", delay: "0s", anim: "animate-float" },
-  { p: products[4], className: "right-[8%] top-[20%]", delay: "0.8s", anim: "animate-float-slow" },
+  { p: products[1], className: "right-[8%] top-[20%]", delay: "0.8s", anim: "animate-float-slow" },
   { p: products[2], className: "left-[8%] bottom-[15%]", delay: "1.4s", anim: "animate-float-slow" },
-  { p: products[7], className: "right-[8%] bottom-[12%]", delay: "0.4s", anim: "animate-float" },
+  { p: products[3], className: "right-[8%] bottom-[12%]", delay: "0.4s", anim: "animate-float" },
 ];
 
 const trust = ["Developers", "Creators", "Students", "Marketers", "Designers", "Businesses"];
@@ -48,7 +48,7 @@ export default function Hero() {
       <div className="container-px mx-auto max-w-4xl text-center">
         <Reveal>
           <a
-            href="https://aivideos.codelove.in"
+            href="https://models.codelove.in"
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-2 rounded-full border border-[var(--surface-border)] bg-[var(--surface)] py-1.5 pl-1.5 pr-4 text-sm backdrop-blur"
@@ -56,7 +56,7 @@ export default function Hero() {
             <span className="rounded-full bg-gradient-to-r from-primary to-secondary px-2.5 py-0.5 text-xs font-semibold text-white">
               New
             </span>
-            <span className="text-[var(--text-muted)]">AI Videos showcase is now live</span>
+            <span className="text-[var(--text-muted)]">Free 3D Models library is now live</span>
             <Icon name="arrowRight" size={14} className="text-[var(--text-faint)] transition group-hover:translate-x-0.5" />
           </a>
         </Reveal>
@@ -84,8 +84,8 @@ export default function Hero() {
 
         <Reveal delay={200}>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-[var(--text-muted)] sm:text-lg">
-            Explore powerful online tools, developer utilities, creative resources, media applications and
-            educational content — built for creators, developers, students and businesses who want to move faster.
+            Explore free online tools — a media downloader, video and image tools, a link-in-bio builder and a 3D
+            model library — plus educational content for creators, developers, students and businesses.
           </p>
         </Reveal>
 

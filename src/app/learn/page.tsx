@@ -6,34 +6,22 @@ import Reveal from "@/components/Reveal";
 import Icon from "@/components/Icon";
 import ArticleCard from "@/components/ArticleCard";
 import { activeCategories, articles } from "@/lib/data";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Learning Center | CodeLove",
+export const metadata: Metadata = pageMetadata({
+  title: "Learning Center",
   description:
-    "A knowledge hub that grows with you. Browse hundreds of CodeLove tutorials, explainers, and guides organised by topic — from your first line of code to advanced automation.",
+    "A knowledge hub that grows with you. Browse CodeLove tutorials, explainers and guides organised by topic — video, images, downloads, creator tools and 3D models.",
+  path: "/learn",
   keywords: [
     "CodeLove",
     "codelove learning",
     "CodeLove tutorials",
     "CodeLove guides",
-    "web development tutorials",
-    "developer tools learning",
-    "learn to code",
+    "video and image tutorials",
+    "3d model guides",
   ],
-  alternates: { canonical: "/learn" },
-  openGraph: {
-    title: "Learning Center | CodeLove",
-    description: "Browse hundreds of CodeLove tutorials, explainers, and guides.",
-    url: "https://codelove.in/learn",
-    siteName: "CodeLove",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Learning Center | CodeLove",
-    description: "Browse hundreds of CodeLove tutorials, explainers, and guides.",
-  },
-};
+});
 
 const totalArticles = articles.length;
 const featured = articles.filter((a) => a.featured).slice(0, 3);
@@ -63,8 +51,8 @@ export default function LearnPage() {
                 A knowledge hub that <span className="theme-text-gradient">grows with you</span>
               </h1>
               <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-[var(--text-muted)] sm:text-lg">
-                Browse hundreds of tutorials, explainers and guides organised by topic. From your first
-                line of code to advanced automation, there&apos;s a clear path forward.
+                Browse tutorials, explainers and guides organised by topic — video, images, downloads,
+                creator tools and 3D models.
               </p>
 
               <div className="mt-8 flex flex-wrap items-center justify-center gap-3">

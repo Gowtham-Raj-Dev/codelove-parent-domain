@@ -5,12 +5,14 @@ import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 import Icon from "@/components/Icon";
 import BlogListing from "@/components/BlogListing";
-import { articles } from "@/lib/data";
+import { blogs } from "@/lib/data";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Blog & Articles | CodeLove",
+export const metadata: Metadata = pageMetadata({
+  title: "Blog & Articles",
   description:
     "Original, in-depth articles on development, video, AI, and design from CodeLove. Read platform updates, tutorials, and deep-dives by our engineering team.",
+  path: "/blog",
   keywords: [
     "CodeLove blog",
     "CodeLove articles",
@@ -20,20 +22,7 @@ export const metadata: Metadata = {
     "software engineering articles",
     "CodeLove news",
   ],
-  alternates: { canonical: "/blog" },
-  openGraph: {
-    title: "Blog & Articles | CodeLove",
-    description: "Original, in-depth articles on development, video, AI, and design from CodeLove.",
-    url: "https://codelove.in/blog",
-    siteName: "CodeLove",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Blog & Articles | CodeLove",
-    description: "Original, in-depth articles on development, video, AI, and design from CodeLove.",
-  },
-};
+});
 
 export default function BlogPage() {
   return (
@@ -52,7 +41,7 @@ export default function BlogPage() {
             <Reveal className="max-w-3xl">
               <span className="inline-flex items-center gap-2 rounded-full border border-[color-mix(in_oklab,var(--t-solid)_28%,transparent)] bg-[var(--t-tint)] px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--t-solid)]">
                 <Icon name="quote" size={13} />
-                The CodeLove Journal · {articles.length} articles
+                The CodeLove Journal · {blogs.length} articles
               </span>
               <h1 className="mt-5 font-[family-name:var(--font-display)] text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
                 Learn something new in <span className="theme-text-gradient">every read</span>

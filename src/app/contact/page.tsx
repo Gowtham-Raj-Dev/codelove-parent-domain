@@ -4,13 +4,14 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 import Icon from "@/components/Icon";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Contact · CodeLove",
+export const metadata: Metadata = pageMetadata({
+  title: "Contact",
   description:
     "Get in touch with the CodeLove team — questions, feedback, bug reports, partnerships or press. We read every message.",
-  alternates: { canonical: "/contact" },
-};
+  path: "/contact",
+});
 
 const CONTACT_EMAIL = "support@codelove.in";
 

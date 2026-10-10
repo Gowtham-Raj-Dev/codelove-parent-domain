@@ -6,13 +6,14 @@ import Reveal from "@/components/Reveal";
 import Icon from "@/components/Icon";
 import ArticleCard from "@/components/ArticleCard";
 import { resourceHub, docs, articles, products } from "@/lib/data";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Resources · CodeLove",
+export const metadata: Metadata = pageMetadata({
+  title: "Resources",
   description:
-    "Everything you need in one place — the Learning Center, blog, documentation, developer cheat sheets, free tools and templates. Start learning, building and shipping faster.",
-  alternates: { canonical: "/resources" },
-};
+    "Everything you need in one place — the Learning Center, blog, product guides, free tools and 3D models. Start learning, building and shipping faster.",
+  path: "/resources",
+});
 
 const featured = articles.filter((a) => a.featured).slice(0, 3);
 
@@ -50,7 +51,7 @@ export default function ResourcesPage() {
                 Everything you need, <span className="text-gradient">in one place</span>
               </h1>
               <p className="mt-4 text-base leading-relaxed text-[var(--text-muted)] sm:text-lg">
-                Guides, articles, documentation, cheat sheets, free tools and templates — all curated to
+                Guides, articles, documentation, free tools and 3D models — all curated to
                 help you learn faster, build smarter and ship with confidence.
               </p>
             </Reveal>
@@ -86,11 +87,11 @@ export default function ResourcesPage() {
 
             <Reveal delay={140}>
               <div className="group relative flex h-full min-h-[300px] flex-col overflow-hidden rounded-2xl border border-[var(--surface-border)] shadow-[var(--shadow-soft)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[var(--shadow-glow)]">
-                <img src="/images/base64_practice.png" alt="Level up your skills" className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+                <img src="/images/videotogif.png" alt="Guides for every CodeLove tool" className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--surface)] via-black/20 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-6 text-[var(--text)]">
                   <h3 className="font-[family-name:var(--font-display)] text-lg font-bold tracking-tight">Learn, Build, Ship</h3>
-                  <p className="mt-2 text-sm text-[var(--text-muted)]">Everything you need to master modern web development.</p>
+                  <p className="mt-2 text-sm text-[var(--text-muted)]">Practical guides for every CodeLove tool.</p>
                 </div>
               </div>
             </Reveal>
@@ -146,7 +147,7 @@ export default function ResourcesPage() {
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {featured.map((a, i) => (
                   <Reveal key={a.slug} delay={(i % 3) * 70}>
-                    <ArticleCard article={a} />
+                    <ArticleCard article={a} basePath="/learn/guide" />
                   </Reveal>
                 ))}
               </div>

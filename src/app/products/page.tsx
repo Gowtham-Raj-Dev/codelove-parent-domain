@@ -6,36 +6,24 @@ import ProductCard from "@/components/ProductCard";
 import Reveal from "@/components/Reveal";
 import Icon from "@/components/Icon";
 import { products } from "@/lib/data";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "All Products & Tools | CodeLove",
+export const metadata: Metadata = pageMetadata({
+  title: "All Products & Tools",
   description:
-    "Explore every CodeLove product — downloaders, developer utilities, video and PDF tools, AI features and more. Each lives on its own fast, free subdomain.",
+    "Explore every CodeLove product — a media downloader, a link-in-bio builder, a free 3D model library and browser-based video and image tools.",
+  path: "/products",
   keywords: [
     "CodeLove",
     "codelove products",
     "CodeLove tools",
     "free online tools",
-    "developer utilities",
     "video processing tools",
-    "PDF tools",
+    "free 3d models",
     "CodeLove ecosystem",
     ...products.map(p => p.name),
   ],
-  alternates: { canonical: "/products" },
-  openGraph: {
-    title: "All Products & Tools | CodeLove",
-    description: "Explore every CodeLove product — downloaders, developer utilities, video and PDF tools, AI features and more.",
-    url: "https://codelove.in/products",
-    siteName: "CodeLove",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "All Products & Tools | CodeLove",
-    description: "Explore every CodeLove product — downloaders, developer utilities, video and PDF tools, AI features and more.",
-  },
-};
+});
 
 export default function ProductsPage() {
   return (

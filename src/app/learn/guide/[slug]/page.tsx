@@ -7,7 +7,8 @@ import Reveal from "@/components/Reveal";
 import Icon from "@/components/Icon";
 import ArticleCard from "@/components/ArticleCard";
 import ArticleToc from "@/components/ArticleToc";
-import { articles, getArticle, getCategory } from "@/lib/data";
+import { articles, getArticle, getCategoryByTitle } from "@/lib/data";
+import { articleJsonLd } from "@/lib/seo";
 
 /** Turn a heading into a stable, URL-safe anchor id. */
 const slugify = (s: string) =>
@@ -27,14 +28,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const description = article.excerpt;
   
   return {
-    title,
+    title: { absolute: title },
     description,
     keywords: [
       "CodeLove",
       "codelove",
       "CodeLove Learning Center",
       article.category,
-      "developer guide",
+      "how-to guide",
       "tutorial",
       ...article.takeaways,
     ],
@@ -45,13 +46,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: "article",
       url: `https://codelove.in/learn/guide/${article.slug}`,
       siteName: "CodeLove",
-      images: article.image ? [{ url: `https://codelove.in${article.image}` }] : undefined,
+      images: [{ url: `https://codelove.in${article.image ?? "/og.png"}` }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: article.image ? [`https://codelove.in${article.image}`] : undefined,
+      images: [`https://codelove.in${article.image ?? "/og.png"}`],
     }
   };
 }
@@ -62,7 +63,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   if (!article) notFound();
 
   // Category slug for the "in category" breadcrumb link, when it maps to a topic.
-  const categorySlug = getCategory(article.category.toLowerCase())?.slug ?? null;
+  const categorySlug = getCategoryByTitle(article.category)?.slug ?? null;
 
   const related = articles
     .filter((a) => a.slug !== article.slug && a.category === article.category)
@@ -78,6 +79,10 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd(article, `/learn/guide/${article.slug}`, { name: "Learning Center", path: "/learn" })) }}
+      />
       <Navbar />
       <main className="theme-learn">
         {/* ============================================================ */}
@@ -253,7 +258,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {related.map((a, i) => (
                   <Reveal key={a.slug} delay={(i % 3) * 70}>
-                    <ArticleCard article={a} />
+                    <ArticleCard article={a} basePath="/learn/guide" />
                   </Reveal>
                 ))}
               </div>

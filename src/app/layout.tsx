@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Space_Grotesk, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { products } from "@/lib/data";
+import { ADSENSE_CLIENT } from "@/lib/adsense";
 import NextTopLoader from "nextjs-toploader";
 import SmoothScroll from "@/components/SmoothScroll";
 
@@ -24,6 +25,10 @@ const geistMono = Geist_Mono({
 });
 
 const SITE = "https://codelove.in";
+const DESCRIPTION =
+  "CodeLove is the home of free online tools: a media downloader, video and image tools, a link-in-bio builder and a 3D model library, plus tutorials.";
+// Default social preview image (public/og.png, 1200x630). Pages without their own image fall back to it.
+const OG_IMAGE = { url: "/og.png", width: 1200, height: 630, alt: "CodeLove — free online tools for creators and developers" };
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
@@ -31,25 +36,22 @@ export const metadata: Metadata = {
     default: "CodeLove — Everything You Need. One Platform.",
     template: "%s · CodeLove",
   },
-  description:
-    "CodeLove is the content hub and product showcase for powerful online tools — downloaders, developer utilities, video & PDF tools, AI content, templates and educational tutorials for creators, developers and businesses.",
+  description: DESCRIPTION,
   keywords: [
     "CodeLove",
     "codelove",
     "code love",
     ...products.map((p) => p.name),
     ...products.map((p) => p.name.toLowerCase()),
-    "online tools",
-    "developer utilities",
+    "free online tools",
     "video tools",
-    "pdf tools",
+    "image tools",
     "instagram downloader",
-    "background remover",
+    "pinterest downloader",
     "link in bio",
-    "base64 encoder",
-    "json formatter",
-    "favicon generator",
-    "AI videos",
+    "free 3d models",
+    "video to gif",
+    "video to images",
     "web development tutorials",
   ],
   authors: [{ name: "Gowtham", url: "https://gowtham.codelove.in" }],
@@ -63,16 +65,16 @@ export const metadata: Metadata = {
     url: SITE,
     siteName: "CodeLove",
     title: "CodeLove — Everything You Need. One Platform.",
-    description:
-      "Explore powerful online tools, developer utilities, creative resources, media applications and educational content built for creators, developers, students and businesses.",
+    description: DESCRIPTION,
     locale: "en_US",
+    images: [OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
     title: "CodeLove — Everything You Need. One Platform.",
     description:
-      "Powerful online tools, developer utilities, media & AI platforms, templates and tutorials — all in one place.",
-    creator: "@codelove",
+      "Free online tools — media downloader, video and image tools, link-in-bio builder and 3D models — all in one place.",
+    images: [OG_IMAGE.url],
   },
   robots: {
     index: true,
@@ -100,13 +102,8 @@ const jsonLd = {
       url: SITE,
       logo: `${SITE}/icon.png`,
       description:
-        "CodeLove develops powerful online applications, developer utilities, media tools, AI content platforms, productivity solutions and creative web experiences.",
+        "CodeLove builds free online tools: a media downloader, video and image tools, a link-in-bio builder and a 3D model library.",
       founder: { "@type": "Person", name: "Gowtham" },
-      sameAs: [
-        "https://gowtham.codelove.in",
-        "https://downloader.codelove.in",
-        "https://templates.codelove.in",
-      ],
     },
     {
       "@type": "WebSite",
@@ -115,19 +112,6 @@ const jsonLd = {
       name: "CodeLove",
       publisher: { "@id": `${SITE}/#organization` },
       inLanguage: "en",
-      potentialAction: {
-        "@type": "SearchAction",
-        target: `${SITE}/?q={search_term_string}`,
-        "query-input": "required name=search_term_string",
-      },
-    },
-    {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: SITE },
-        { "@type": "ListItem", position: 2, name: "Products", item: `${SITE}/#products` },
-        { "@type": "ListItem", position: 3, name: "Blog", item: `${SITE}/#articles` },
-      ],
     },
     {
       "@type": "ItemList",
@@ -159,6 +143,17 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        {/* Google AdSense — only rendered once a publisher ID is set in src/lib/adsense.ts */}
+        {ADSENSE_CLIENT ? (
+          <>
+            <meta name="google-adsense-account" content={ADSENSE_CLIENT} />
+            <script
+              async
+              src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
+              crossOrigin="anonymous"
+            />
+          </>
+        ) : null}
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <script
           type="application/ld+json"

@@ -8,6 +8,7 @@ import Icon from "@/components/Icon";
 import ArticleCard from "@/components/ArticleCard";
 import ArticleToc from "@/components/ArticleToc";
 import { blogs, getCategory } from "@/lib/data";
+import { articleJsonLd } from "@/lib/seo";
 
 /** Turn a heading into a stable, URL-safe anchor id. */
 const slugify = (s: string) =>
@@ -27,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const description = article.excerpt;
   
   return {
-    title,
+    title: { absolute: title },
     description,
     keywords: [
       "CodeLove",
@@ -45,13 +46,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: "article",
       url: `https://codelove.in/blog/${article.slug}`,
       siteName: "CodeLove",
-      images: article.image ? [{ url: `https://codelove.in${article.image}` }] : undefined,
+      images: [{ url: `https://codelove.in${article.image ?? "/og.png"}` }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: article.image ? [`https://codelove.in${article.image}`] : undefined,
+      images: [`https://codelove.in${article.image ?? "/og.png"}`],
     }
   };
 }
@@ -78,6 +79,10 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd(article, `/blog/${article.slug}`, { name: "Blog", path: "/blog" })) }}
+      />
       <Navbar />
       <main className="theme-blog">
         {/* ============================================================ */}

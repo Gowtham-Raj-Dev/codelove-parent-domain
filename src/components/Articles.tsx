@@ -64,7 +64,7 @@ export default function Articles() {
           {/* Lead article */}
           <Reveal>
             <Link
-              href={`/blog/${lead.slug}`}
+              href={`/learn/guide/${lead.slug}`}
               className="group grid h-full overflow-hidden rounded-3xl border border-[var(--surface-border)] bg-[var(--bg-elevated)] shadow-[var(--shadow-soft)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[var(--shadow-glow)] sm:grid-cols-2"
             >
               <Thumb article={lead} big />
@@ -87,7 +87,7 @@ export default function Articles() {
             {feature.map((a, i) => (
               <Reveal key={a.title} delay={i * 70}>
                 <Link
-                  href={`/blog/${a.slug}`}
+                  href={`/learn/guide/${a.slug}`}
                   className="group flex overflow-hidden rounded-3xl border border-[var(--surface-border)] bg-[var(--bg-elevated)] shadow-[var(--shadow-soft)] transition-all duration-500 hover:-translate-y-1"
                 >
                   <div className="relative w-28 shrink-0 overflow-hidden sm:w-40">
@@ -120,7 +120,7 @@ export default function Articles() {
           {grid.map((a, i) => (
             <Reveal key={a.title} delay={(i % 3) * 70}>
               <Link
-                href={`/blog/${a.slug}`}
+                href={`/learn/guide/${a.slug}`}
                 className="group flex h-full flex-col overflow-hidden rounded-3xl border border-[var(--surface-border)] bg-[var(--bg-elevated)] shadow-[var(--shadow-soft)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[var(--shadow-glow)]"
               >
                 <Thumb article={a} />
@@ -140,7 +140,7 @@ export default function Articles() {
 
         <Reveal className="mt-10 text-center">
           <Link
-            href="/blog"
+            href="/learn"
             className="inline-flex items-center gap-2 rounded-xl border border-[var(--surface-border)] bg-[var(--surface)] px-5 py-3 text-sm font-semibold backdrop-blur transition hover:shadow-sm"
           >
             Browse all articles <Icon name="arrowRight" size={16} />

@@ -18,10 +18,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!product) return { title: "Product not found · CodeLove" };
   
   const title = `${product.name} — ${product.tagline} | CodeLove`;
-  const description = product.detail?.overview ?? product.description;
-  
+  const description = product.description;
+
   return {
-    title,
+    title: { absolute: title },
     description,
     keywords: [
       "CodeLove",
@@ -30,7 +30,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       product.name.toLowerCase(),
       product.category,
       "free online tool",
-      "developer utility",
       product.tagline
     ],
     alternates: { canonical: `/products/${product.slug}` },
@@ -40,13 +39,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       url: `https://codelove.in/products/${product.slug}`,
       siteName: "CodeLove",
       type: "website",
-      images: product.image ? [{ url: `https://codelove.in${product.image}` }] : undefined,
+      images: [{ url: `https://codelove.in${product.image ?? "/og.png"}` }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: product.image ? [`https://codelove.in${product.image}`] : undefined,
+      images: [`https://codelove.in${product.image ?? "/og.png"}`],
     }
   };
 }

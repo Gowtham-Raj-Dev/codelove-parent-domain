@@ -10,7 +10,7 @@ export default function LearningCenter() {
       <SectionHeading
         eyebrow="Learning Center"
         title={<>A knowledge hub that <span className="text-gradient">grows with you</span></>}
-        description="Browse hundreds of tutorials, explainers and guides organised by topic. From your first line of code to advanced automation, there's a clear path forward."
+        description="Browse tutorials, explainers and guides organised by topic — video, images, downloads, creator tools and 3D models."
       />
 
       <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

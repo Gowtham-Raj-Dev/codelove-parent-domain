@@ -146,7 +146,7 @@ function SearchModal({ onClose }: { onClose: () => void }) {
           {results.arts.map((a) => (
             <Link
               key={a.title}
-              href={`/blog/${a.slug}`}
+              href={`/learn/guide/${a.slug}`}
               onClick={onClose}
               className="flex items-center gap-3 rounded-xl px-3 py-2.5 transition hover:bg-[var(--surface)]"
             >
@@ -161,7 +161,7 @@ function SearchModal({ onClose }: { onClose: () => void }) {
           ))}
           {results.prod.length === 0 && results.arts.length === 0 && (
             <div className="px-4 py-[50px] text-center text-sm text-[var(--text-faint)]">
-              No results for “{q}”. Try “video”, “pdf” or “base64”.
+              No results for “{q}”. Try “video”, “gif” or “3d”.
             </div>
           )}
         </div>

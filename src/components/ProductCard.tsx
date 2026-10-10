@@ -23,7 +23,8 @@ export default function ProductCard({ product, featured = false }: { product: Pr
       <div
         className={`relative overflow-hidden ${featured ? "lg:w-[46%]" : ""}`}
       >
-        <div className={`relative flex h-44 items-center justify-center bg-gradient-to-br ${product.gradient} ${featured ? "lg:h-full lg:min-h-[19rem]" : ""}`}>
+        {/* 4:3 keeps the whole illustration in view — a shorter strip cropped the square artwork to its middle. */}
+        <div className={`relative flex aspect-[4/3] items-center justify-center bg-gradient-to-br ${product.gradient} ${featured ? "lg:aspect-auto lg:h-full lg:min-h-[19rem]" : ""}`}>
           {product.image ? (
             <img src={product.image} alt={product.name} className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105" />
           ) : (

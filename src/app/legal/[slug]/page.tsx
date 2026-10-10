@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 import Icon from "@/components/Icon";
 import { legalPages, getLegalPage } from "@/lib/data";
+import { pageMetadata } from "@/lib/seo";
 
 export function generateStaticParams() {
   return legalPages.map((p) => ({ slug: p.slug }));
@@ -15,11 +16,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const page = getLegalPage(slug);
   if (!page) return { title: "Not found · CodeLove" };
-  return {
-    title: `${page.title} · CodeLove`,
+  return pageMetadata({
+    title: page.title,
     description: page.description,
-    alternates: { canonical: `/legal/${page.slug}` },
-  };
+    path: `/legal/${page.slug}`,
+  });
 }
 
 export default async function LegalPageRoute({ params }: { params: Promise<{ slug: string }> }) {
@@ -72,6 +73,22 @@ export default async function LegalPageRoute({ params }: { params: Promise<{ slu
                     {section.paragraphs.map((p, j) => (
                       <p key={j} className="text-base leading-relaxed text-[var(--text-muted)]">{p}</p>
                     ))}
+                    {section.links && (
+                      <ul className="space-y-1.5 pt-1">
+                        {section.links.map((l) => (
+                          <li key={l.href}>
+                            <a
+                              href={l.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1.5 text-base font-medium text-primary transition hover:underline"
+                            >
+                              {l.label} <Icon name="arrowUpRight" size={14} />
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
                 </section>
               </Reveal>

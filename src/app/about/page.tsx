@@ -6,13 +6,14 @@ import Reveal from "@/components/Reveal";
 import Icon from "@/components/Icon";
 import AboutEditor from "@/components/AboutEditor";
 import { values, products } from "@/lib/data";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "About · CodeLove",
+export const metadata: Metadata = pageMetadata({
+  title: "About",
   description:
     "CodeLove is built by Gowthamraj — a solo developer creating fast, free web tools for creators and developers. Learn what I'm building and why.",
-  alternates: { canonical: "/about" },
-};
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (
