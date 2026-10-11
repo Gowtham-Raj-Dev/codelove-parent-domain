@@ -647,6 +647,7 @@ export const articles: Article[] = [
     updated: "Oct 10, 2026",
     gradient: "from-purple-500 to-violet-600",
     icon: "image",
+    image: "/images/image_formats.jpg",
     intro:
       "Saving an image usually means picking a format from a list without much thought. The choice matters more than it looks: the wrong one gives you a blurry logo or a photo ten times larger than it needs to be.",
     takeaways: [
@@ -897,6 +898,7 @@ export const articles: Article[] = [
     updated: "Oct 10, 2026",
     gradient: "from-purple-500 to-violet-600",
     icon: "scissors",
+    image: "/images/image_editing.jpg",
     intro:
       "Most images that slow a page down are not badly compressed — they are simply far bigger than the space they are shown in. Resizing, cropping and compressing each solve a different part of that problem.",
     takeaways: [
@@ -948,6 +950,7 @@ export const articles: Article[] = [
     updated: "Oct 10, 2026",
     gradient: "from-rose-500 to-pink-600",
     icon: "play",
+    image: "/images/audio_extract.jpg",
     intro:
       "Sometimes the picture is not the part you need. A recorded talk makes a fine podcast episode, a voice note is easier to share as audio, and an interview is quicker to transcribe from a small sound file than from a large video.",
     takeaways: [

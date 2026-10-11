@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { flushSync } from "react-dom";
 import Link from "next/link";
 import Icon from "./Icon";
+import Logo from "./Logo";
 import { navLinks, products, articles } from "@/lib/data";
 
 function ThemeToggle() {
@@ -210,14 +211,15 @@ export default function Navbar() {
           >
             {/* Logo */}
             <div className="flex lg:flex-1">
-              <Link href="/" className="flex items-center gap-2.5">
-              <span className="relative grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-primary via-secondary to-accent text-white shadow-[var(--shadow-glow)]">
-                <Icon name="heart" size={18} />
-              </span>
-              <span className="font-[family-name:var(--font-display)] text-lg font-bold tracking-tight">
-                Code<span className="text-gradient">Love</span>
-              </span>
-            </Link>
+              <Link href="/" aria-label="CodeLove home" className="flex items-center">
+                {/* Icon only on very narrow screens, full wordmark from 400px up */}
+                <span className="min-[400px]:hidden">
+                  <Logo variant="icon" className="h-8" />
+                </span>
+                <span className="hidden min-[400px]:block">
+                  <Logo variant="header" className="h-5 sm:h-6" />
+                </span>
+              </Link>
             </div>
 
             {/* Desktop nav */}

@@ -1,4 +1,4 @@
-import Icon from "@/components/Icon";
+import Logo from "@/components/Logo";
 
 export default function Loading() {
   return (
@@ -10,13 +10,13 @@ export default function Loading() {
 
       <div className="relative flex flex-col items-center">
         {/* Pulsating logo/icon */}
-        <div className="relative flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-primary via-secondary to-accent text-white shadow-[var(--shadow-glow)] animate-pulse">
-          <Icon name="heart" size={32} className="animate-spin-slow" />
+        <div className="animate-pulse">
+          <Logo variant="icon" className="h-16" />
         </div>
 
         {/* Loading text */}
         <h2 className="mt-6 font-[family-name:var(--font-display)] text-lg font-bold tracking-tight">
-          Code<span className="text-gradient">Love</span>
+          codelove<span className="text-[#2158FE]">.in</span>
         </h2>
         <p className="mt-2 text-xs text-[var(--text-faint)] tracking-wider uppercase animate-pulse">
           Loading resources...

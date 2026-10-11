@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Icon from "./Icon";
+import Logo from "./Logo";
 import HeartButton from "./HeartButton";
 import { footerColumns } from "@/lib/data";
 
@@ -11,13 +11,8 @@ export default function Footer() {
         <div className="grid gap-10 lg:grid-cols-[1.4fr_repeat(5,1fr)]">
           {/* Brand */}
           <div className="max-w-xs">
-            <Link href="/" className="flex items-center gap-2.5">
-              <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-primary via-secondary to-accent text-white">
-                <Icon name="heart" size={18} />
-              </span>
-              <span className="font-[family-name:var(--font-display)] text-lg font-bold tracking-tight">
-                Code<span className="text-gradient">Love</span>
-              </span>
+            <Link href="/" aria-label="CodeLove home" className="inline-flex items-center">
+              <Logo variant="footer" className="h-9" />
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-[var(--text-muted)]">
               Free online tools for creators and developers — a media downloader, video and image tools, a

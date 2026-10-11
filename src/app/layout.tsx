@@ -5,6 +5,7 @@ import { products } from "@/lib/data";
 import { ADSENSE_CLIENT } from "@/lib/adsense";
 import NextTopLoader from "nextjs-toploader";
 import SmoothScroll from "@/components/SmoothScroll";
+import AdSenseScript from "@/components/AdSenseScript";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -60,6 +61,19 @@ export const metadata: Metadata = {
   applicationName: "CodeLove",
   category: "technology",
   alternates: { canonical: SITE },
+  // /favicon.ico is served from src/app/favicon.ico. The SVG follows the browser's light/dark theme;
+  // the PNGs sit on a dark tile so the white "C" stays visible on light tabs and in search results.
+  icons: {
+    icon: [
+      { url: "/new-logo/favicon-adaptive.svg", type: "image/svg+xml" },
+      { url: "/new-logo/favicon-32x32-dark.png", type: "image/png", sizes: "32x32" },
+      { url: "/new-logo/favicon-48x48-dark.png", type: "image/png", sizes: "48x48" },
+      { url: "/new-logo/favicon-96x96-dark.png", type: "image/png", sizes: "96x96" },
+      { url: "/new-logo/android-chrome-192x192.png", type: "image/png", sizes: "192x192" },
+    ],
+    apple: [{ url: "/new-logo/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
+  manifest: "/new-logo/site.webmanifest",
   openGraph: {
     type: "website",
     url: SITE,
@@ -100,7 +114,7 @@ const jsonLd = {
       "@id": `${SITE}/#organization`,
       name: "CodeLove",
       url: SITE,
-      logo: `${SITE}/icon.png`,
+      logo: `${SITE}/new-logo/android-chrome-512x512.png`,
       description:
         "CodeLove builds free online tools: a media downloader, video and image tools, a link-in-bio builder and a 3D model library.",
       founder: { "@type": "Person", name: "Gowtham" },
@@ -143,22 +157,13 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        {/* Google AdSense — only rendered once a publisher ID is set in src/lib/adsense.ts */}
-        {ADSENSE_CLIENT ? (
-          <>
-            <meta name="google-adsense-account" content={ADSENSE_CLIENT} />
-            <script
-              async
-              src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
-              crossOrigin="anonymous"
-            />
-          </>
-        ) : null}
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        {/* Google AdSense — only rendered once a publisher ID is set in src/lib/adsense.ts */}
+        {ADSENSE_CLIENT ? <meta name="google-adsense-account" content={ADSENSE_CLIENT} /> : null}
       </head>
       <body className="min-h-full">
         <NextTopLoader
@@ -173,6 +178,7 @@ export default function RootLayout({
           shadow="0 0 10px #2563eb, 0 0 5px #7c3aed"
         />
         <SmoothScroll />
+        {ADSENSE_CLIENT ? <AdSenseScript client={ADSENSE_CLIENT} /> : null}
         {children}
       </body>
     </html>
