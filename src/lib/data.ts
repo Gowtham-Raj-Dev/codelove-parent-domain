@@ -17,7 +17,12 @@ export type Product = {
   status: "Live" | "New" | "Beta" | "Soon";
   category: string;
   image?: string;
+  /** Label of the button that opens the product; defaults to "Access Tool". */
+  cta?: string;
 };
+
+/** Every status except "Soon" is already live and can be opened. */
+export const isProductLive = (product: Product) => product.status !== "Soon";
 
 export const products: Product[] = [
   {
@@ -145,6 +150,7 @@ export const products: Product[] = [
     status: "New",
     category: "Games",
     image: "/images/games.jpg",
+    cta: "Play Games",
   },
 ];
 
@@ -1374,6 +1380,18 @@ export const footerColumns = [
       { label: "Video to Images", href: "/products/videotoimages" },
       { label: "3D Games", href: "/products/games" },
       { label: "All Products", href: "/products" },
+    ],
+  },
+  {
+    // Plain links to every site in the CodeLove network so crawlers can discover each subdomain.
+    title: "CodeLove network",
+    links: [
+      { label: "Free 3D Models", href: "https://models.codelove.in" },
+      { label: "Free 3D Games", href: "https://games.codelove.in" },
+      { label: "Instagram & Pinterest Downloader", href: "https://downloader.codelove.in" },
+      { label: "Link in Bio", href: "https://linkinbio.codelove.in" },
+      { label: "Video to GIF", href: "https://videotogif.codelove.in" },
+      { label: "Video to Images", href: "https://videotoimages.codelove.in" },
     ],
   },
   {

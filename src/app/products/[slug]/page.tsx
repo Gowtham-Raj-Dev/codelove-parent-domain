@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 import Icon from "@/components/Icon";
-import { products, getProduct } from "@/lib/data";
+import { products, getProduct, isProductLive } from "@/lib/data";
 
 /* Pre-render every product page at build time. */
 export function generateStaticParams() {
@@ -57,7 +57,8 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
 
   const detail = product.detail;
   const related = products.filter((p) => p.slug !== product.slug).slice(0, 3);
-  const isLive = product.status === "Live";
+  const isLive = isProductLive(product);
+  const ctaLabel = product.cta ?? "Access Tool";
   const statusLabel = product.status === "Soon" ? "Coming soon" : product.status;
 
   return (
@@ -121,7 +122,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                       rel="noopener noreferrer"
                       className={`group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r ${product.gradient} px-7 py-4 text-sm font-semibold text-white shadow-[var(--shadow-glow)] transition hover:-translate-y-0.5 hover:brightness-110`}
                     >
-                      Access Tool
+                      {ctaLabel}
                       <Icon name="arrowUpRight" size={18} className="transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                     </a>
                   ) : (
@@ -303,7 +304,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                     rel="noopener noreferrer"
                     className={`group mt-8 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r ${product.gradient} px-7 py-4 text-sm font-semibold text-white shadow-[var(--shadow-glow)] transition hover:-translate-y-0.5 hover:brightness-110`}
                   >
-                    Access Tool
+                    {ctaLabel}
                     <Icon name="arrowUpRight" size={18} className="transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </a>
                 ) : (
@@ -397,7 +398,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                     rel="noopener noreferrer"
                     className="group mt-8 inline-flex items-center gap-2 rounded-xl bg-white px-8 py-4 text-sm font-semibold text-slate-900 shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl"
                   >
-                    Access Tool
+                    {ctaLabel}
                     <Icon name="arrowUpRight" size={18} className="transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </a>
                 ) : (

@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="relative overflow-hidden border-t border-[var(--surface-border)] bg-[var(--bg-elevated)]">
       <div aria-hidden className="pointer-events-none absolute -top-24 left-1/2 h-48 w-[40rem] -translate-x-1/2 rounded-full bg-[var(--glow-primary)] blur-[120px]" />
       <div className="container-px mx-auto max-w-7xl py-[50px]">
-        <div className="grid gap-10 lg:grid-cols-[1.4fr_repeat(5,1fr)]">
+        <div className="grid gap-10 lg:grid-cols-[1.4fr_repeat(6,1fr)]">
           {/* Brand */}
           <div className="max-w-xs">
             <Link href="/" aria-label="CodeLove home" className="inline-flex items-center">

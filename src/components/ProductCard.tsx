@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Icon from "./Icon";
-import type { Product } from "@/lib/data";
+import { isProductLive, type Product } from "@/lib/data";
 
 export default function ProductCard({ product, featured = false }: { product: Product; featured?: boolean }) {
   const statusStyles =
@@ -10,7 +10,7 @@ export default function ProductCard({ product, featured = false }: { product: Pr
       ? "bg-blue-500/12 text-blue-500 ring-blue-500/20"
       : "bg-amber-500/12 text-amber-500 ring-amber-500/20";
 
-  const isLive = product.status === "Live";
+  const isLive = isProductLive(product);
   const statusLabel = product.status === "Soon" ? "Coming soon" : product.status;
 
   return (
@@ -93,7 +93,7 @@ export default function ProductCard({ product, featured = false }: { product: Pr
               rel="noopener noreferrer"
               className="group/tool inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold text-[var(--text-muted)] transition hover:text-primary"
             >
-              Access Tool
+              {product.cta ?? "Access Tool"}
               <Icon name="arrowUpRight" size={16} className="transition group-hover/tool:translate-x-0.5 group-hover/tool:-translate-y-0.5" />
             </a>
           ) : (
