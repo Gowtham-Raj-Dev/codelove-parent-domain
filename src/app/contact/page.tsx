@@ -7,7 +7,7 @@ import Icon from "@/components/Icon";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Contact",
+  title: "Contact Us — Feedback, Bugs & Partnerships",
   description:
     "Get in touch with the CodeLove team — questions, feedback, bug reports, partnerships or press. We read every message.",
   path: "/contact",

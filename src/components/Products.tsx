@@ -37,6 +37,24 @@ export default function Products() {
           {products.length} products and counting — browse the full collection.
         </p>
       </Reveal>
+
+      {/* Direct links to every CodeLove site, so visitors and search engines reach each subdomain from the home page. */}
+      <nav aria-label="CodeLove sites" className="mt-10">
+        <ul className="flex flex-wrap justify-center gap-3">
+          {products.map((product) => (
+            <li key={product.slug}>
+              <a
+                href={product.url}
+                className="inline-flex items-center gap-2 rounded-full border border-[var(--surface-border)] px-4 py-2 text-sm text-[var(--text-muted)] transition hover:border-primary hover:text-[var(--text)]"
+              >
+                <Icon name={product.icon} size={14} />
+                <span className="font-medium text-[var(--text)]">{product.name}</span>
+                <span>{product.domain}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </section>
   );
 }

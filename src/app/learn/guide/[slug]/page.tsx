@@ -24,7 +24,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const article = getArticle(slug);
   if (!article) return { title: "Article not found · CodeLove" };
   
-  const title = `${article.title} | CodeLove Learning Center`;
+  // Search results show about 60–70 characters, so the brand is added only when the whole title still fits.
+  const branded = `${article.title} | CodeLove`;
+  const title = branded.length <= 70 ? branded : article.title;
   const description = article.excerpt;
   
   return {

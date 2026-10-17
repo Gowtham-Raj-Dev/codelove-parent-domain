@@ -125,6 +125,27 @@ export const products: Product[] = [
     category: "Media",
     image: "/images/videotoimages.png",
   },
+  {
+    slug: "games",
+    name: "3D Games",
+    icon: "play",
+    domain: "games.codelove.in",
+    url: "https://games.codelove.in",
+    tagline: "Free 3D browser games",
+    description:
+      "Play free 3D games right in your browser — kart racing, skating, tower defense, a dungeon crawler, mini golf, puzzles and more. No download, no sign-up.",
+    features: [
+      "Free 3D games, no download",
+      "Racing, action, puzzle & strategy",
+      "Plays on PC and phone",
+      "No sign-up needed",
+    ],
+    gradient: "from-amber-500 to-orange-600",
+    accent: "#f59e0b",
+    status: "New",
+    category: "Games",
+    image: "/images/games.jpg",
+  },
 ];
 
 /* ------------------------------------------------------------------ */
@@ -221,6 +242,22 @@ export const productDetails: Record<string, ProductDetail> = {
       { q: "Are my files uploaded anywhere?", a: "No. All processing happens locally in your browser, so your files never leave your device." },
       { q: "What formats can frames be saved in?", a: "Frames can be exported as JPG, PNG or WebP images from MP4, WebM or MOV video." },
       { q: "Is there a limit?", a: "No, you can process as many files as you need. Very large files depend on your device's available memory." },
+    ],
+  },
+  games: {
+    overview:
+      "3D Games is a collection of free 3D games that run straight in your web browser. Race karts, skate, defend towers, explore dungeons or play mini golf — every game loads in seconds on a PC or a phone, with nothing to install and no account to create. The games are built from the CodeLove 3D model library.",
+    highlights: ["Free to play", "No download", "PC & mobile", "No sign-up"],
+    steps: [
+      { icon: "search", title: "Pick a game", text: "Browse the collection and open any game that catches your eye." },
+      { icon: "play", title: "Press play", text: "The game loads right in your browser tab — no installer, no app store." },
+      { icon: "smartphone", title: "Play anywhere", text: "Use keyboard and mouse on a PC or touch controls on your phone." },
+      { icon: "star", title: "Come back for more", text: "New games are added to the collection regularly." },
+    ],
+    faqs: [
+      { q: "Are the games free?", a: "Yes. Every game is free to play with no sign-up." },
+      { q: "Do I need to download anything?", a: "No. The games run in your browser on PC and phone." },
+      { q: "Where can I play?", a: "Open games.codelove.in and pick any game from the list." },
     ],
   },
 };
@@ -1201,7 +1238,7 @@ export const legalPages: LegalPage[] = [
   {
     slug: "terms",
     title: "Terms of Service",
-    description: "The basic terms for using CodeLove tools and websites.",
+    description: "The terms for using CodeLove's free online tools and websites: fair and lawful use, your rights to the files you process, availability, changes and liability.",
     updated: "July 2026",
     intro:
       "By using CodeLove, you agree to these terms. They are intentionally short and reasonable — use the tools fairly and they stay free and fast for everyone.",
@@ -1230,7 +1267,7 @@ export const legalPages: LegalPage[] = [
   {
     slug: "cookies",
     title: "Cookie Policy",
-    description: "How and why CodeLove uses cookies and local storage.",
+    description: "How and why CodeLove uses cookies and local storage: theme preferences, Google Analytics, advertising cookies, and how you can control or delete them.",
     updated: "October 2026",
     intro:
       "This page explains the small amount of browser storage CodeLove relies on and what each part is for.",
@@ -1269,7 +1306,7 @@ export const legalPages: LegalPage[] = [
   {
     slug: "disclaimer",
     title: "Disclaimer",
-    description: "Important notes about relying on CodeLove tools and content.",
+    description: "Important notes about relying on CodeLove tools and content: tools provided as is, guides that are not professional advice, and links to third-party sites.",
     updated: "July 2026",
     intro:
       "CodeLove aims to be accurate and helpful, but our tools and articles are provided for general use and information only.",
@@ -1297,7 +1334,7 @@ export const legalPages: LegalPage[] = [
   {
     slug: "editorial-policy",
     title: "Editorial Policy",
-    description: "How we research, write and maintain the content on CodeLove.",
+    description: "How we research, write, fact-check and update the guides, tutorials and blog posts on CodeLove, and how to report a mistake.",
     updated: "July 2026",
     intro:
       "We want everything you read on CodeLove to be clear, current and genuinely useful. Here is how we approach it.",
@@ -1335,6 +1372,7 @@ export const footerColumns = [
       { label: "3D Models", href: "/products/models" },
       { label: "Video to GIF", href: "/products/videotogif" },
       { label: "Video to Images", href: "/products/videotoimages" },
+      { label: "3D Games", href: "/products/games" },
       { label: "All Products", href: "/products" },
     ],
   },

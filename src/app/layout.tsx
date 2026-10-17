@@ -27,14 +27,14 @@ const geistMono = Geist_Mono({
 
 const SITE = "https://codelove.in";
 const DESCRIPTION =
-  "CodeLove is the home of free online tools: a media downloader, video and image tools, a link-in-bio builder and a 3D model library, plus tutorials.";
+  "Free online tools by CodeLove: media downloader, video to GIF, video to images, link in bio builder, a 3D model library and free 3D games.";
 // Default social preview image (public/og.png, 1200x630). Pages without their own image fall back to it.
 const OG_IMAGE = { url: "/og.png", width: 1200, height: 630, alt: "CodeLove — free online tools for creators and developers" };
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: {
-    default: "CodeLove — Everything You Need. One Platform.",
+    default: "CodeLove — Free Online Tools, 3D Models & Games",
     template: "%s · CodeLove",
   },
   description: DESCRIPTION,
@@ -53,6 +53,7 @@ export const metadata: Metadata = {
     "free 3d models",
     "video to gif",
     "video to images",
+    "free 3d games",
     "web development tutorials",
   ],
   authors: [{ name: "Gowtham", url: "https://gowtham.codelove.in" }],
@@ -116,14 +117,16 @@ const jsonLd = {
       url: SITE,
       logo: `${SITE}/new-logo/android-chrome-512x512.png`,
       description:
-        "CodeLove builds free online tools: a media downloader, video and image tools, a link-in-bio builder and a 3D model library.",
+        "CodeLove builds free online tools: a media downloader, video and image tools, a link-in-bio builder, a 3D model library and free 3D games.",
       founder: { "@type": "Person", name: "Gowtham" },
+      email: "support@codelove.in",
     },
     {
       "@type": "WebSite",
       "@id": `${SITE}/#website`,
       url: SITE,
       name: "CodeLove",
+      alternateName: ["Code Love", "codelove.in"],
       publisher: { "@id": `${SITE}/#organization` },
       inLanguage: "en",
     },
