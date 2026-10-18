@@ -62,8 +62,8 @@ export const metadata: Metadata = {
   applicationName: "CodeLove",
   category: "technology",
   alternates: { canonical: SITE },
-  // /favicon.ico is served from src/app/favicon.ico. The SVG follows the browser's light/dark theme;
-  // the PNGs sit on a dark tile so the white "C" stays visible on light tabs and in search results.
+  // /favicon.ico is served from src/app/favicon.ico. Every icon is the white "C" on a black tile with
+  // rounded, transparent corners, matching the other CodeLove tools' favicons.
   icons: {
     icon: [
       { url: "/new-logo/favicon-adaptive.svg", type: "image/svg+xml" },
