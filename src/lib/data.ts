@@ -152,6 +152,49 @@ export const products: Product[] = [
     image: "/images/games.jpg",
     cta: "Play Games",
   },
+  {
+    slug: "utubeflow",
+    name: "UTubeFlow",
+    icon: "youtube",
+    domain: "utubeflow.codelove.in",
+    url: "https://utubeflow.codelove.in",
+    tagline: "Free YouTube automation",
+    description:
+      "Free YouTube automation: bulk upload and schedule YouTube videos and Shorts, and let Autopilot keep posting on time even with your PC turned off.",
+    features: [
+      "Bulk upload YouTube videos & Shorts",
+      "Schedule posts in advance",
+      "Autopilot posting with your PC off",
+      "100% free, no paid plans",
+    ],
+    gradient: "from-red-500 to-rose-600",
+    accent: "#ef4444",
+    status: "New",
+    category: "Creator",
+    image: "/images/utubeflow.png",
+  },
+  {
+    slug: "javaplay",
+    name: "JavaPlay",
+    icon: "smartphone",
+    domain: "javagames-emu.codelove.in",
+    url: "https://javagames-emu.codelove.in",
+    tagline: "Free Java phone games",
+    description:
+      "Play old Java (J2ME) phone games free in your browser or in a tiny Android app. Pick from 163 free open-license games or open your own .jar file. No sign-up.",
+    features: [
+      "Play J2ME .jar games in your browser",
+      "163 free open-license Java games",
+      "Tiny Android app (~177 KB)",
+      "Phone keypad, touch & keyboard controls",
+    ],
+    gradient: "from-emerald-500 to-teal-600",
+    accent: "#10b981",
+    status: "New",
+    category: "Games",
+    image: "/images/javaplay.png",
+    cta: "Play Java Games",
+  },
 ];
 
 /* ------------------------------------------------------------------ */
@@ -264,6 +307,39 @@ export const productDetails: Record<string, ProductDetail> = {
       { q: "Are the games free?", a: "Yes. Every game is free to play with no sign-up." },
       { q: "Do I need to download anything?", a: "No. The games run in your browser on PC and phone." },
       { q: "Where can I play?", a: "Open games.codelove.in and pick any game from the list." },
+    ],
+  },
+  utubeflow: {
+    overview:
+      "UTubeFlow is free YouTube automation for creators. Upload a whole batch of YouTube videos and Shorts at once, set when each one should go live, and let Autopilot publish them on schedule — even while your PC is switched off. No paid plans, no per-video limits.",
+    highlights: ["Completely free", "Bulk upload", "Videos & Shorts", "Autopilot posting"],
+    steps: [
+      { icon: "youtube", title: "Connect your channel", text: "Sign in with Google and connect the YouTube channel you want to post to." },
+      { icon: "layers", title: "Add your videos", text: "Drop in a batch of videos or Shorts and fill in titles, descriptions and tags." },
+      { icon: "clock", title: "Set the schedule", text: "Choose when each video should go live, or spread the batch across the days ahead." },
+      { icon: "zap", title: "Let Autopilot post", text: "Autopilot publishes every video on time, even with your PC turned off." },
+    ],
+    faqs: [
+      { q: "Is UTubeFlow really free?", a: "Yes. Bulk uploading, scheduling and Autopilot posting are free to use." },
+      { q: "Does my PC need to stay on?", a: "No. Once Autopilot is set up, your scheduled videos and Shorts are posted even when your PC is off." },
+      { q: "Does it work with YouTube Shorts?", a: "Yes. You can bulk upload and schedule both regular YouTube videos and Shorts." },
+    ],
+  },
+  javaplay: {
+    overview:
+      "JavaPlay brings back the Java (J2ME) games from old keypad phones. Open a .jar game right in your browser, or install the small Android app (about 177 KB). The site has a free catalog of 163 open-license Java games ready to play, and you can also load .jar files you already have. An on-screen phone keypad, touch and your computer keyboard all work as controls, and you can record your gameplay as a video. It is free and needs no sign-up.",
+    highlights: ["Completely free", "No sign-up", "Browser & Android", "163 free games"],
+    steps: [
+      { icon: "search", title: "Pick a game", text: "Browse the 163 free open-license Java games, or open a .jar file you already have." },
+      { icon: "play", title: "Play in your browser", text: "The game starts right in the browser tab — nothing to install." },
+      { icon: "smartphone", title: "Use phone keys", text: "Play with the on-screen phone keypad, touch, or your computer keyboard." },
+      { icon: "download", title: "Get the Android app", text: "Install the tiny JavaPlay app (about 177 KB) to play Java games on your Android phone." },
+    ],
+    faqs: [
+      { q: "Is JavaPlay free?", a: "Yes. The player, the Android app and the 163 games in the catalog are free, with no sign-up." },
+      { q: "Can I play my own .jar games?", a: "Yes. Open any J2ME .jar file in the browser player or the Android app. Only play games you have the right to use." },
+      { q: "Where do I get the Android app?", a: "Download it from javagames-emu.codelove.in/download/JavaPlay.apk. It is about 177 KB." },
+      { q: "Can I record my gameplay?", a: "Yes. JavaPlay can record your gameplay as a video you can save and share." },
     ],
   },
 };
@@ -1379,6 +1455,8 @@ export const footerColumns = [
       { label: "Video to GIF", href: "/products/videotogif" },
       { label: "Video to Images", href: "/products/videotoimages" },
       { label: "3D Games", href: "/products/games" },
+      { label: "UTubeFlow", href: "/products/utubeflow" },
+      { label: "JavaPlay", href: "/products/javaplay" },
       { label: "All Products", href: "/products" },
     ],
   },
@@ -1392,6 +1470,8 @@ export const footerColumns = [
       { label: "Link in Bio", href: "https://linkinbio.codelove.in" },
       { label: "Video to GIF", href: "https://videotogif.codelove.in" },
       { label: "Video to Images", href: "https://videotoimages.codelove.in" },
+      { label: "Free YouTube Automation", href: "https://utubeflow.codelove.in" },
+      { label: "Free Java Games", href: "https://javagames-emu.codelove.in" },
     ],
   },
   {

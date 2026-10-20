@@ -45,7 +45,19 @@ export default function Footer() {
             <span>&copy; {new Date().getFullYear()} CodeLove. All rights reserved.</span>
           </div>
           <p className="flex items-center text-sm text-[var(--text-faint)]">
-            Developed with <HeartButton /> by <span className="font-medium text-[var(--text)] ml-1">CodeLove.in</span> <span className="mx-1.5">·</span> Created by Gowtham
+            Built with <HeartButton /> by
+            <a
+              href="https://gowtham.codelove.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-1 font-medium text-[var(--text)] transition hover:text-primary"
+            >
+              Gowtham
+            </a>
+            <span className="mx-1.5">·</span>
+            <a href="/" className="font-medium text-[var(--text)] transition hover:text-primary">
+              CodeLove
+            </a>
           </p>
         </div>
       </div>
