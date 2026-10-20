@@ -177,8 +177,8 @@ export const products: Product[] = [
     slug: "javaplay",
     name: "JavaPlay",
     icon: "smartphone",
-    domain: "javagames-emu.codelove.in",
-    url: "https://javagames-emu.codelove.in",
+    domain: "javaplay.codelove.in",
+    url: "https://javaplay.codelove.in",
     tagline: "Free Java phone games",
     description:
       "Play old Java (J2ME) phone games free in your browser or in a tiny Android app. Pick from 163 free open-license games or open your own .jar file. No sign-up.",
@@ -338,7 +338,7 @@ export const productDetails: Record<string, ProductDetail> = {
     faqs: [
       { q: "Is JavaPlay free?", a: "Yes. The player, the Android app and the 163 games in the catalog are free, with no sign-up." },
       { q: "Can I play my own .jar games?", a: "Yes. Open any J2ME .jar file in the browser player or the Android app. Only play games you have the right to use." },
-      { q: "Where do I get the Android app?", a: "Download it from javagames-emu.codelove.in/download/JavaPlay.apk. It is about 177 KB." },
+      { q: "Where do I get the Android app?", a: "Download it from javaplay.codelove.in/download/JavaPlay.apk. It is about 177 KB." },
       { q: "Can I record my gameplay?", a: "Yes. JavaPlay can record your gameplay as a video you can save and share." },
     ],
   },
@@ -1471,7 +1471,7 @@ export const footerColumns = [
       { label: "Video to GIF", href: "https://videotogif.codelove.in" },
       { label: "Video to Images", href: "https://videotoimages.codelove.in" },
       { label: "Free YouTube Automation", href: "https://utubeflow.codelove.in" },
-      { label: "Free Java Games", href: "https://javagames-emu.codelove.in" },
+      { label: "Free Java Games", href: "https://javaplay.codelove.in" },
     ],
   },
   {
