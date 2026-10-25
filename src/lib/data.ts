@@ -27,13 +27,13 @@ export const isProductLive = (product: Product) => product.status !== "Soon";
 export const products: Product[] = [
   {
     slug: "downloader",
-    name: "Downloader",
+    name: "Insta Downloader",
     icon: "download",
     domain: "downloader.codelove.in",
     url: "https://downloader.codelove.in",
-    tagline: "Media downloader",
+    tagline: "Free Instagram downloader",
     description:
-      "Download public Instagram and Pinterest videos and images using a clean, fast, ad-light interface built for creators and marketers.",
+      "Download public Instagram Reels, videos and photos in HD with no watermark and no sign-up — plus Pinterest videos and images — from a clean, fast interface built for creators.",
     features: [
       "Instagram video & Reels downloader",
       "Pinterest video downloader",
@@ -1449,7 +1449,7 @@ export const footerColumns = [
   {
     title: "Products",
     links: [
-      { label: "Downloader", href: "/products/downloader" },
+      { label: "Insta Downloader", href: "/products/downloader" },
       { label: "Link in Bio", href: "/products/linkinbio" },
       { label: "3D Models", href: "/products/models" },
       { label: "Video to GIF", href: "/products/videotogif" },
@@ -1464,9 +1464,10 @@ export const footerColumns = [
     // Plain links to every site in the CodeLove network so crawlers can discover each subdomain.
     title: "CodeLove network",
     links: [
+      { label: "CodeLove Home", href: "https://codelove.in" },
       { label: "Free 3D Models", href: "https://models.codelove.in" },
       { label: "Free 3D Games", href: "https://games.codelove.in" },
-      { label: "Instagram & Pinterest Downloader", href: "https://downloader.codelove.in" },
+      { label: "Insta Downloader", href: "https://downloader.codelove.in" },
       { label: "Link in Bio", href: "https://linkinbio.codelove.in" },
       { label: "Video to GIF", href: "https://videotogif.codelove.in" },
       { label: "Video to Images", href: "https://videotoimages.codelove.in" },
