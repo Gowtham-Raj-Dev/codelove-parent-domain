@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Space_Grotesk, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { products } from "@/lib/data";
-import { ADSENSE_CLIENT } from "@/lib/adsense";
+import { ADSENSE_CLIENT, GA_MEASUREMENT_ID } from "@/lib/adsense";
+import Script from "next/script";
 import NextTopLoader from "nextjs-toploader";
 import SmoothScroll from "@/components/SmoothScroll";
 import AdSenseScript from "@/components/AdSenseScript";
@@ -190,6 +191,15 @@ export default function RootLayout({
         />
         <SmoothScroll />
         {ADSENSE_CLIENT ? <AdSenseScript client={ADSENSE_CLIENT} /> : null}
+        {/* Google Analytics — only once a measurement ID is set in src/lib/adsense.ts */}
+        {GA_MEASUREMENT_ID ? (
+          <>
+            <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} strategy="afterInteractive" />
+            <Script id="ga-init" strategy="afterInteractive">
+              {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_MEASUREMENT_ID}');`}
+            </Script>
+          </>
+        ) : null}
         {children}
       </body>
     </html>
