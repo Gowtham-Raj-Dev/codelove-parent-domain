@@ -127,8 +127,13 @@ const jsonLd = {
       logo: `${SITE}/new-logo/android-chrome-512x512.png`,
       description:
         "CodeLove builds free online tools: a media downloader, video and image tools, a link-in-bio builder, a 3D model library, free 3D games, free YouTube automation and free Java phone games.",
-      founder: { "@type": "Person", name: "Gowtham" },
+      // the same person as on gowtham.codelove.in, so search engines join the two
+      founder: { "@type": "Person", "@id": "https://gowtham.codelove.in/#person", name: "Gowtham", url: "https://gowtham.codelove.in" },
       email: "support@codelove.in",
+      contactPoint: [
+        { "@type": "ContactPoint", contactType: "customer support", email: "support@codelove.in", availableLanguage: ["English", "Tamil"] },
+        { "@type": "ContactPoint", contactType: "sales", name: "Gowtham", email: "gowtham@codelove.in", telephone: "+91-63694-94396", url: "https://wa.me/916369494396", availableLanguage: ["English", "Tamil"] },
+      ],
     },
     {
       "@type": "WebSite",

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Logo from "./Logo";
 import HeartButton from "./HeartButton";
+import { ContactLinks } from "./ContactLinks";
 import { footerColumns } from "@/lib/data";
 
 export default function Footer() {
@@ -44,7 +45,7 @@ export default function Footer() {
           <div className="flex items-center text-sm text-[var(--text-faint)]">
             <span>&copy; {new Date().getFullYear()} CodeLove. All rights reserved.</span>
           </div>
-          <p className="flex items-center text-sm text-[var(--text-faint)]">
+          <p className="flex flex-wrap items-center justify-center text-sm text-[var(--text-faint)]">
             Built with <HeartButton /> by
             <a
               href="https://gowtham.codelove.in"
@@ -55,9 +56,11 @@ export default function Footer() {
               Gowtham
             </a>
             <span className="mx-1.5">·</span>
-            <a href="/" className="font-medium text-[var(--text)] transition hover:text-primary">
+            <Link href="/" className="font-medium text-[var(--text)] transition hover:text-primary">
               CodeLove
-            </a>
+            </Link>
+            <span className="mx-1.5">·</span>
+            <ContactLinks className="text-[var(--text)]" />
           </p>
         </div>
       </div>
