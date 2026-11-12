@@ -9,7 +9,7 @@ function Thumb({ article, big = false }: { article: Article; big?: boolean }) {
     <div className={`relative overflow-hidden ${big ? "h-full min-h-[16rem]" : "h-44"}`}>
       <div className={`flex h-full items-center justify-center bg-gradient-to-br ${article.gradient}`}>
         {article.image ? (
-          <img src={article.image} alt={article.title} className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+          <img src={article.image} alt={article.title} width={800} height={500} loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105" />
         ) : (
           <>
             <div aria-hidden className="absolute inset-0">
@@ -93,7 +93,7 @@ export default function Articles() {
                   <div className="relative w-28 shrink-0 overflow-hidden sm:w-40">
                     <div className={`flex h-full items-center justify-center bg-gradient-to-br ${a.gradient}`}>
                       {a.image ? (
-                        <img src={a.image} alt={a.title} className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+                        <img src={a.image} alt={a.title} width={400} height={300} loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105" />
                       ) : (
                         <Icon name={a.icon} size={30} className="text-white/85" />
                       )}

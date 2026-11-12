@@ -87,7 +87,7 @@ export default function ResourcesPage() {
 
             <Reveal delay={140}>
               <div className="group relative flex h-full min-h-[300px] flex-col overflow-hidden rounded-2xl border border-[var(--surface-border)] shadow-[var(--shadow-soft)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[var(--shadow-glow)]">
-                <img src="/images/videotogif.png" alt="Guides for every CodeLove tool" className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+                <img src="/images/videotogif.png" alt="Guides for every CodeLove tool" width={1200} height={750} loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--surface)] via-black/20 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-6 text-[var(--text)]">
                   <h2 className="font-[family-name:var(--font-display)] text-lg font-bold tracking-tight">Learn, Build, Ship</h2>

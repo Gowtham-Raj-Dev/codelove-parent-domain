@@ -15,7 +15,7 @@ export default function ArticleCard({ article, basePath = "/blog" }: { article: 
       {/* Thumbnail */}
       <div className="relative h-48 overflow-hidden">
         {article.image ? (
-          <img src={article.image} alt={article.title} className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105" />
+          <img src={article.image} alt={article.title} width={800} height={500} loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105" />
         ) : (
           <div className={`flex h-full items-center justify-center bg-gradient-to-br ${article.gradient}`}>
             <div aria-hidden className="absolute inset-0">
