@@ -132,6 +132,14 @@ export default function AboutPage() {
                   >
                     Contact me
                   </Link>
+                  <a
+                    href="https://gowtham.codelove.in"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-xl border border-white/40 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10"
+                  >
+                    Gowtham 3D Portfolio <Icon name="arrowUpRight" size={16} />
+                  </a>
                 </div>
               </div>
             </div>

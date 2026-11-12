@@ -28,7 +28,20 @@ const geistMono = Geist_Mono({
 
 const SITE = "https://codelove.in";
 const DESCRIPTION =
-  "Free online tools by CodeLove: media downloader, video to GIF, video to images, link in bio builder, a 3D model library, free 3D games, free YouTube automation and free Java phone games.";
+  "Free online tools by CodeLove: media downloader, video shorts cutter, video compressor, video to GIF, video to images, free link in bio builder, 3D GLB model library, free 3D games, YouTube automation, and free Java games.";
+
+const NETWORK_URLS = [
+  "https://gowtham.codelove.in",
+  "https://models.codelove.in",
+  "https://games.codelove.in",
+  "https://downloader.codelove.in",
+  "https://linkinbio.codelove.in",
+  "https://videotogif.codelove.in",
+  "https://videotoimages.codelove.in",
+  "https://videocut.codelove.in",
+  "https://utubeflow.codelove.in",
+  "https://javaplay.codelove.in",
+];
 // Default social preview image (public/og.png, 1200x630). Pages without their own image fall back to it.
 const OG_IMAGE = { url: "/og.png", width: 1200, height: 630, alt: "CodeLove — free online tools for creators and developers" };
 
@@ -43,20 +56,32 @@ export const metadata: Metadata = {
     "CodeLove",
     "codelove",
     "code love",
+    "code of love",
+    "code with love",
     ...products.map((p) => p.name),
     ...products.map((p) => p.name.toLowerCase()),
     "free online tools",
     "video tools",
     "image tools",
+    "video cut",
+    "video shorts cutter",
+    "video compressor",
     "instagram downloader",
     "pinterest downloader",
     "link in bio",
+    "link in bio free",
     "free 3d models",
+    "free glb models",
     "video to gif",
     "video to images",
+    "games",
     "free 3d games",
+    "3d games free no download",
     "free youtube automation",
     "free java games",
+    "java games online",
+    "Gowtham",
+    "gowtham.codelove.in",
     "web development tutorials",
   ],
   authors: [{ name: "Gowtham", url: "https://gowtham.codelove.in" }],
@@ -90,8 +115,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "CodeLove — Everything You Need. One Platform.",
-    description:
-      "Free online tools — media downloader, video and image tools, link-in-bio builder and 3D models — all in one place.",
+    description: DESCRIPTION,
     images: [OG_IMAGE.url],
   },
   robots: {
@@ -120,15 +144,27 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "Person",
+      "@id": "https://gowtham.codelove.in/#person",
+      name: "Gowtham",
+      alternateName: "Gowthamraj",
+      url: "https://gowtham.codelove.in",
+      jobTitle: "Full-Stack Developer & 3D Generalist",
+      worksFor: { "@id": `${SITE}/#organization` },
+      sameAs: ["https://codelove.in/about", "https://gowtham.codelove.in"],
+    },
+    {
       "@type": "Organization",
       "@id": `${SITE}/#organization`,
       name: "CodeLove",
+      alternateName: ["Code Love", "Code With Love", "Code of Love"],
       url: SITE,
+      sameAs: NETWORK_URLS,
       logo: `${SITE}/new-logo/android-chrome-512x512.png`,
       description:
-        "CodeLove builds free online tools: a media downloader, video and image tools, a link-in-bio builder, a 3D model library, free 3D games, free YouTube automation and free Java phone games.",
+        "CodeLove builds free online tools: a media downloader, video shorts cutter, video compressor, video and image tools, a link-in-bio builder, a 3D model library, free 3D games, free YouTube automation and free Java phone games.",
       // the same person as on gowtham.codelove.in, so search engines join the two
-      founder: { "@type": "Person", "@id": "https://gowtham.codelove.in/#person", name: "Gowtham", url: "https://gowtham.codelove.in" },
+      founder: { "@id": "https://gowtham.codelove.in/#person" },
       email: "support@codelove.in",
       contactPoint: [
         { "@type": "ContactPoint", contactType: "customer support", email: "support@codelove.in", availableLanguage: ["English", "Tamil"] },
@@ -140,7 +176,8 @@ const jsonLd = {
       "@id": `${SITE}/#website`,
       url: SITE,
       name: "CodeLove",
-      alternateName: ["Code Love", "codelove.in"],
+      alternateName: ["Code Love", "Code of Love", "codelove.in"],
+      creator: { "@id": "https://gowtham.codelove.in/#person" },
       publisher: { "@id": `${SITE}/#organization` },
       inLanguage: "en",
     },

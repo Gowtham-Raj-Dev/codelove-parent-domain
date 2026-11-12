@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import type { Article } from "@/lib/data";
+import type { Article, getProduct } from "@/lib/data";
+
+type ProductWithDetail = NonNullable<ReturnType<typeof getProduct>>;
 
 export const SITE_URL = "https://codelove.in";
 /** Shared social preview image (public/og.png, 1200x630). */
@@ -69,7 +71,9 @@ export function articleJsonLd(article: Article, path: string, section: { name: s
         image: `${SITE_URL}${article.image ?? DEFAULT_OG_IMAGE}`,
         datePublished: isoDate(article.published),
         dateModified: isoDate(article.updated || article.published),
-        author: { "@type": article.author.includes("CodeLove") ? "Organization" : "Person", name: article.author },
+        author: article.author.includes("CodeLove")
+          ? { "@type": "Organization", "@id": `${SITE_URL}/#organization`, name: article.author }
+          : { "@type": "Person", "@id": "https://gowtham.codelove.in/#person", name: article.author, url: "https://gowtham.codelove.in" },
         publisher: { "@id": `${SITE_URL}/#organization` },
         mainEntityOfPage: url,
       },
@@ -83,4 +87,47 @@ export function articleJsonLd(article: Article, path: string, section: { name: s
       },
     ],
   };
+}
+
+/** SoftwareApplication + BreadcrumbList + optional FAQPage structured data for `/products/[slug]`. */
+export function productJsonLd(product: ProductWithDetail) {
+  const pageUrl = `${SITE_URL}/products/${product.slug}`;
+  const graph: Record<string, unknown>[] = [
+    {
+      "@type": "SoftwareApplication",
+      "@id": `${pageUrl}/#software`,
+      name: product.name,
+      description: product.detail?.overview ?? product.description,
+      url: pageUrl,
+      sameAs: product.url,
+      image: `${SITE_URL}${product.image ?? DEFAULT_OG_IMAGE}`,
+      applicationCategory: product.category === "Games" ? "GameApplication" : "WebApplication",
+      operatingSystem: "Any",
+      isAccessibleForFree: true,
+      offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+      creator: { "@id": "https://gowtham.codelove.in/#person" },
+      publisher: { "@id": `${SITE_URL}/#organization` },
+      mainEntityOfPage: pageUrl,
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+        { "@type": "ListItem", position: 2, name: "Products", item: `${SITE_URL}/products` },
+        { "@type": "ListItem", position: 3, name: product.name, item: pageUrl },
+      ],
+    },
+  ];
+  if (product.detail?.faqs?.length) {
+    graph.push({
+      "@type": "FAQPage",
+      "@id": `${pageUrl}/#faq`,
+      mainEntity: product.detail.faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.q,
+        acceptedAnswer: { "@type": "Answer", text: faq.a },
+      })),
+    });
+  }
+  return { "@context": "https://schema.org", "@graph": graph };
 }

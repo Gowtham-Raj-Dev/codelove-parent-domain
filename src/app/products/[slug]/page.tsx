@@ -6,6 +6,19 @@ import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 import Icon from "@/components/Icon";
 import { products, getProduct, isProductLive } from "@/lib/data";
+import { productJsonLd } from "@/lib/seo";
+
+const PRODUCT_KEYWORDS: Record<string, string[]> = {
+  downloader: ["instagram downloader", "pinterest downloader", "reels downloader", "free online media downloader"],
+  linkinbio: ["link in bio", "free link in bio", "link in bio india", "free link in bio instagram"],
+  models: ["free glb models", "free 3d models glb", "glb animations free", "glb characters free"],
+  videotogif: ["video to gif", "online video compressor", "mp4 to gif free"],
+  videotoimages: ["video to frames", "video frame extractor", "online video compressor", "crop and compress image"],
+  videocut: ["video cut", "video shorts cutter", "video splitter online free", "cut video for youtube shorts"],
+  games: ["games", "free games", "3d games free no download", "free 3d browser games"],
+  utubeflow: ["free youtube automation", "youtube automation tool"],
+  javaplay: ["java games online", "javaplay", "free java games"],
+};
 
 /* Pre-render every product page at build time. */
 export function generateStaticParams() {
@@ -30,7 +43,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       product.name.toLowerCase(),
       product.category,
       "free online tool",
-      product.tagline
+      product.tagline,
+      ...(PRODUCT_KEYWORDS[product.slug] ?? []),
     ],
     alternates: { canonical: `/products/${product.slug}` },
     openGraph: {
@@ -56,13 +70,16 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   if (!product) notFound();
 
   const detail = product.detail;
-  const related = products.filter((p) => p.slug !== product.slug).slice(0, 3);
+  const currentIdx = products.findIndex((p) => p.slug === product.slug);
+  const rotated = currentIdx >= 0 ? [...products.slice(currentIdx + 1), ...products.slice(0, currentIdx)] : products.filter((p) => p.slug !== product.slug);
+  const related = rotated.slice(0, 3);
   const isLive = isProductLive(product);
   const ctaLabel = product.cta ?? "Access Tool";
   const statusLabel = product.status === "Soon" ? "Coming soon" : product.status;
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd(product)) }} />
       <Navbar />
       <main>
         {/* ============================================================ */}
