@@ -89,7 +89,6 @@ export const metadata: Metadata = {
   publisher: "CodeLove",
   applicationName: "CodeLove",
   category: "technology",
-  alternates: { canonical: SITE },
   // /favicon.ico is served from src/app/favicon.ico. Every icon is the white "C" on a black tile with
   // rounded, transparent corners, matching the other CodeLove tools' favicons.
   icons: {
