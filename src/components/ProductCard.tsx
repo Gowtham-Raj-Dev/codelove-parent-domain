@@ -26,7 +26,7 @@ export default function ProductCard({ product, featured = false }: { product: Pr
         {/* 4:3 keeps the whole illustration in view — a shorter strip cropped the square artwork to its middle. */}
         <div className={`relative flex aspect-[4/3] items-center justify-center bg-gradient-to-br ${product.gradient} ${featured ? "lg:aspect-auto lg:h-full lg:min-h-[19rem]" : ""}`}>
           {product.image ? (
-            <img src={product.image} alt={product.name} className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+            <img src={product.image} alt={product.name} width={800} height={600} className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105" />
           ) : (
             <>
               {/* decorative orbs */}
@@ -81,9 +81,10 @@ export default function ProductCard({ product, featured = false }: { product: Pr
         <div className="mt-6 flex flex-wrap items-center gap-2.5">
           <Link
             href={`/products/${product.slug}`}
+            aria-label={`Explore ${product.name} features and guide`}
             className="group/btn inline-flex items-center justify-center gap-2 rounded-xl border border-[var(--surface-border)] bg-[var(--surface)] px-4 py-2.5 text-sm font-semibold transition hover:border-transparent hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white"
           >
-            Learn More
+            About {product.name}
             <Icon name="arrowRight" size={16} className="transition group-hover/btn:translate-x-0.5" />
           </Link>
           {isLive ? (

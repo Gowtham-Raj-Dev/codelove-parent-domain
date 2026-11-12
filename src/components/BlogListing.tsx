@@ -1,12 +1,30 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { Suspense, useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Icon from "./Icon";
 import Reveal from "./Reveal";
 import ArticleCard from "./ArticleCard";
 import { blogs, blogCategories, type Article } from "@/lib/data";
+
+function QuerySync({
+  onCategory,
+  onQuery,
+}: {
+  onCategory: (c: string) => void;
+  onQuery: (q: string) => void;
+}) {
+  const searchParams = useSearchParams();
+  useEffect(() => {
+    const initial = searchParams.get("category") ?? "";
+    const matched = blogCategories.find((c) => c.toLowerCase() === initial.toLowerCase());
+    if (matched) onCategory(matched);
+    const q = searchParams.get("q") ?? "";
+    if (q) onQuery(q);
+  }, [searchParams, onCategory, onQuery]);
+  return null;
+}
 
 function FeaturedLead({ article }: { article: Article }) {
   return (
@@ -63,17 +81,22 @@ function FeaturedLead({ article }: { article: Article }) {
 }
 
 export default function BlogListing() {
-  const searchParams = useSearchParams();
-  const initial = searchParams.get("category") ?? "All";
-  const matched = blogCategories.find((c) => c.toLowerCase() === initial.toLowerCase());
-  const [active, setActive] = useState<string>(matched ?? "All");
+  const [active, setActive] = useState<string>("All");
+  const [query, setQuery] = useState<string>("");
 
-  const filtered = useMemo(
-    () => (active === "All" ? blogs : blogs.filter((a) => a.category === active)),
-    [active]
-  );
+  const filtered = useMemo(() => {
+    const base = active === "All" ? blogs : blogs.filter((a) => a.category === active);
+    const q = query.trim().toLowerCase();
+    if (!q) return base;
+    return base.filter(
+      (a) =>
+        a.title.toLowerCase().includes(q) ||
+        a.excerpt.toLowerCase().includes(q) ||
+        a.category.toLowerCase().includes(q)
+    );
+  }, [active, query]);
 
-  const showFeatured = active === "All";
+  const showFeatured = active === "All" && !query.trim();
   const lead = showFeatured ? blogs.find((a) => a.featured) ?? blogs[0] : null;
   const grid = lead ? filtered.filter((a) => a.slug !== lead.slug) : filtered;
 
@@ -81,6 +104,9 @@ export default function BlogListing() {
 
   return (
     <>
+      <Suspense fallback={null}>
+        <QuerySync onCategory={setActive} onQuery={setQuery} />
+      </Suspense>
       {/* Filter tabs */}
       <Reveal className="flex flex-wrap items-center gap-2">
         {tabs.map((tab) => {

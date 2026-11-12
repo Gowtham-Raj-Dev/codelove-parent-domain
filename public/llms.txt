@@ -1,0 +1,24 @@
+# CodeLove
+
+> CodeLove builds free, zero-signup web tools, 3D model libraries, browser games, and developer learning guides.
+
+## Main Pages
+- [Home](https://codelove.in): Overview of CodeLove products, ecosystem, and free online tools.
+- [Products](https://codelove.in/products): Directory of all CodeLove web apps with features and direct links.
+- [Learning Center](https://codelove.in/learn): Tutorials and guides for video editing, image compression, 3D models, and creator workflows.
+- [Blog](https://codelove.in/blog): Engineering articles, platform updates, and practical how-tos.
+- [Resources](https://codelove.in/resources): Combined directory of guides, documentation, and free tools.
+- [About](https://codelove.in/about): Story and mission behind CodeLove, founded by Gowtham.
+
+## CodeLove Network Products
+- [Video Cut](https://videocut.codelove.in): Free in-browser video shorts cutter and splitter (9:16 Shorts/Reels, equal parts, ZIP export).
+- [Free 3D Models](https://models.codelove.in): 6,900+ free GLB/glTF 3D models with live in-browser viewer and texture recoloring.
+- [Free 3D Games](https://games.codelove.in): 14+ free browser 3D games powered by WebGL with mobile touch support.
+- [Insta Downloader](https://downloader.codelove.in): Save public Instagram Reels, videos, photos, and Pinterest media in HD.
+- [Link in Bio](https://linkinbio.codelove.in): Free link-in-bio page builder with themes and click analytics.
+- [Video to GIF](https://videotogif.codelove.in): Convert, trim, crop, compress, and optimize GIFs directly in your browser.
+- [Video to Images](https://videotoimages.codelove.in): Extract frames from video, compress video, convert video to MP3, crop, and resize images/videos.
+- [UTubeFlow](https://utubeflow.codelove.in): Free YouTube automation workflow for bulk upload and scheduled publishing.
+- [JavaPlay](https://javaplay.codelove.in): Free J2ME Java phone game emulator running in the browser and on Android.
+- [Gowtham Portfolio](https://gowtham.codelove.in): 3D interactive museum portfolio by CodeLove founder Gowtham.
+

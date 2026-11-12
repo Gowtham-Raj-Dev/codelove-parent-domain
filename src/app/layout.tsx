@@ -28,7 +28,7 @@ const geistMono = Geist_Mono({
 
 const SITE = "https://codelove.in";
 const DESCRIPTION =
-  "Free online tools by CodeLove: media downloader, video shorts cutter, video compressor, video to GIF, video to images, free link in bio builder, 3D GLB model library, free 3D games, YouTube automation, and free Java games.";
+  "CodeLove offers free browser tools, video shorts cutter, 3D GLB models, online 3D & Java games, link in bio pages, and creator automation — no sign-up.";
 
 const NETWORK_URLS = [
   "https://gowtham.codelove.in",
@@ -139,6 +139,16 @@ const themeScript = `
 })();
 `;
 
+const SITE_NAV = [
+  { name: "All Products & Tools", description: "Browse all 10+ free CodeLove web apps and tools.", url: `${SITE}/products` },
+  { name: "Video Cut — Shorts Cutter", description: "Split and crop videos into 9:16 YouTube Shorts & Reels.", url: "https://videocut.codelove.in" },
+  { name: "Free 3D Models (GLB)", description: "6,900+ free GLB/glTF 3D models with live viewer.", url: "https://models.codelove.in" },
+  { name: "Free 3D Browser Games", description: "14+ free 3D games ready to play in your browser.", url: "https://games.codelove.in" },
+  { name: "Learning Center", description: "Step-by-step tutorials and guides across video, 3D, and web.", url: `${SITE}/learn` },
+  { name: "CodeLove Blog", description: "Articles, product deep-dives, and developer guides.", url: `${SITE}/blog` },
+  { name: "About CodeLove", description: "Story, creator Gowtham, and mission behind CodeLove.", url: `${SITE}/about` },
+];
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -156,14 +166,34 @@ const jsonLd = {
       "@type": "Organization",
       "@id": `${SITE}/#organization`,
       name: "CodeLove",
-      alternateName: ["Code Love", "Code With Love", "Code of Love"],
+      legalName: "CodeLove",
+      alternateName: ["Code Love", "Code With Love", "Code of Love", "CodeLove Tools"],
+      slogan: "Everything You Need. One Platform.",
+      foundingDate: "2024",
+      foundingLocation: { "@type": "Country", name: "India" },
       url: SITE,
       sameAs: NETWORK_URLS,
-      logo: `${SITE}/new-logo/android-chrome-512x512.png`,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE}/new-logo/android-chrome-512x512.png`,
+        width: 512,
+        height: 512,
+      },
+      image: [
+        `${SITE}/og.png`,
+        ...products.filter((p) => p.image).map((p) => `${SITE}${p.image}`),
+      ],
       description:
-        "CodeLove builds free online tools: a media downloader, video shorts cutter, video compressor, video and image tools, a link-in-bio builder, a 3D model library, free 3D games, free YouTube automation and free Java phone games.",
-      // the same person as on gowtham.codelove.in, so search engines join the two
+        "CodeLove builds free online tools: media downloader, video shorts cutter, video compressor, video and image tools, link-in-bio builder, 3D model library, 3D games, YouTube automation and Java phone games.",
       founder: { "@id": "https://gowtham.codelove.in/#person" },
+      knowsAbout: ["Video Editing", "Web Tools", "3D GLB Models", "Browser Games", "Creator Economy", "YouTube Automation"],
+      owns: products.map((p) => ({
+        "@type": "WebApplication",
+        name: p.name,
+        url: p.url,
+        applicationCategory: p.category === "Games" ? "GameApplication" : "WebApplication",
+        operatingSystem: "Any",
+      })),
       email: "support@codelove.in",
       contactPoint: [
         { "@type": "ContactPoint", contactType: "customer support", email: "support@codelove.in", availableLanguage: ["English", "Tamil"] },
@@ -176,10 +206,25 @@ const jsonLd = {
       url: SITE,
       name: "CodeLove",
       alternateName: ["Code Love", "Code of Love", "codelove.in"],
+      description: DESCRIPTION,
       creator: { "@id": "https://gowtham.codelove.in/#person" },
       publisher: { "@id": `${SITE}/#organization` },
       inLanguage: "en",
+      potentialAction: {
+        "@type": "SearchAction",
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate: `${SITE}/blog?q={search_term_string}`,
+        },
+        "query-input": "required name=search_term_string",
+      },
     },
+    ...SITE_NAV.map((nav) => ({
+      "@type": "SiteNavigationElement",
+      name: nav.name,
+      description: nav.description,
+      url: nav.url,
+    })),
     {
       "@type": "ItemList",
       name: "CodeLove Products",
@@ -210,6 +255,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        <link rel="sitemap" type="application/xml" href="https://codelove.in/sitemap.xml" />
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <script
           type="application/ld+json"

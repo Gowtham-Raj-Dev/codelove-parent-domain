@@ -66,6 +66,7 @@ export default function ProductsPage() {
 
         {/* Grid */}
         <section className="container-px mx-auto max-w-7xl pb-[50px] pt-6 sm:pb-[50px]">
+          <h2 className="sr-only">All CodeLove Products and Free Web Tools</h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {products.map((product, i) => (
               <Reveal key={product.slug} delay={(i % 3) * 70}>

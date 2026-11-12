@@ -9,7 +9,7 @@ import { resourceHub, docs, articles, products } from "@/lib/data";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Resources",
+  title: "Resources — Free Tools & Guides",
   description:
     "Everything you need in one place — the Learning Center, blog, product guides, free tools and 3D models. Start learning, building and shipping faster.",
   path: "/resources",
@@ -74,9 +74,9 @@ export default function ResourcesPage() {
                   >
                     <Icon name={r.icon} size={22} />
                   </span>
-                  <h3 className="mt-5 font-[family-name:var(--font-display)] text-lg font-bold tracking-tight">
+                  <h2 className="mt-5 font-[family-name:var(--font-display)] text-lg font-bold tracking-tight">
                     {r.title}
-                  </h3>
+                  </h2>
                   <p className="mt-2 flex-1 text-sm leading-relaxed text-[var(--text-muted)]">{r.blurb}</p>
                   <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition group-hover:gap-2.5">
                     {r.cta} <Icon name="arrowRight" size={15} />
@@ -90,7 +90,7 @@ export default function ResourcesPage() {
                 <img src="/images/videotogif.png" alt="Guides for every CodeLove tool" className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--surface)] via-black/20 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-6 text-[var(--text)]">
-                  <h3 className="font-[family-name:var(--font-display)] text-lg font-bold tracking-tight">Learn, Build, Ship</h3>
+                  <h2 className="font-[family-name:var(--font-display)] text-lg font-bold tracking-tight">Learn, Build, Ship</h2>
                   <p className="mt-2 text-sm text-[var(--text-muted)]">Practical guides for every CodeLove tool.</p>
                 </div>
               </div>
@@ -107,9 +107,9 @@ export default function ResourcesPage() {
                   >
                     <Icon name={r.icon} size={22} />
                   </span>
-                  <h3 className="mt-5 font-[family-name:var(--font-display)] text-lg font-bold tracking-tight">
+                  <h2 className="mt-5 font-[family-name:var(--font-display)] text-lg font-bold tracking-tight">
                     {r.title}
-                  </h3>
+                  </h2>
                   <p className="mt-2 flex-1 text-sm leading-relaxed text-[var(--text-muted)]">{r.blurb}</p>
                   <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition group-hover:gap-2.5">
                     {r.cta} <Icon name="arrowRight" size={15} />

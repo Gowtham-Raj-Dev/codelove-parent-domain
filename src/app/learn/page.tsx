@@ -9,9 +9,9 @@ import { activeCategories, articles } from "@/lib/data";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Learning Center",
+  title: "Learning Center — Tutorials & Guides",
   description:
-    "A knowledge hub that grows with you. Browse CodeLove tutorials, explainers and guides organised by topic — video, images, downloads, creator tools and 3D models.",
+    "Browse free CodeLove tutorials, explainers and step-by-step guides by topic — video editing, image compression, downloads, creator tools and 3D models.",
   path: "/learn",
   keywords: [
     "CodeLove",

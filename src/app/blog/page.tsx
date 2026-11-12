@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
@@ -56,9 +55,7 @@ export default function BlogPage() {
 
         {/* Listing */}
         <section className="container-px mx-auto max-w-7xl pb-[50px] pt-6 sm:pb-[50px]">
-          <Suspense fallback={<div className="h-40" />}>
-            <BlogListing />
-          </Suspense>
+          <BlogListing />
         </section>
       </main>
       <Footer />
