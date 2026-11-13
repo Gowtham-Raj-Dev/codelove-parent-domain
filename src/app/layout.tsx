@@ -39,6 +39,7 @@ const NETWORK_URLS = [
   "https://videotogif.codelove.in",
   "https://videotoimages.codelove.in",
   "https://videocut.codelove.in",
+  "https://videomaker.codelove.in",
   "https://utubeflow.codelove.in",
   "https://javaplay.codelove.in",
 ];
@@ -141,6 +142,7 @@ const themeScript = `
 
 const SITE_NAV = [
   { name: "All Products & Tools", description: "Browse all 10+ free CodeLove web apps and tools.", url: `${SITE}/products` },
+  { name: "Free AI Video Maker", description: "Type a script, get a talking cartoon or text video with AI voices — free, no watermark.", url: "https://videomaker.codelove.in" },
   { name: "Video Cut — Shorts Cutter", description: "Split and crop videos into 9:16 YouTube Shorts & Reels.", url: "https://videocut.codelove.in" },
   { name: "Free 3D Models (GLB)", description: "6,900+ free GLB/glTF 3D models with live viewer.", url: "https://models.codelove.in" },
   { name: "Free 3D Browser Games", description: "14+ free 3D games ready to play in your browser.", url: "https://games.codelove.in" },

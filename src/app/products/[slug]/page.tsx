@@ -15,6 +15,7 @@ const PRODUCT_KEYWORDS: Record<string, string[]> = {
   videotogif: ["video to gif", "online video compressor", "mp4 to gif free"],
   videotoimages: ["video to frames", "video frame extractor", "online video compressor", "crop and compress image"],
   videocut: ["video cut", "video shorts cutter", "video splitter online free", "cut video for youtube shorts"],
+  videomaker: ["free ai video maker", "free video maker", "ai video maker free", "free video making online", "script to video", "cartoon video maker", "codelove video maker"],
   games: ["games", "free games", "3d games free no download", "free 3d browser games"],
   utubeflow: ["free youtube automation", "youtube automation tool"],
   javaplay: ["java games online", "javaplay", "free java games"],

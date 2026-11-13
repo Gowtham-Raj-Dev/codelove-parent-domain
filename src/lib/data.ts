@@ -175,6 +175,28 @@ export const products: Product[] = [
     cta: "Open Video Cut",
   },
   {
+    slug: "videomaker",
+    name: "Video Maker",
+    icon: "sparkles",
+    domain: "videomaker.codelove.in",
+    url: "https://videomaker.codelove.in",
+    tagline: "Free AI video maker",
+    description:
+      "Free AI video maker: type a script and get a talking cartoon video with AI voices, lip sync, subtitles and music — or a text-only video with big captions. Tamil, Hindi, Telugu & English. No watermark.",
+    features: [
+      "Script to video with AI voices",
+      "66 cartoon characters with lip sync",
+      "Text-only caption videos",
+      "Free MP4 export up to 4K, no watermark",
+    ],
+    gradient: "from-orange-500 to-amber-500",
+    accent: "#ff5b24",
+    status: "New",
+    category: "Creator",
+    image: "/images/videomaker.png",
+    cta: "Make a Video",
+  },
+  {
     slug: "utubeflow",
     name: "UTubeFlow",
     icon: "youtube",
@@ -313,6 +335,22 @@ export const productDetails: Record<string, ProductDetail> = {
       { q: "Can I use Video Cut as a video shorts cutter?", a: "Yes. Video Cut is built to trim and split long videos into bite-sized clips formatted for YouTube Shorts, Instagram Reels, and vertical feeds." },
       { q: "Does Video Cut upload my videos or add a watermark?", a: "No. Processing runs locally in your browser so files stay private on your device and exports have no watermarks." },
       { q: "Is Video Cut free to use?", a: "Yes, Video Cut is 100% free with no account required." },
+    ],
+  },
+  videomaker: {
+    overview:
+      "Video Maker is CodeLove's free AI video maker. Type a dialogue and 66 ready-made cartoon characters act it out with AI voices from Google Gemini, lip sync worked out from the real sound, word-by-word subtitles, background music and sound effects. Prefer no characters? Text-only mode turns the same script into big captions on a plain screen. It works in Tamil, Tanglish, Telugu, Hindi, Hinglish and English, runs entirely in your browser with your own free Gemini key, and exports an MP4 for YouTube Shorts, Instagram Reels and YouTube — up to 4K, with no watermark.",
+    highlights: ["Free AI video maker", "AI voices & lip sync", "Text-only mode", "No watermark"],
+    steps: [
+      { icon: "fileText", title: "Write the script", text: "Type one line per turn, like Meena: Hello! — or let the AI write it from a topic in your language." },
+      { icon: "user", title: "Pick the look", text: "Choose cartoon characters and voices, or go text-only with big captions on a plain colour screen." },
+      { icon: "sparkles", title: "Add AI voices", text: "Press play: Gemini speaks every line with your free key, mouths sync to the sound, music and effects play underneath." },
+      { icon: "download", title: "Export the MP4", text: "Download for Shorts, Reels or YouTube up to 4K — or send it straight to UTubeFlow to schedule." },
+    ],
+    faqs: [
+      { q: "Is Video Maker really free?", a: "Yes. The site is free with no sign-up and no watermark. The AI voices use Google Gemini through your own free API key, which allows several videos a day." },
+      { q: "Can I make a video without cartoon characters?", a: "Yes. Text-only mode shows big word-by-word captions on a plain screen with the same AI voices, music and sound effects." },
+      { q: "Which languages does it support?", a: "Tamil, Tanglish, Telugu, Hindi, Hinglish and English, with matching subtitle fonts for each." },
     ],
   },
   videotoimages: {
@@ -1493,6 +1531,7 @@ export const footerColumns = [
       { label: "Video to GIF", href: "/products/videotogif" },
       { label: "Video to Images", href: "/products/videotoimages" },
       { label: "Video Cut", href: "/products/videocut" },
+      { label: "Video Maker", href: "/products/videomaker" },
       { label: "3D Games", href: "/products/games" },
       { label: "UTubeFlow", href: "/products/utubeflow" },
       { label: "JavaPlay", href: "/products/javaplay" },
@@ -1512,6 +1551,7 @@ export const footerColumns = [
       { label: "Video to GIF", href: "https://videotogif.codelove.in" },
       { label: "Video to Images", href: "https://videotoimages.codelove.in" },
       { label: "Video Cut", href: "https://videocut.codelove.in" },
+      { label: "Free AI Video Maker", href: "https://videomaker.codelove.in" },
       { label: "Free YouTube Automation", href: "https://utubeflow.codelove.in" },
       { label: "Free Java Games", href: "https://javaplay.codelove.in" },
     ],
