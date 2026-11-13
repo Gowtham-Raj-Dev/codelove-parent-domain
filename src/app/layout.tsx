@@ -265,6 +265,8 @@ export default function RootLayout({
         />
         {/* Google AdSense — only rendered once a publisher ID is set in src/lib/adsense.ts */}
         {ADSENSE_CLIENT ? <meta name="google-adsense-account" content={ADSENSE_CLIENT} /> : null}
+        {/* CodeLove Analytics (admin.codelove.in) */}
+        <script defer src="https://admin.codelove.in/t.js" />
       </head>
       <body className="min-h-full">
         <NextTopLoader
