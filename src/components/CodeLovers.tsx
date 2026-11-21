@@ -23,11 +23,19 @@ export const codeLoversFaqs: { q: string; a: string }[] = [
     a: "Yes. There are no paid plans, and the video, GIF and image tools do their work inside your browser, so most files are never uploaded. The sites are paid for by ads.",
   },
   {
+    q: "Is CodeLove the same as Code Love or Code with Love?",
+    a: "Yes. CodeLove is also written Code Love or Code with Love. It is one free tools site at codelove.in, made by Gowtham, with the tools, guides and blog all in one place.",
+  },
+  {
+    q: "How do I start using CodeLove tools?",
+    a: "Open the products page, pick a tool such as Video Cut or Video to GIF, and use it straight in your browser. There is nothing to install and no account to create.",
+  },
+  {
     q: "Who makes CodeLove?",
     a: "Gowtham (Gowthamraj), a solo full-stack developer from India, designs, codes and runs every CodeLove site. You can read his story on the About page or see his portfolio at gowtham.codelove.in.",
   },
   {
-    q: "Does CodeLove have web development tutorials?",
+    q: "How do I find web development tutorials on CodeLove?",
     a: "The Learning Center is mostly about video, images, 3D models and YouTube. For web developers, the 3D guides explain GLB files and how to load free 3D models in three.js, Blender or a game engine.",
   },
 ];

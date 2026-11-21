@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 import Icon from "@/components/Icon";
 import ArticleCard from "@/components/ArticleCard";
-import { activeCategories, articles } from "@/lib/data";
+import { activeCategories, articles, articlesByCategory } from "@/lib/data";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
@@ -175,8 +175,35 @@ export default function LearnPage() {
             </div>
           </section>
         )}
+        {/* ============================================================ */}
+        {/*  ALL GUIDES — plain links, so every guide is one click away  */}
+        {/* ============================================================ */}
+        <section className="container-px mx-auto max-w-7xl pb-[50px]" aria-labelledby="all-guides">
+          <h2 id="all-guides" className="font-[family-name:var(--font-display)] text-2xl font-bold tracking-tight sm:text-3xl">
+            All {totalArticles} guides by topic
+          </h2>
+          <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {activeCategories.map((c) => (
+              <nav key={c.slug} aria-label={`${c.title} guides`}>
+                <h3 className="font-[family-name:var(--font-display)] text-base font-bold tracking-tight">
+                  <Link href={`/learn/${c.slug}`} className="transition hover:text-primary">
+                    {c.title} guides
+                  </Link>
+                </h3>
+                <ul className="mt-3 space-y-2 text-sm">
+                  {articlesByCategory(c.title).map((a) => (
+                    <li key={a.slug}>
+                      <Link href={`/learn/guide/${a.slug}`} className="text-[var(--text-muted)] transition hover:text-primary">
+                        {a.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            ))}
+          </div>
+        </section>
       </main>
-      <Footer />
-    </>
+      <Footer />    </>
   );
 }

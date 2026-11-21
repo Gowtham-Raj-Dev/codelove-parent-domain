@@ -4,6 +4,22 @@ import HeartButton from "./HeartButton";
 import { ContactLinks } from "./ContactLinks";
 import { footerColumns } from "@/lib/data";
 
+// Every site of the CodeLove network, with descriptive anchor text, in the footer of every page.
+const networkSites = [
+  { label: "Free 3D models (GLB) library", href: "https://models.codelove.in" },
+  { label: "Free 3D browser games", href: "https://games.codelove.in" },
+  { label: "Instagram and Pinterest downloader", href: "https://downloader.codelove.in" },
+  { label: "Link in bio page builder", href: "https://linkinbio.codelove.in" },
+  { label: "Video to GIF converter", href: "https://videotogif.codelove.in" },
+  { label: "Video to images frame extractor", href: "https://videotoimages.codelove.in" },
+  { label: "Video Cut: video to YouTube Shorts cutter", href: "https://videocut.codelove.in" },
+  { label: "Video Maker: AI cartoon videos from a script", href: "https://videomaker.codelove.in" },
+  { label: "UTubeFlow: free YouTube automation", href: "https://utubeflow.codelove.in" },
+  { label: "JavaPlay: old Java phone games emulator", href: "https://javaplay.codelove.in" },
+  { label: "CodeLove Apps for Android", href: "https://apps.codelove.in" },
+  { label: "Gowtham, creative web developer portfolio", href: "https://gowtham.codelove.in" },
+];
+
 export default function Footer() {
   return (
     <footer className="relative overflow-hidden border-t border-[var(--surface-border)] bg-[var(--bg-elevated)]">
@@ -41,7 +57,20 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-[var(--surface-border)] pt-8 sm:flex-row">
+        <nav aria-label="CodeLove network" className="mt-12 border-t border-[var(--surface-border)] pt-8">
+          <h3 className="text-sm font-semibold">The CodeLove network</h3>
+          <ul className="mt-4 grid gap-x-6 gap-y-2.5 sm:grid-cols-2 lg:grid-cols-3">
+            {networkSites.map((l) => (
+              <li key={l.href}>
+                <a href={l.href} className="text-sm text-[var(--text-muted)] transition hover:text-primary">
+                  {l.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-[var(--surface-border)] pt-8 sm:flex-row">
           <div className="flex items-center text-sm text-[var(--text-faint)]">
             <span>&copy; {new Date().getFullYear()} CodeLove. All rights reserved.</span>
           </div>
