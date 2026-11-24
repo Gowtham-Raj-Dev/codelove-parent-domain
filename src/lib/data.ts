@@ -275,6 +275,30 @@ export const products: Product[] = [
     cardImage: "/images/products/javaplay.jpg",
     cta: "Play Java Games",
   },
+  {
+    slug: "webly",
+    name: "Webly",
+    icon: "sparkles",
+    domain: "webly.codelove.in",
+    url: "https://webly.codelove.in",
+    tagline: "Website Analytics & SEO Problem Fixer",
+    description:
+      "All your website metrics in one place. Connect Google Analytics, Search Console and AdSense, audit 30+ SEO and speed points, and get instant copy-paste code fixes.",
+    features: [
+      "GA4, Search Console & AdSense in one place",
+      "30+ point deep technical SEO audit",
+      "Instant copy-paste code fixes & AI prompts",
+      "Keyword rank tracking & broken links monitor",
+    ],
+    gradient: "from-indigo-600 to-purple-600",
+    accent: "#4f46e5",
+    status: "Live",
+    category: "Analytics & SEO",
+    logo: "/logos/webly.svg",
+    ...shots("webly", ["Google Analytics, Search Console and AdSense in one place", "Deep technical SEO and speed audit with score breakdown", "Instant copy-paste code fixes and AI prompts for every problem"]),
+    cardImage: "/images/products/webly.jpg",
+    cta: "Open Webly",
+  },
 ];
 
 /* ------------------------------------------------------------------ */
@@ -1544,6 +1568,7 @@ export const footerColumns = [
       { label: "3D Games", href: "/products/games" },
       { label: "UTubeFlow", href: "/products/utubeflow" },
       { label: "JavaPlay", href: "/products/javaplay" },
+      { label: "Webly (Analytics & SEO)", href: "https://webly.codelove.in" },
       { label: "All Products", href: "/products" },
     ],
   },

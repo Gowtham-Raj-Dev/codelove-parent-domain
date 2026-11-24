@@ -16,6 +16,7 @@ const networkSites = [
   { label: "Video Maker: AI cartoon videos from a script", href: "https://videomaker.codelove.in" },
   { label: "UTubeFlow: free YouTube automation", href: "https://utubeflow.codelove.in" },
   { label: "JavaPlay: old Java phone games emulator", href: "https://javaplay.codelove.in" },
+  { label: "Webly: website analytics, SEO & problem fixer", href: "https://webly.codelove.in" },
   { label: "CodeLove Apps for Android", href: "https://apps.codelove.in" },
   { label: "Gowtham, creative web developer portfolio", href: "https://gowtham.codelove.in" },
 ];
