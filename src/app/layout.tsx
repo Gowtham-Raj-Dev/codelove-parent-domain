@@ -42,6 +42,9 @@ const NETWORK_URLS = [
   "https://videomaker.codelove.in",
   "https://utubeflow.codelove.in",
   "https://javaplay.codelove.in",
+  "https://satisfying-video-maker.codelove.in",
+  "https://voltarc.codelove.in",
+  "https://iloveconvert.codelove.in",
 ];
 // Default social preview image (public/og.png, 1200x630). Pages without their own image fall back to it.
 const OG_IMAGE = { url: "/og.png", width: 1200, height: 630, alt: "CodeLove — free online tools for creators and developers" };
