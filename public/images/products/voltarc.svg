@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" fill="none">
+  <rect width="1200" height="900" rx="32" fill="#050507"/>
+  <circle cx="940" cy="210" r="240" fill="#FF1E42" fill-opacity="0.22"/>
+  <circle cx="230" cy="700" r="220" fill="#FF1E42" fill-opacity="0.12"/>
+  <rect x="110" y="100" width="980" height="700" rx="28" fill="#0E0E13" stroke="#27272A" stroke-width="2"/>
+  <rect x="150" y="145" width="900" height="310" rx="22" fill="#18181F" stroke="#FF1E42" stroke-opacity="0.5"/>
+  <text x="200" y="230" fill="#FF1E42" font-family="system-ui, sans-serif" font-size="18" font-weight="800">VOLTARC CLOUD ARCADE</text>
+  <text x="200" y="295" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="48" font-weight="800">3,000+ Instant Browser Games</text>
+  <text x="200" y="345" fill="#A1A1AA" font-family="system-ui, sans-serif" font-size="20">3D WebGL, Racing, Puzzle, Arcade &amp; Portrait Mobile — Zero Downloads</text>
+  <rect x="200" y="375" width="180" height="48" rx="24" fill="#FF1E42"/>
+  <text x="290" y="405" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="16" font-weight="800">PLAY NOW</text>
+  <rect x="150" y="485" width="280" height="270" rx="20" fill="#14141B" stroke="#27272A"/>
+  <rect x="175" y="510" width="230" height="145" rx="14" fill="#271319"/>
+  <text x="175" y="690" fill="#F4F4F5" font-family="system-ui, sans-serif" font-size="20" font-weight="700">3D Racing &amp; Drift</text>
+  <text x="175" y="722" fill="#A1A1AA" font-family="system-ui, sans-serif" font-size="15">Keyboard &amp; Touch Ready</text>
+  <rect x="460" y="485" width="280" height="270" rx="20" fill="#14141B" stroke="#27272A"/>
+  <rect x="485" y="510" width="230" height="145" rx="14" fill="#172033"/>
+  <text x="485" y="690" fill="#F4F4F5" font-family="system-ui, sans-serif" font-size="20" font-weight="700">Brain &amp; Merge Puzzle</text>
+  <text x="485" y="722" fill="#A1A1AA" font-family="system-ui, sans-serif" font-size="15">Desktop &amp; Portrait Mode</text>
+  <rect x="770" y="485" width="280" height="270" rx="20" fill="#14141B" stroke="#27272A"/>
+  <rect x="795" y="510" width="230" height="145" rx="14" fill="#142923"/>
+  <text x="795" y="690" fill="#F4F4F5" font-family="system-ui, sans-serif" font-size="20" font-weight="700">Theater Fullscreen</text>
+  <text x="795" y="722" fill="#A1A1AA" font-family="system-ui, sans-serif" font-size="15">190 Categories &amp; Filters</text>
+</svg>

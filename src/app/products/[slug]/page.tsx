@@ -10,8 +10,11 @@ import { products, getProduct, isProductLive } from "@/lib/data";
 import { productJsonLd } from "@/lib/seo";
 
 const PRODUCT_KEYWORDS: Record<string, string[]> = {
-  downloader: ["instagram downloader", "pinterest downloader", "reels downloader", "free online media downloader"],
-  linkinbio: ["link in bio", "free link in bio", "link in bio india", "free link in bio instagram"],
+  iloveconvert: ["iloveconvert", "online image converter", "pdf tools", "background remover", "free browser converter"],
+  voltarc: ["voltarc", "instant browser games", "html5 cloud arcade", "webgl games"],
+  "satisfying-video-maker": ["satisfying video maker", "physics simulation studio", "asmr canvas generator"],
+  webly: ["webly", "website analytics", "technical seo audit", "adsense health check"],
+  linkinbio: ["link in bio", "free link in bio", "link in bio creator", "bio page analytics"],
   models: ["free glb models", "free 3d models glb", "glb animations free", "glb characters free"],
   videotogif: ["video to gif", "online video compressor", "mp4 to gif free"],
   videotoimages: ["video to frames", "video frame extractor", "online video compressor", "crop and compress image"],

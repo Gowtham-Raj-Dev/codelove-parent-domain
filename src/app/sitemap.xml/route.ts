@@ -5,15 +5,14 @@ export const dynamic = "force-static";
 
 /**
  * /sitemap.xml — written at build time (static export), so every deploy refreshes <lastmod>.
- * Routes come from the same data that each page's generateStaticParams uses, so new products,
- * guides, blog posts and legal pages are listed automatically.
- * URLs have no trailing slash, matching each page's canonical.
+ * Routes come from the same data that each page's generateStaticParams uses.
  */
 export function GET() {
   const lastmod = new Date().toISOString();
 
   const paths = [
     "",
+    "/tools",
     "/about",
     "/blog",
     "/contact",
@@ -21,9 +20,7 @@ export function GET() {
     "/products",
     "/resources",
     ...products.map((product) => `/products/${product.slug}`),
-    // Learning Center guides live under /learn/guide.
     ...articles.map((article) => `/learn/guide/${article.slug}`),
-    // Only categories that have guides are indexable; empty ones are noindex and left out.
     ...activeCategories.map((category) => `/learn/${category.slug}`),
     ...blogs.map((post) => `/blog/${post.slug}`),
     ...legalPages.map((page) => `/legal/${page.slug}`),

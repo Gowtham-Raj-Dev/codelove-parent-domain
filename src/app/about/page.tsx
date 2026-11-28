@@ -11,7 +11,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "About Gowtham — The Maker of CodeLove",
   description:
-    "Gowtham (Gowthamraj) builds CodeLove alone: fast, free web tools for creators and code lovers. Learn what I'm building and why.",
+    "Gowtham (Gowthamraj) builds CodeLove independently: fast, privacy-respecting web tools, technical guides, and interactive utilities with zero paywalls.",
   path: "/about",
 });
 
@@ -36,17 +36,22 @@ export default function AboutPage() {
                 Built by one person, <span className="text-gradient">out loud</span>
               </h1>
               <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-[var(--text-muted)] sm:text-lg">
-                I&apos;m Gowthamraj — the solo developer designing, building and shipping every CodeLove tool, in the
-                open, one release at a time.
+                I&apos;m Gowthamraj — the solo developer designing, building and shipping every CodeLove tool, guide, and interactive utility from India.
               </p>
 
               <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
                 <Link
-                  href="/products"
+                  href="/tools"
                   className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-primary to-secondary px-6 py-3.5 text-sm font-semibold text-white shadow-[var(--shadow-glow)] transition hover:-translate-y-0.5 hover:brightness-110"
                 >
-                  Explore products
+                  Open Built-In Tools
                   <Icon name="arrowRight" size={16} className="transition group-hover:translate-x-0.5" />
+                </Link>
+                <Link
+                  href="/products"
+                  className="inline-flex items-center gap-2 rounded-xl border border-[var(--surface-border)] bg-[var(--surface)] px-6 py-3.5 text-sm font-semibold transition hover:text-[var(--text)]"
+                >
+                  Explore products
                 </Link>
                 <Link
                   href="/contact"
@@ -66,19 +71,33 @@ export default function AboutPage() {
         {/* Scroll-pinned code editor */}
         <AboutEditor toolCount={products.length} />
 
-        {/* Story */}
+        {/* Story & Engineering Standards */}
         <section className="container-px mx-auto max-w-3xl pb-4">
           <Reveal className="space-y-5 text-base leading-relaxed text-[var(--text-muted)]">
+            <h2 className="font-[family-name:var(--font-display)] text-2xl font-bold tracking-tight text-[var(--text)]">
+              Why CodeLove exists
+            </h2>
             <p>
-              CodeLove started with a simple frustration: the tools I reached for every day were scattered across
-              a dozen cluttered, ad-heavy sites. I wanted one place — clean, quick and honest — where a tool does
-              exactly what it says and then gets out of your way.
+              CodeLove started with a practical frustration: everyday utilities — trimming a clip into vertical Shorts,
+              compressing an image cleanly, inspecting JSON, or testing a 3D GLB file — were buried behind slow upload queues,
+              forced account walls, or deceptive download buttons.
             </p>
             <p>
-              So I started building them myself, one product at a time. Everything you see here is made by a single
-              person, which means it&apos;s early and always evolving — but it also means I can move fast, keep
-              things simple and answer you directly. If something feels rough, tell me. That feedback is exactly
-              what shapes what I build next.
+              I wanted one clean engineering home where tools process files directly inside modern browser APIs (Canvas,
+              WebAssembly, WebAudio, and WebGL) so users keep privacy over their footage and images without waiting on server
+              queues.
+            </p>
+            <h2 className="pt-3 font-[family-name:var(--font-display)] text-2xl font-bold tracking-tight text-[var(--text)]">
+              How tools &amp; guides are verified
+            </h2>
+            <p>
+              Every product and written guide is authored and tested directly on real desktop and mobile browsers before launch.
+              When a file format trade-off changes or browser codec support improves, guides carry explicit last-updated dates
+              and practical examples. If you find an error or broken asset, you can message me directly on the{" "}
+              <Link href="/contact" className="font-semibold text-primary hover:underline">
+                Contact page
+              </Link>
+              .
             </p>
           </Reveal>
         </section>
@@ -116,7 +135,7 @@ export default function AboutPage() {
                   Try what I&apos;ve built so far
                 </h2>
                 <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-white/80 sm:text-base">
-                  {products.length} free tools and counting — no sign-up, no limits. Have an idea or found a bug?
+                  {products.length} free tools plus the built-in toolkit — no sign-up, no limits. Have an idea or found a bug?
                   I&apos;d love to hear from you.
                 </p>
                 <div className="mt-7 flex flex-wrap items-center justify-center gap-3">

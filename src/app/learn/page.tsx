@@ -51,8 +51,8 @@ export default function LearnPage() {
                 A knowledge hub that <span className="theme-text-gradient">grows with you</span>
               </h1>
               <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-[var(--text-muted)] sm:text-lg">
-                Browse tutorials, explainers and guides organised by topic — video, images, downloads,
-                creator tools and 3D models.
+                Browse tutorials, technical explainers, and step-by-step guides organised by topic — video, images,
+                WebAssembly optimization, creator tools, and 3D models.
               </p>
 
               <div className="mt-8 flex flex-wrap items-center justify-center gap-3">

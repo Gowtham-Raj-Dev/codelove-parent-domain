@@ -4,11 +4,14 @@ import HeartButton from "./HeartButton";
 import { ContactLinks } from "./ContactLinks";
 import { footerColumns } from "@/lib/data";
 
-// Every site of the CodeLove network, with descriptive anchor text, in the footer of every page.
+// Verified product apps & studios in the CodeLove ecosystem.
 const networkSites = [
   { label: "Free 3D models (GLB) library", href: "https://models.codelove.in" },
+  { label: "ILoveConvert: 54 browser utilities & converters", href: "https://iloveconvert.codelove.in" },
+  { label: "VOLTARC: instant HTML5 & 3D cloud arcade", href: "https://voltarc.codelove.in" },
+  { label: "Satisfying Video Maker: physics & ASMR studio", href: "https://satisfying-video-maker.codelove.in" },
+  { label: "Webly: website analytics, SEO & problem fixer", href: "https://webly.codelove.in" },
   { label: "Free 3D browser games", href: "https://games.codelove.in" },
-  { label: "Instagram and Pinterest downloader", href: "https://downloader.codelove.in" },
   { label: "Link in bio page builder", href: "https://linkinbio.codelove.in" },
   { label: "Video to GIF converter", href: "https://videotogif.codelove.in" },
   { label: "Video to images frame extractor", href: "https://videotoimages.codelove.in" },
@@ -16,10 +19,6 @@ const networkSites = [
   { label: "Video Maker: AI cartoon videos from a script", href: "https://videomaker.codelove.in" },
   { label: "UTubeFlow: free YouTube automation", href: "https://utubeflow.codelove.in" },
   { label: "JavaPlay: old Java phone games emulator", href: "https://javaplay.codelove.in" },
-  { label: "VOLTARC: instant HTML5 & 3D cloud arcade", href: "https://voltarc.codelove.in" },
-  { label: "Satisfying Video Maker: physics & ASMR studio", href: "https://satisfying-video-maker.codelove.in" },
-  { label: "ILoveConvert: free online multi-tools & converters", href: "https://iloveconvert.codelove.in" },
-  { label: "Webly: website analytics, SEO & problem fixer", href: "https://webly.codelove.in" },
   { label: "CodeLove Apps for Android", href: "https://apps.codelove.in" },
   { label: "Gowtham, creative web developer portfolio", href: "https://gowtham.codelove.in" },
 ];
@@ -36,8 +35,7 @@ export default function Footer() {
               <Logo variant="footer" className="h-9" />
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-[var(--text-muted)]">
-              CodeLove tools are free online tools for code lovers, creators and developers — free video tools, a
-              link-in-bio builder, a 3D model library and browser games.
+              CodeLove builds browser-local utilities, creator video editors, interactive 3D tools, and practical engineering tutorials with zero paywalls.
             </p>
           </div>
 

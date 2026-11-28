@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Icon from "./Icon";
 import ProductLogo from "./ProductLogo";
 import Reveal from "./Reveal";
@@ -10,7 +11,7 @@ const floating = [
   { p: products[3], className: "right-[8%] bottom-[12%]", delay: "0.4s", anim: "animate-float" },
 ];
 
-const trust = ["Developers", "Creators", "Students", "Marketers", "Designers", "Businesses"];
+const trust = ["Developers", "Creators", "Students", "Marketers", "Designers", "Educators"];
 
 export default function Hero() {
   return (
@@ -46,18 +47,16 @@ export default function Hero() {
 
       <div className="container-px mx-auto max-w-4xl text-center">
         <Reveal>
-          <a
-            href="https://models.codelove.in"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/tools"
             className="group inline-flex items-center gap-2 rounded-full border border-[var(--surface-border)] bg-[var(--surface)] py-1.5 pl-1.5 pr-4 text-sm backdrop-blur"
           >
             <span className="rounded-full bg-gradient-to-r from-primary to-secondary px-2.5 py-0.5 text-xs font-semibold text-white">
               New
             </span>
-            <span className="text-[var(--text-muted)]">Free 3D Models library is now live</span>
+            <span className="text-[var(--text-muted)]">Built-in Browser Tools now live right on codelove.in</span>
             <Icon name="arrowRight" size={14} className="text-[var(--text-faint)] transition group-hover:translate-x-0.5" />
-          </a>
+          </Link>
         </Reveal>
 
         <Reveal delay={80}>
@@ -86,34 +85,34 @@ export default function Hero() {
 
         <Reveal delay={200}>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-[var(--text-muted)] sm:text-lg">
-            CodeLove tools are free online tools for code lovers and creators — free video tools, an AI video
-            maker, a link-in-bio builder, a 3D model library and browser games — plus step-by-step guides.
+            Run browser-local image, video bitrate, and SEO utilities right here on codelove.in, or explore dedicated
+            creative studios, 3D GLB models, and instant browser games — backed by hands-on technical guides.
           </p>
         </Reveal>
 
         <Reveal delay={260}>
           <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <a
-              href="#products"
+            <Link
+              href="/tools"
               className="btn-shine animate-shimmer flex w-full items-center justify-center gap-2 rounded-xl px-6 py-3.5 text-sm font-semibold text-white shadow-[var(--shadow-glow)] transition hover:brightness-110 sm:w-auto"
             >
-              Explore Products
+              Open Built-In Tools
               <Icon name="arrowRight" size={16} />
-            </a>
-            <a
-              href="#articles"
+            </Link>
+            <Link
+              href="/products"
               className="flex w-full items-center justify-center gap-2 rounded-xl border border-[var(--surface-border)] bg-[var(--surface)] px-6 py-3.5 text-sm font-semibold backdrop-blur transition hover:shadow-sm sm:w-auto"
             >
-              <Icon name="fileText" size={16} />
-              Read Articles
-            </a>
+              <Icon name="layout" size={16} />
+              Explore All Apps
+            </Link>
           </div>
         </Reveal>
 
         <Reveal delay={320}>
           <div className="mt-10">
             <p className="text-xs font-medium uppercase tracking-wider text-[var(--text-faint)]">
-              Trusted by millions of
+              Built cleanly for
             </p>
             <div className="mt-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
               {trust.map((t) => (

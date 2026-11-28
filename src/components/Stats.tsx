@@ -3,16 +3,18 @@
 import { useEffect, useRef, useState } from "react";
 import { stats } from "@/lib/data";
 
-function useCountUp(target: number, active: boolean, duration = 1600) {
-  const [value, setValue] = useState(0);
+function useCountUp(target: number, active: boolean, duration = 900) {
+  // Initialize at target so SSR HTML and initial paint always show factual figures, never "0+".
+  const [value, setValue] = useState(target);
   useEffect(() => {
-    if (!active) return;
+    if (!active || target <= 0) return;
     let raf = 0;
     const start = performance.now();
+    const startFrom = target * 0.65;
     const tick = (now: number) => {
       const t = Math.min((now - start) / duration, 1);
       const eased = 1 - Math.pow(1 - t, 3);
-      setValue(target * eased);
+      setValue(startFrom + (target - startFrom) * eased);
       if (t < 1) raf = requestAnimationFrame(tick);
     };
     raf = requestAnimationFrame(tick);

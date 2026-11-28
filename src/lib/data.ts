@@ -42,27 +42,78 @@ export const isProductLive = (product: Product) => product.status !== "Soon";
 
 export const products: Product[] = [
   {
-    slug: "downloader",
-    name: "Insta Downloader",
-    icon: "download",
-    domain: "downloader.codelove.in",
-    url: "https://downloader.codelove.in",
-    tagline: "Free Instagram downloader",
+    slug: "videomaker",
+    name: "Video Maker",
+    icon: "sparkles",
+    domain: "videomaker.codelove.in",
+    url: "https://videomaker.codelove.in",
+    tagline: "Free AI video maker",
     description:
-      "Download public Instagram Reels, videos and photos in HD with no watermark and no sign-up — plus Pinterest videos and images — from a clean, fast interface built for creators.",
+      "Free AI video maker: type a script and get a talking cartoon video with AI voices, lip sync, subtitles and music — or a text-only video with big captions. Tamil, Hindi, Telugu & English. No watermark.",
     features: [
-      "Instagram video & Reels downloader",
-      "Pinterest video downloader",
-      "Pinterest image downloader",
-      "Batch & multi-link downloading",
+      "AI writes the script — you check it first",
+      "66 cartoon characters, AI voices & lip sync",
+      "Edit any line on the timeline; own video & music",
+      "Free MP4 export up to 4K, no watermark",
     ],
-    gradient: "from-blue-500 to-indigo-600",
-    accent: "#3b82f6",
-    status: "Live",
+    gradient: "from-orange-500 to-amber-500",
+    accent: "#ff5b24",
+    status: "New",
+    category: "Creator",
+    logo: "/logos/videomaker.svg",
+    ...shots("videomaker", ["Turn a script into a talking cartoon video","The editor: script on the left, live preview and a voice/scene/music timeline","Write the dialogue, pick characters, export an MP4"]),
+    cardImage: "/images/products/videomaker.jpg",
+    cta: "Make a Video",
+  },
+  {
+    slug: "videocut",
+    name: "Video Cut",
+    tagline: "Free video shorts cutter & splitter in your browser",
+    description:
+      "Cut, trim, and split long videos into crisp 9:16 vertical Shorts, Reels, and highlights right inside your browser with zero uploads and no watermarks.",
+    domain: "videocut.codelove.in",
+    url: "https://videocut.codelove.in",
+    icon: "scissors",
+    features: [
+      "15–60 s 9:16 Shorts or equal parts",
+      "Blurred 9:16 background, crop or letterbox",
+      "Tamil, Telugu, Hindi & English audio track picker",
+      "One ZIP download — or send to UTubeFlow",
+    ],
+    gradient: "from-orange-500 to-rose-600",
+    accent: "#f97316",
+    status: "New",
     category: "Media",
-    logo: "/logos/downloader.svg",
-    ...shots("downloader", ["Paste a public Reel, video or photo link and download it in HD","The Instagram video downloader, with single and multi-link modes","Pinterest video downloader — the same paste-and-save flow"]),
-    cardImage: "/images/products/downloader.jpg",
+    logo: "/logos/videocut.svg",
+    ...shots("videocut", ["Split long videos into parts and 9:16 Shorts","The VideoCut Studio editor with a clip loaded: trim, split, frame and add text","See how VideoCut works in a two-minute guide"]),
+    cardImage: "/images/products/videocut.jpg",
+    cta: "Open Video Cut",
+  },
+  {
+    slug: "iloveconvert",
+    name: "ILoveConvert",
+    icon: "sliders",
+    domain: "iloveconvert.codelove.in",
+    url: "https://iloveconvert.codelove.in",
+    tagline: "54 free browser-local utilities & converters",
+    description:
+      "Convert, compress, resize, crop, erase backgrounds with precision brush refinement, and manage PDF or SVG files right inside your browser with zero uploads.",
+    features: [
+      "54 local image, PDF, vector & utility tools",
+      "Split preview with manual brush & clear tools",
+      "Batch ZIP export for multi-file image jobs",
+      "Zero server uploads & no sign-up required",
+    ],
+    gradient: "from-rose-600 to-red-600",
+    accent: "#e11d48",
+    status: "New",
+    category: "Utilities",
+    logo: "/logos/iloveconvert.svg",
+    image: "/images/products/iloveconvert.svg",
+    cardImage: "/images/products/iloveconvert.svg",
+    screens: [],
+    phone: "",
+    cta: "Open ILoveConvert",
   },
   {
     slug: "linkinbio",
@@ -109,6 +160,58 @@ export const products: Product[] = [
     logo: "/logos/models.svg",
     ...shots("models", ["6,700+ free 3D models with a live preview on the home page","Browse by category — here, free vehicle models","The full catalogue: filter by category and download GLB files"]),
     cardImage: "/images/products/models.jpg",
+  },
+  {
+    slug: "voltarc",
+    name: "VOLTARC",
+    icon: "play",
+    domain: "voltarc.codelove.in",
+    url: "https://voltarc.codelove.in",
+    tagline: "Instant-play browser cloud arcade",
+    description:
+      "Discover over 3,000 instant-play HTML5 and 3D WebGL games organized across 190 genres — with portrait phone stages, light/dark theater mode, favorites, and zero downloads.",
+    features: [
+      "3,000+ instant-play HTML5 & 3D WebGL games",
+      "190 genres with instant search & device filters",
+      "Desktop widescreen & portrait phone stages",
+      "Saved local favorites & recently played history",
+    ],
+    gradient: "from-red-600 to-rose-600",
+    accent: "#ff1e42",
+    status: "New",
+    category: "Games",
+    logo: "/logos/voltarc.svg",
+    image: "/images/products/voltarc.svg",
+    cardImage: "/images/products/voltarc.svg",
+    screens: [],
+    phone: "",
+    cta: "Open Arcade",
+  },
+  {
+    slug: "satisfying-video-maker",
+    name: "Satisfying Video Maker",
+    icon: "palette",
+    domain: "satisfying-video-maker.codelove.in",
+    url: "https://satisfying-video-maker.codelove.in",
+    tagline: "Browser physics & ASMR video studio",
+    description:
+      "Play interactive 60 FPS geometric physics simulations, trigger harmonic MIDI & audio notes on collisions, customize parameters, and export clean 9:16 vertical videos in your browser.",
+    features: [
+      "100+ interactive physics simulation presets",
+      "Real-time WebAudio & harmonic MIDI collision sound",
+      "Export vertical 9:16 & widescreen videos locally",
+      "Zero watermarks & instant parameter controls",
+    ],
+    gradient: "from-emerald-500 to-cyan-600",
+    accent: "#10b981",
+    status: "New",
+    category: "Media",
+    logo: "/logos/satisfying-video-maker.svg",
+    image: "/images/products/satisfying-video-maker.svg",
+    cardImage: "/images/products/satisfying-video-maker.svg",
+    screens: [],
+    phone: "",
+    cta: "Launch Studio",
   },
   {
     slug: "videotogif",
@@ -181,54 +284,6 @@ export const products: Product[] = [
     cta: "Play Games",
   },
   {
-    slug: "videocut",
-    name: "Video Cut",
-    tagline: "Free video shorts cutter & splitter in your browser",
-    description:
-      "Cut, trim, and split long videos into crisp 9:16 vertical Shorts, Reels, and highlights right inside your browser with zero uploads and no watermarks.",
-    domain: "videocut.codelove.in",
-    url: "https://videocut.codelove.in",
-    icon: "scissors",
-    features: [
-      "15–60 s 9:16 Shorts or equal parts",
-      "Blurred 9:16 background, crop or letterbox",
-      "Tamil, Telugu, Hindi & English audio track picker",
-      "One ZIP download — or send to UTubeFlow",
-    ],
-    gradient: "from-orange-500 to-rose-600",
-    accent: "#f97316",
-    status: "New",
-    category: "Media",
-    logo: "/logos/videocut.svg",
-    ...shots("videocut", ["Split long videos into parts and 9:16 Shorts","The VideoCut Studio editor with a clip loaded: trim, split, frame and add text","See how VideoCut works in a two-minute guide"]),
-    cardImage: "/images/products/videocut.jpg",
-    cta: "Open Video Cut",
-  },
-  {
-    slug: "videomaker",
-    name: "Video Maker",
-    icon: "sparkles",
-    domain: "videomaker.codelove.in",
-    url: "https://videomaker.codelove.in",
-    tagline: "Free AI video maker",
-    description:
-      "Free AI video maker: type a script and get a talking cartoon video with AI voices, lip sync, subtitles and music — or a text-only video with big captions. Tamil, Hindi, Telugu & English. No watermark.",
-    features: [
-      "AI writes the script — you check it first",
-      "66 cartoon characters, AI voices & lip sync",
-      "Edit any line on the timeline; own video & music",
-      "Free MP4 export up to 4K, no watermark",
-    ],
-    gradient: "from-orange-500 to-amber-500",
-    accent: "#ff5b24",
-    status: "New",
-    category: "Creator",
-    logo: "/logos/videomaker.svg",
-    ...shots("videomaker", ["Turn a script into a talking cartoon video","The editor: script on the left, live preview and a voice/scene/music timeline","Write the dialogue, pick characters, export an MP4"]),
-    cardImage: "/images/products/videomaker.jpg",
-    cta: "Make a Video",
-  },
-  {
     slug: "utubeflow",
     name: "UTubeFlow",
     icon: "youtube",
@@ -295,8 +350,10 @@ export const products: Product[] = [
     status: "Live",
     category: "Analytics & SEO",
     logo: "/logos/webly.svg",
-    ...shots("webly", ["Google Analytics, Search Console and AdSense in one place", "Deep technical SEO and speed audit with score breakdown", "Instant copy-paste code fixes and AI prompts for every problem"]),
-    cardImage: "/images/products/webly.jpg",
+    image: "/images/products/webly.svg",
+    cardImage: "/images/products/webly.svg",
+    screens: [],
+    phone: "",
     cta: "Open Webly",
   },
 ];
@@ -317,20 +374,56 @@ export type ProductDetail = {
 };
 
 export const productDetails: Record<string, ProductDetail> = {
-  downloader: {
+  videomaker: {
     overview:
-      "The CodeLove Downloader is a fast, ad-light media saver for creators, marketers and researchers. Paste a link from Instagram or Pinterest and it fetches the original, watermark-free file in the highest quality the platform offers — videos, Reels and pin images. Everything runs through a clean interface with no forced sign-ups.",
-    highlights: ["No watermarks", "HD quality", "No sign-up", "Instagram · Pinterest"],
+      "Video Maker is CodeLove's free AI video maker. Type a dialogue and 66 ready-made cartoon characters act it out with AI voices from Google Gemini, lip sync worked out from the real sound, word-by-word subtitles, background music and sound effects. Prefer no characters? Text-only mode turns the same script into big captions on a plain screen. It works in Tamil, Tanglish, Telugu, Hindi, Hinglish and English, runs entirely in your browser with your own free Gemini key, and exports an MP4 for YouTube Shorts, Instagram Reels and YouTube — up to 4K, with no watermark.",
+    highlights: ["Free AI video maker", "AI voices & lip sync", "Text-only mode", "No watermark"],
     steps: [
-      { icon: "link", title: "Copy the link", text: "Open the post, Reel, video or pin you want and copy its share link from the app or browser." },
-      { icon: "download", title: "Paste it in", text: "Choose the Instagram or Pinterest downloader and drop the link into the input box." },
-      { icon: "layers", title: "Preview it", text: "Check the preview to make sure it is the right post — fetch a single link or several at once in multi-link mode." },
-      { icon: "check", title: "Save to device", text: "Hit download and the original file saves straight to your device, clean and watermark-free." },
+      { icon: "fileText", title: "Write the script", text: "Type one line per turn, like Meena: Hello! — or let the AI (Gemini, ChatGPT or any AI) write it in your language, then check every line before it is used." },
+      { icon: "user", title: "Pick the look", text: "Choose cartoon characters and voices, or go text-only with big captions on a plain colour screen." },
+      { icon: "sparkles", title: "Add AI voices", text: "Press play: Gemini speaks every line with your free key, mouths sync to the sound, music and effects play underneath." },
+      { icon: "download", title: "Export the MP4", text: "Download for Shorts, Reels or YouTube up to 4K — or send it straight to UTubeFlow to schedule." },
     ],
     faqs: [
-      { q: "Which platforms are supported?", a: "Instagram (videos & Reels) and Pinterest (videos & images), each with a single-link and a multi-link mode." },
-      { q: "Are there watermarks on downloads?", a: "No. The Downloader saves the original media as the platform serves it, with no added CodeLove watermark." },
-      { q: "Is it legal to download content?", a: "Downloading content you own or that is licensed for reuse is fine. Always respect copyright and each platform's terms for content you don't own." },
+      { q: "Is Video Maker really free?", a: "Yes. The site is free with no sign-up and no watermark. The AI voices use Google Gemini through your own free API key, which allows several videos a day." },
+      { q: "Can I make a video without cartoon characters?", a: "Yes. Text-only mode shows big word-by-word captions on a plain screen with the same AI voices, music and sound effects." },
+      { q: "Which languages does it support?", a: "Tamil, Tanglish, Telugu, Hindi, Hinglish and English, with matching subtitle fonts for each. The AI script writer checks that every line is in the voice language you picked." },
+      { q: "Can I change a line after the video is made?", a: "Yes. Click any line on the timeline to change the words, speaker, mood, subtitle or the pause before it, or move and delete lines. Only the changed lines are recorded again." },
+      { q: "Can I use my own video or music?", a: "Yes. Use your own video as the background (with its sound and a start point) and your own music track. Both stay in your browser for next time." },
+    ],
+  },
+  videocut: {
+    overview:
+      "Video Cut is CodeLove's free online video shorts cutter and clip splitter. Drop in any MP4, WebM, or MOV file to trim exact timestamps, split long videos into vertical 9:16 Shorts and Reels, or export clean clips — all processed privately inside your browser with no uploads and no watermarks.",
+    highlights: ["Video Shorts cutter", "9:16 vertical crop", "Runs in-browser", "No watermarks"],
+    steps: [
+      { icon: "film", title: "Load your video", text: "Open any long video, podcast, or recording right from your device — nothing uploads to a server." },
+      { icon: "scissors", title: "Pick cuts & Shorts clips", text: "Mark start and end timestamps or split out punchy segments ready for YouTube Shorts and Reels." },
+      { icon: "sliders", title: "Frame 9:16 or 16:9", text: "Choose portrait 9:16 framing for Shorts or keep widescreen framing with clean local export settings." },
+      { icon: "download", title: "Download clean clips", text: "Save your cut videos straight to your device with zero watermarks and no sign-up." },
+    ],
+    faqs: [
+      { q: "Can I use Video Cut as a video shorts cutter?", a: "Yes. Video Cut is built to trim and split long videos into bite-sized clips formatted for YouTube Shorts, Instagram Reels, and vertical feeds." },
+      { q: "Does Video Cut upload my videos or add a watermark?", a: "No. Processing runs locally in your browser so files stay private on your device and exports have no watermarks." },
+      { q: "Is Video Cut free to use?", a: "Yes, Video Cut is 100% free with no account required." },
+      { q: "Can I keep only the Tamil (or Hindi, Telugu, English) audio?", a: "Yes. If an MP4 or MKV file has several audio tracks, Video Cut lists them all, lets you hear each one live, and your exported parts keep only the track you pick." },
+      { q: "Can I schedule the clips on YouTube?", a: "Yes. Send to UTubeFlow puts every clip, already titled Part 1, Part 2…, into your UTubeFlow upload list, where it can be scheduled one per day without downloading anything." },
+    ],
+  },
+  iloveconvert: {
+    overview:
+      "ILoveConvert puts 54 browser-local file, image, PDF, audio, and vector conversion tools inside one distraction-free split studio. Upload one image or a batch, inspect live side-by-side results with precision manual brush and clear controls where relevant, and download clean files without uploading anything to a server.",
+    highlights: ["54 local utilities", "Split studio preview", "Batch ZIP downloads", "Zero file uploads"],
+    steps: [
+      { icon: "search", title: "Pick a converter tool", text: "Select any utility across image conversion, compression, background editing, PDF, SVG, or media extraction." },
+      { icon: "image", title: "Drop your files", text: "Load single or multiple files directly in your browser tab — nothing leaves your device." },
+      { icon: "sliders", title: "Refine interactively", text: "Adjust dimensions, format quality, or touch up edges cleanly with live preview updates." },
+      { icon: "download", title: "Export ready files", text: "Download individual results or grab a single ZIP archive for multi-file batches." },
+    ],
+    faqs: [
+      { q: "Are files uploaded to external servers on ILoveConvert?", a: "No. All 54 conversion and editing workflows execute in memory inside your own browser using WebAssembly, HTML5 Canvas, and Web APIs." },
+      { q: "Can I process multiple images at once?", a: "Yes. Most image utilities support multi-file uploads and package all processed outputs into a single ZIP download." },
+      { q: "Are exports watermarked or paywalled?", a: "No. Every converter works without limits, sign-ups, or watermarks." },
     ],
   },
   linkinbio: {
@@ -365,6 +458,38 @@ export const productDetails: Record<string, ProductDetail> = {
       { q: "Do I need an account?", a: "No. You can browse, preview and download models without signing up." },
     ],
   },
+  voltarc: {
+    overview:
+      "VOLTARC is an instant-play browser arcade featuring over 3,000 curated HTML5 and 3D WebGL games organized across 190 genres. Play widescreen action, racing, and puzzle games on desktop or switch seamlessly to portrait mobile stages with keyboard, mouse, and touch controls.",
+    highlights: ["3,000+ games", "190 genres", "Portrait & wide stages", "No installs"],
+    steps: [
+      { icon: "search", title: "Browse or filter", text: "Explore 190 genres, trending picks, or search instantly across 3,000+ desktop and mobile-ready titles." },
+      { icon: "play", title: "Launch the stage", text: "Press Play Now to start the game directly in the browser with audio unlocked on your tap." },
+      { icon: "smartphone", title: "Adapt screen mode", text: "Play full-bleed widescreen on PC or centered portrait theater view on touch devices." },
+      { icon: "star", title: "Save favorites", text: "Bookmark favorite titles and jump back into recently played games stored locally in your browser." },
+    ],
+    faqs: [
+      { q: "Do VOLTARC games work on mobile phones?", a: "Yes. You can filter the library specifically for Android and iOS touch-compatible or portrait-mode games." },
+      { q: "Are downloads or plugins required?", a: "No. Every title runs natively inside modern browsers using HTML5 and WebGL." },
+      { q: "Where are my favorites stored?", a: "Favorites and play history stay privately in your browser's local storage with no account needed." },
+    ],
+  },
+  "satisfying-video-maker": {
+    overview:
+      "Satisfying Video Maker is an interactive browser physics sandbox and video creator. Run 100+ deterministic kinetic, bouncing-ball, Pendulum, Domino, and orbital physics simulations at 60 FPS with synthesized WebAudio harmonic collision sounds, then record clean vertical 9:16 or widescreen clips for Reels, Shorts, and creative loops.",
+    highlights: ["100+ physics presets", "Synthesized audio", "9:16 Reels export", "60 FPS canvas"],
+    steps: [
+      { icon: "palette", title: "Pick a simulation", text: "Explore bouncing geometric rings, kinetic art engines, or orbital particle systems." },
+      { icon: "sliders", title: "Tune speed & audio", text: "Adjust gravity, restitution, color gradients, and harmonic musical scales live." },
+      { icon: "play", title: "Preview 60 FPS motion", text: "Watch deterministic collisions trigger real-time visual trails and WebAudio notes." },
+      { icon: "download", title: "Export clean video", text: "Capture 9:16 or 16:9 video loops straight in your browser without watermarks." },
+    ],
+    faqs: [
+      { q: "Does Satisfying Video Maker include collision sound effects?", a: "Yes. Every bounce and surface trigger can play synthesized musical notes tuned cleanly in real time via the Web Audio API." },
+      { q: "Can I export vertical videos for Shorts and Reels?", a: "Yes. You can render clean 9:16 vertical canvases ready to share with no watermarks." },
+      { q: "Is any software installation required?", a: "No. Everything simulates and records right inside modern desktop and mobile browsers." },
+    ],
+  },
   videotogif: {
     overview:
       "Video to GIF is a dedicated utility that runs entirely inside your browser. Convert any video file into an optimized GIF animation without uploading a single byte to a server. Because processing happens locally on your device, it's private, watermark-free and lightning fast.",
@@ -379,42 +504,6 @@ export const productDetails: Record<string, ProductDetail> = {
       { q: "Are my videos uploaded anywhere?", a: "No. All processing happens locally in your browser, so your files never leave your device." },
       { q: "Is there a watermark?", a: "No. Exports are completely clean with no branding added." },
       { q: "Is it completely free?", a: "Yes, you can convert as many videos to GIFs as you want for free." },
-    ],
-  },
-  videocut: {
-    overview:
-      "Video Cut is CodeLove's free online video shorts cutter and clip splitter. Drop in any MP4, WebM, or MOV file to trim exact timestamps, split long videos into vertical 9:16 Shorts and Reels, or export clean clips — all processed privately inside your browser with no uploads and no watermarks.",
-    highlights: ["Video Shorts cutter", "9:16 vertical crop", "Runs in-browser", "No watermarks"],
-    steps: [
-      { icon: "film", title: "Load your video", text: "Open any long video, podcast, or recording right from your device — nothing uploads to a server." },
-      { icon: "scissors", title: "Pick cuts & Shorts clips", text: "Mark start and end timestamps or split out punchy segments ready for YouTube Shorts and Reels." },
-      { icon: "sliders", title: "Frame 9:16 or 16:9", text: "Choose portrait 9:16 framing for Shorts or keep widescreen framing with clean local export settings." },
-      { icon: "download", title: "Download clean clips", text: "Save your cut videos straight to your device with zero watermarks and no sign-up." },
-    ],
-    faqs: [
-      { q: "Can I use Video Cut as a video shorts cutter?", a: "Yes. Video Cut is built to trim and split long videos into bite-sized clips formatted for YouTube Shorts, Instagram Reels, and vertical feeds." },
-      { q: "Does Video Cut upload my videos or add a watermark?", a: "No. Processing runs locally in your browser so files stay private on your device and exports have no watermarks." },
-      { q: "Is Video Cut free to use?", a: "Yes, Video Cut is 100% free with no account required." },
-      { q: "Can I keep only the Tamil (or Hindi, Telugu, English) audio?", a: "Yes. If an MP4 or MKV file has several audio tracks, Video Cut lists them all, lets you hear each one live, and your exported parts keep only the track you pick." },
-      { q: "Can I schedule the clips on YouTube?", a: "Yes. Send to UTubeFlow puts every clip, already titled Part 1, Part 2…, into your UTubeFlow upload list, where it can be scheduled one per day without downloading anything." },
-    ],
-  },
-  videomaker: {
-    overview:
-      "Video Maker is CodeLove's free AI video maker. Type a dialogue and 66 ready-made cartoon characters act it out with AI voices from Google Gemini, lip sync worked out from the real sound, word-by-word subtitles, background music and sound effects. Prefer no characters? Text-only mode turns the same script into big captions on a plain screen. It works in Tamil, Tanglish, Telugu, Hindi, Hinglish and English, runs entirely in your browser with your own free Gemini key, and exports an MP4 for YouTube Shorts, Instagram Reels and YouTube — up to 4K, with no watermark.",
-    highlights: ["Free AI video maker", "AI voices & lip sync", "Text-only mode", "No watermark"],
-    steps: [
-      { icon: "fileText", title: "Write the script", text: "Type one line per turn, like Meena: Hello! — or let the AI (Gemini, ChatGPT or any AI) write it in your language, then check every line before it is used." },
-      { icon: "user", title: "Pick the look", text: "Choose cartoon characters and voices, or go text-only with big captions on a plain colour screen." },
-      { icon: "sparkles", title: "Add AI voices", text: "Press play: Gemini speaks every line with your free key, mouths sync to the sound, music and effects play underneath." },
-      { icon: "download", title: "Export the MP4", text: "Download for Shorts, Reels or YouTube up to 4K — or send it straight to UTubeFlow to schedule." },
-    ],
-    faqs: [
-      { q: "Is Video Maker really free?", a: "Yes. The site is free with no sign-up and no watermark. The AI voices use Google Gemini through your own free API key, which allows several videos a day." },
-      { q: "Can I make a video without cartoon characters?", a: "Yes. Text-only mode shows big word-by-word captions on a plain screen with the same AI voices, music and sound effects." },
-      { q: "Which languages does it support?", a: "Tamil, Tanglish, Telugu, Hindi, Hinglish and English, with matching subtitle fonts for each. The AI script writer checks that every line is in the voice language you picked." },
-      { q: "Can I change a line after the video is made?", a: "Yes. Click any line on the timeline to change the words, speaker, mood, subtitle or the pause before it, or move and delete lines. Only the changed lines are recorded again." },
-      { q: "Can I use my own video or music?", a: "Yes. Use your own video as the background (with its sound and a start point) and your own music track. Both stay in your browser for next time." },
     ],
   },
   videotoimages: {
@@ -483,6 +572,22 @@ export const productDetails: Record<string, ProductDetail> = {
       { q: "Can I record my gameplay?", a: "Yes. JavaPlay can record your gameplay as a video you can save and share." },
     ],
   },
+  webly: {
+    overview:
+      "Webly brings Google Analytics, Search Console, Core Web Vitals, and AdSense site-health audits into one focused workspace. Scan 30+ technical SEO, sitemap, meta tag, canonical, and asset-loading checks and copy ready-to-apply fixes for Next.js, HTML, and static sites.",
+    highlights: ["30+ SEO audits", "GA4 & Search Console", "AdSense health check", "Copy-paste fixes"],
+    steps: [
+      { icon: "globe", title: "Add your property", text: "Enter your site URL or connect your read-only Search Console & Analytics properties." },
+      { icon: "search", title: "Run full site scan", text: "Check canonical URLs, sitemaps, meta descriptions, headings, broken links, and AdSense tags." },
+      { icon: "code", title: "Review exact issues", text: "Pinpoint missing structured data, slow pages, or indexing blockers sorted by impact." },
+      { icon: "check", title: "Apply verified fixes", text: "Use the copy-paste code patches and re-audit immediately to confirm resolution." },
+    ],
+    faqs: [
+      { q: "What does Webly audit automatically?", a: "Webly checks robots.txt, sitemap coverage, canonical tags, title and description length, Open Graph cards, broken assets, and analytics/AdSense script placement." },
+      { q: "Does Webly modify my live website automatically?", a: "No. Webly reads public pages and connected read-only Google metrics, then provides clear diagnostic fixes for you to apply." },
+      { q: "Can Webly help prepare sites for AdSense review?", a: "Yes. Its site health scanner checks required policy links (About, Contact, Privacy, Terms), thin HTML text counts, ads.txt presence, and script installation." },
+    ],
+  },
 };
 
 /** Returns a product merged with its detail content, or null if unknown. */
@@ -526,7 +631,6 @@ export type Category = {
 export const categories: Category[] = [
   { icon: "film", title: "Video", slug: "video", blurb: "GIFs, frames, formats & compression.", gradient: "from-rose-500 to-pink-600" },
   { icon: "image", title: "Image", slug: "image", blurb: "Formats, compression, cropping & resizing.", gradient: "from-purple-500 to-violet-600" },
-  { icon: "download", title: "Downloads", slug: "downloads", blurb: "Saving Instagram & Pinterest media responsibly.", gradient: "from-blue-500 to-indigo-600" },
   { icon: "link", title: "Creator", slug: "creator", blurb: "Link-in-bio pages & growing your audience.", gradient: "from-violet-500 to-fuchsia-600" },
   { icon: "box", title: "3D Models", slug: "3d-models", blurb: "GLB files, licences & using models in projects.", gradient: "from-indigo-500 to-violet-600" },
   { icon: "youtube", title: "YouTube & Shorts", slug: "youtube", blurb: "Cutting Shorts, AI cartoon videos & scheduling uploads.", gradient: "from-red-500 to-orange-600" },
@@ -711,46 +815,53 @@ export const articles: Article[] = [
     ],
   },
   {
-    slug: "complete-instagram-downloader-guide",
-    title: "The Complete Instagram Downloader Guide (2026)",
+    slug: "how-browser-media-tools-work-wasm-webcodecs",
+    title: "How Browser-Based Media Tools Work: WebAssembly, Canvas & WebCodecs",
     excerpt:
-      "How Instagram media works, what you can and can't download, and how to save reels, photos and carousels responsibly for your own content.",
-    category: "Downloads",
-    readingTime: "10 min read",
+      "An inside look at how modern web apps resize images, split MP4 videos, and analyze frames locally in your tab with zero server uploads.",
+    category: "Video",
+    readingTime: "8 min read",
     author: "Gowtham",
-    published: "Jun 22, 2026",
-    updated: "Jul 2, 2026",
-    gradient: "from-pink-500 to-rose-600",
-    icon: "download",
-    image: "/images/products/downloader.jpg",
+    published: "Nov 18, 2026",
+    updated: "Nov 26, 2026",
+    gradient: "from-blue-500 to-indigo-600",
+    icon: "code",
+    featured: true,
+    image: "/images/videocomp_spatial.png",
     intro:
-      "Saving your own reels, backing up a client's carousel, or archiving content you created — there are plenty of legitimate reasons to download Instagram media. This guide covers how it works and how to do it responsibly.",
+      "Ten years ago, compressing a 200 MB video or converting fifty PNG screenshots to WebP required uploading everything to a cloud server queue. Modern browser engines now expose three core primitives — HTML5 Canvas, WebAssembly, and WebCodecs — that move heavy media work cleanly onto the user's own hardware.",
     takeaways: [
-      "Instagram serves media as standard files behind its interface.",
-      "Downloaders fetch the original, watermark-free version of a post.",
-      "Reels, photos, carousels and profile pictures can all be saved.",
-      "Always respect copyright and only download content you may use.",
+      "HTML5 Canvas decodes and re-encodes raster images to WebP, JPG, and PNG in milliseconds.",
+      "WebAssembly runs native C/Rust codecs such as FFmpeg cleanly inside sandboxed browser threads.",
+      "Local object URLs (URL.createObjectURL) let previews update instantly without network traffic.",
+      "Zero server uploads reduce bandwidth costs while keeping user files strictly private.",
     ],
     content: [
       {
-        heading: "How Instagram media works",
+        heading: "1. Fast image transforms with HTML5 Canvas",
         paragraphs: [
-          "Every reel, photo and carousel on Instagram is ultimately a standard video or image file hosted on Meta's servers and delivered to your browser or app. The platform wraps these files in its own interface, but the underlying media is retrievable when you have the post's link.",
-          "A downloader simply requests that original file and hands it to you directly, without the app's compression or on-screen watermarks.",
+          "For still images, browsers already include hardware-accelerated decoders for PNG, JPEG, WebP, and AVIF. Drawing a local File onto an off-screen Canvas element automatically applies GPU-backed bilinear or Lanczos scaling when width or height changes.",
+          "Calling canvas.toBlob(callback, 'image/webp', 0.82) triggers the browser's built-in libwebp encoder directly in memory. Memory cleanup via URL.revokeObjectURL prevents leaks even during multi-image batch workflows like ILoveConvert.",
         ],
       },
       {
-        heading: "What you can download",
+        heading: "2. Sandboxed video multiplexing via WebAssembly",
         paragraphs: [
-          "Modern tools handle the full range of public content: single-photo posts, multi-image carousels, reels, video posts and even high-resolution profile pictures. For carousels, a good downloader lets you grab every slide at once rather than one at a time.",
-          "The process is usually the same: copy the share link from the post's menu, paste it into the downloader, preview the media and save it in its original quality.",
+          "Video containers such as MP4 and MKV store separate compressed video and audio streams interleaved in chunks. Compiled WebAssembly modules allow a single-tab studio like Video Cut to inspect streams, strip unused dubbed audio tracks, or remux keyframe segments losslessly in roughly a second.",
+          "Running compilation inside a dedicated Web Worker keeps the timeline UI smooth at 60 FPS while encoding happens in the background.",
         ],
       },
       {
-        heading: "Downloading responsibly",
+        heading: "3. Real-time synthesis with Canvas + WebAudio",
         paragraphs: [
-          "Downloading content you created, own the rights to, or have permission to reuse is perfectly reasonable. Downloading someone else's work to republish as your own is not — it can breach copyright and Instagram's terms.",
-          "Treat downloaders as a convenience for legitimate backup and reuse, always credit creators, and never redistribute private or copyrighted material without consent.",
+          "Physics sandboxes and motion generators take the opposite path: instead of decoding camera footage, a deterministic simulation loop renders vector frames onto a high-DPI 2D or WebGL canvas while scheduling collision notes on the Web Audio API timeline.",
+          "Combining MediaStreamTrack capture with synced AudioContext routing produces clean vertical 9:16 exports without external capture tools.",
+        ],
+      },
+      {
+        heading: "Trade-offs to plan for",
+        paragraphs: [
+          "Local-first architectures depend on the device's available RAM and browser tab limits. Keeping peak image resolution capped when exporting web thumbnails, snapping video widths to even integers for YUV 4:2:0 encoding, and releasing temporary blobs immediately ensure reliable performance even on mid-range Android phones.",
         ],
       },
     ],
@@ -1002,52 +1113,53 @@ export const articles: Article[] = [
     ],
   },
   {
-    slug: "how-to-download-pinterest-videos-and-images",
-    title: "How to Download Pinterest Videos and Images",
+    slug: "technical-seo-and-core-web-vitals-checklist",
+    title: "Technical SEO & Core Web Vitals Checklist for Fast Web Apps (2026)",
     excerpt:
-      "Save pins for offline reference the right way. Learn how pin links work, how to save videos and images, and what you may do with them.",
-    category: "Downloads",
-    readingTime: "6 min read",
+      "A practical engineering checklist covering SSR HTML text, canonical consistency, sitemap hygiene, LCP image sizing, and zero broken assets.",
+    category: "Creator",
+    readingTime: "8 min read",
     author: "Gowtham",
-    published: "Oct 10, 2026",
-    updated: "Oct 10, 2026",
-    gradient: "from-red-500 to-rose-600",
-    icon: "download",
-    image: "/images/products/downloader.jpg",
+    published: "Nov 22, 2026",
+    updated: "Nov 27, 2026",
+    gradient: "from-indigo-500 to-purple-600",
+    icon: "globe",
+    featured: true,
+    image: "/images/products/webly.svg",
     intro:
-      "Pinterest is built for collecting ideas, but its boards only work while you are online and signed in. Saving a pin to your device is useful for mood boards, client references and offline planning — as long as you respect who made it.",
+      "Fast interactive web apps frequently lose search visibility not from bad writing, but from quiet technical mistakes: empty client-rendered HTML shells, duplicate URLs across trailing slashes, missing canonical tags, or broken static images. This checklist mirrors the exact checks we audit across CodeLove sites.",
     takeaways: [
-      "Every pin has a share link you can copy.",
-      "Video pins and image pins are saved with different tools.",
-      "The full pin URL is more reliable than a short link.",
-      "Saved pins are for reference, not for republishing.",
+      "Render primary headings, copy, and key metrics in initial server HTML — never empty 0-value states.",
+      "Keep canonical URLs, sitemap <loc> paths, and trailing slashes strictly identical.",
+      "Exclude utility shell routes (like personal favorites or empty filter states) from indexable sitemaps.",
+      "Verify every image, SVG icon, and script link returns HTTP 200 after static builds.",
     ],
     content: [
       {
-        heading: "How pin links work",
+        heading: "Server HTML readability and word depth",
         paragraphs: [
-          "Each pin lives at its own address. In the app or on the website, the share menu gives you a link you can copy. Pinterest often shortens these to a pin.it address, which redirects to the full pin URL.",
-          "Both normally work, but if a short link fails, open the pin in a browser and copy the full address from the address bar instead.",
+          "Even though modern crawlers execute JavaScript, initial indexing and quality classifiers inspect static HTML immediately on download. Interactive tools should surround workspaces with clear introductory text, workflow instructions, reference tables, and FAQs rendered directly in server markup.",
+          "Avoid rendering placeholder counters like 0 or loading spinners inside initial HTML snapshots when static numbers are already known at build time.",
         ],
       },
       {
-        heading: "Saving a video or an image",
+        heading: "Canonical consistency & sitemap hygiene",
         paragraphs: [
-          "The steps are the same for both: copy the pin's link, paste it into the downloader, check the preview to confirm it is the right pin, and save the file. The CodeLove Downloader has a Pinterest Video Downloader for video pins and a Pinterest Image Downloader for image pins.",
-          "If you are collecting several pins for one project, the multi-link mode lets you paste a list of links and fetch them together instead of one at a time.",
+          "Every indexable page in sitemap.xml must return HTTP 200 without redirect chains, match the <link rel='canonical'> path character-for-character (including trailing slash rules), and carry a unique <title> and meta description.",
+          "Pages with thin personal state — such as saved favorites or local history views — should carry noindex robots rules and stay out of public sitemaps so crawl budget concentrates on substantive guides and tools.",
         ],
       },
       {
-        heading: "What you can and cannot save",
+        heading: "Asset integrity and CLS prevention",
         paragraphs: [
-          "Downloaders work with public pins. Pins on secret boards and content that requires you to be signed in cannot be fetched, and that is by design.",
+          "Every <img> and SVG card should declare explicit width and height dimensions and return HTTP 200 cleanly. Missing asset paths hurt both user trust and automated Core Web Vitals scoring.",
+          "Pair crisp WebP thumbnails sized cleanly around 800–1280 px with priority fetch attributes only on true above-the-fold hero visuals.",
         ],
       },
       {
-        heading: "Using saved pins responsibly",
+        heading: "Verify continuously after every deploy",
         paragraphs: [
-          "A pin usually belongs to the photographer, designer or creator who made it, not to the person who pinned it. Saving it for your own reference, a private mood board or a client conversation is a reasonable use.",
-          "Republishing it as your own, or using it commercially without permission, is not. When in doubt, follow the pin back to its source and ask.",
+          "Automating simple checks in CI — fetching sitemap URLs, validating meta tags, and testing every local image asset against HTTP 200 — catches regressions before search crawlers or ad reviewers ever visit your site.",
         ],
       },
     ],
@@ -1291,20 +1403,21 @@ export const activeCategories = categoriesWithCounts.filter((c) => c.count > 0);
 /* ------------------------------------------------------------------ */
 /*  Documentation                                                      */
 /* ------------------------------------------------------------------ */
-export type Doc = { icon: IconName; title: string; text: string; steps: number };
+export type Doc = { icon: IconName; title: string; text: string; steps: number; href: string };
 export const docs: Doc[] = [
-  { icon: "rocket", title: "Getting Started", text: "Understand the CodeLove ecosystem and find the right product for your task in minutes.", steps: 4 },
-  { icon: "download", title: "Downloading Media", text: "Step-by-step guides for saving videos and images from every supported platform.", steps: 6 },
-  { icon: "box", title: "Using 3D Models", text: "Find, preview and download GLB models, and check each licence before you use them.", steps: 5 },
-  { icon: "film", title: "Editing Video", text: "Crop, resize, compress and convert video right inside your browser.", steps: 7 },
-  { icon: "image", title: "Making GIFs & Frames", text: "Turn clips into GIFs and extract image frames while keeping your files private.", steps: 5 },
-  { icon: "link", title: "Building a Bio Page", text: "Create, theme and publish your personal Link in Bio profile.", steps: 6 },
+  { icon: "rocket", title: "Built-In Browser Toolkit", text: "Compress images to WebP, estimate MP4 bitrates, plan Shorts ratios, and validate JSON right on codelove.in.", steps: 4, href: "/tools" },
+  { icon: "film", title: "Cutting & Editing Shorts", text: "Split long videos into vertical 9:16 clips with Blur Fill framing and audio track selection.", steps: 5, href: "/learn/guide/how-to-cut-a-long-video-into-youtube-shorts" },
+  { icon: "box", title: "Using 3D GLB Models", text: "Find, preview and download GLB models, and check each licence before you use them.", steps: 5, href: "/learn/guide/how-to-use-free-3d-models" },
+  { icon: "image", title: "Web Image Optimization", text: "Choose cleanly between JPG, PNG, and WebP and resize images before publishing.", steps: 4, href: "/learn/guide/jpg-vs-png-vs-webp" },
+  { icon: "code", title: "Browser Media Engineering", text: "Understand how Canvas, WebAssembly, and WebAudio run media tools locally without server uploads.", steps: 4, href: "/learn/guide/how-browser-media-tools-work-wasm-webcodecs" },
+  { icon: "globe", title: "Technical SEO & Vitals", text: "Audit HTML rendering depth, canonical tags, sitemaps, and broken assets systematically.", steps: 4, href: "/learn/guide/technical-seo-and-core-web-vitals-checklist" },
 ];
 
 /* ------------------------------------------------------------------ */
 /*  Navigation                                                        */
 /* ------------------------------------------------------------------ */
 export const navLinks = [
+  { label: "Tools", href: "/tools" },
   { label: "Products", href: "/products" },
   { label: "Learning Center", href: "/learn" },
   { label: "Blog", href: "/blog" },
@@ -1350,10 +1463,10 @@ export const resourceHub: ResourceCard[] = [
   },
   {
     icon: "zap",
-    title: "Free Tools",
-    blurb: "Every CodeLove product on its own fast, free subdomain — a media downloader, video and image tools, a link-in-bio builder and a 3D model library.",
-    href: "/products",
-    cta: "Explore tools",
+    title: "Built-In & Studio Tools",
+    blurb: "Run image compression, bitrate math, and JSON checks directly on codelove.in/tools, or launch dedicated video, 3D, and game apps.",
+    href: "/tools",
+    cta: "Open toolkit",
     gradient: "from-amber-500 to-orange-600",
   },
   {
@@ -1388,40 +1501,46 @@ export const legalPages: LegalPage[] = [
   {
     slug: "privacy",
     title: "Privacy Policy",
-    description: "How CodeLove handles the limited data involved in using our tools, including analytics, cookies and advertising.",
-    updated: "October 2026",
+    description: "How CodeLove handles local browser processing, analytics, cookies, user privacy rights, and Google AdSense advertising.",
+    updated: "November 2026",
     intro:
-      "CodeLove is built privacy-first. Most of our tools run entirely in your browser, and we collect as little as possible. This page explains what that means in plain language.",
+      "CodeLove is built around local-first browser execution so your media files, scripts, and JSON inputs stay on your own device. This Privacy Policy describes what data we do and do not process across codelove.in and linked CodeLove web applications.",
     sections: [
       {
-        heading: "What we collect",
+        heading: "Local-first file & input handling",
         paragraphs: [
-          "Many CodeLove tools process your files and data directly in your browser — those files are never uploaded to us. For features that do require a server, we only handle what is strictly needed to perform the task, and we do not keep your content afterwards.",
-          "Some CodeLove sites use Google Analytics to collect aggregated usage data (such as which pages are visited) so we can understand what is useful and improve the product. We do not sell your data.",
+          "Built-in utilities on codelove.in/tools and most CodeLove web apps process your images, video clips, text, and configuration payloads entirely in your browser tab using HTML5 Canvas, WebAssembly, and WebAudio. Files processed locally never touch or remain on a CodeLove backend server.",
+          "For optional authenticated workflows (such as saving Link in Bio profiles or scheduling uploads via UTubeFlow with Google OAuth), only the tokens and fields necessary to perform the action you requested are stored.",
         ],
       },
       {
-        heading: "Cookies & local storage",
+        heading: "Analytics & aggregate traffic telemetry",
         paragraphs: [
-          "We use local storage for small preferences such as your light/dark theme. Analytics and advertising cookies are described below and on our Cookie Policy page.",
+          "CodeLove uses Google Analytics (GA4) and privacy-minded first-party page telemetry to measure page visits, broken routes, and device performance across tools. These aggregate counts never sell personal profiles, store passwords, or expose private user uploads.",
         ],
       },
       {
-        heading: "Advertising",
+        heading: "Cookies & browser local storage",
         paragraphs: [
-          "We use, or may use, Google AdSense to show ads on CodeLove sites. Third-party vendors, including Google, use cookies to serve ads based on your prior visits to this website or other websites. Google's use of advertising cookies enables it and its partners to serve ads to you based on your visits to our sites and other sites on the Internet.",
-          "You can opt out of personalised advertising in Google Ads Settings, and opt out of other vendors' use of cookies for personalised advertising at aboutads.info.",
+          "We store simple preferences (such as dark/light color theme selection, saved favorite tools, or recently viewed items) in your browser's local storage so pages keep working comfortably across visits. See our Cookie Policy for full browser controls.",
+        ],
+      },
+      {
+        heading: "Advertising & Google AdSense",
+        paragraphs: [
+          "CodeLove displays or plans to display advertisements via Google AdSense. Third-party vendors, including Google, use cookies or local identifiers to serve ads based on a visitor's prior visits to codelove.in or other sites on the web.",
+          "Users in the EEA, UK, or eligible regions can review personalized ad settings or opt out of personalized advertising anytime via Google Ads Settings and YourAdChoices.",
         ],
         links: [
           { label: "Google Ads Settings", href: "https://adssettings.google.com" },
           { label: "Opt out of personalised advertising (aboutads.info)", href: "https://www.aboutads.info" },
-          { label: "How Google uses information from sites that use its services", href: "https://policies.google.com/technologies/partner-sites" },
+          { label: "How Google uses information from partner sites", href: "https://policies.google.com/technologies/partner-sites" },
         ],
       },
       {
-        heading: "Your choices",
+        heading: "Your rights & direct contact",
         paragraphs: [
-          "You can clear cookies and local storage from your browser at any time. If you have a question about your data or want something removed, contact us and we will help.",
+          "You may clear browser storage or block cookies at any time using your browser settings. To request account deletion for authenticated CodeLove apps or ask privacy questions, email support@codelove.in.",
         ],
       },
     ],
@@ -1429,28 +1548,34 @@ export const legalPages: LegalPage[] = [
   {
     slug: "terms",
     title: "Terms of Service",
-    description: "The terms for using CodeLove's free online tools and websites: fair and lawful use, your rights to the files you process, availability, changes and liability.",
-    updated: "July 2026",
+    description: "Terms of Service covering lawful personal and commercial usage, intellectual property rights, output ownership, and liability limits on CodeLove.",
+    updated: "November 2026",
     intro:
-      "By using CodeLove, you agree to these terms. They are intentionally short and reasonable — use the tools fairly and they stay free and fast for everyone.",
+      "By accessing codelove.in or running any built-in or linked CodeLove utility, you agree to these Terms of Service. These rules protect platform uptime and clarify ownership of files you create.",
     sections: [
       {
-        heading: "Using our tools",
+        heading: "Ownership of your exports & creative output",
         paragraphs: [
-          "CodeLove tools are provided for lawful personal and commercial use. You are responsible for the content you process and for having the rights to it. Do not use our tools to break the law or infringe on others.",
-          "We may apply fair-use limits to protect the service and keep it available for everyone.",
+          "CodeLove claims zero ownership or watermark rights over images, compressed videos, Shorts clips, JSON payloads, or animations you create or transform using our browser utilities.",
+          "Where tools bundle third-party open-licensed assets (such as 3D GLB files on models.codelove.in or open-license J2ME titles on javaplay.codelove.in), you agree to honor the individual license displayed alongside each asset, including CC BY attribution requirements where applicable.",
         ],
       },
       {
-        heading: "Availability & changes",
+        heading: "Acceptable & lawful use",
         paragraphs: [
-          "CodeLove is a young and evolving product. Tools may change, move or be temporarily unavailable, and we may update these terms as the platform grows. Continued use means you accept the current version.",
+          "You agree to use CodeLove tools and educational content strictly for lawful purposes and only process content you created or hold permission to modify. Automated scraping, denial-of-service abuse, or redistribution of embedded game/third-party content outside intended platform terms is prohibited.",
         ],
       },
       {
-        heading: "Liability",
+        heading: "Service availability & API limits",
         paragraphs: [
-          "Our tools are provided “as is” without warranties. To the extent permitted by law, CodeLove is not liable for any loss arising from use of the tools. Always keep your own backups of important files.",
+          "All utilities are provided free of charge and evolve continuously as browsers ship new capabilities. We may modify features, update educational guides, or enforce reasonable rate limits on API-connected services to protect stability.",
+        ],
+      },
+      {
+        heading: "Warranty disclaimer & liability",
+        paragraphs: [
+          "CodeLove software and tutorials are delivered on an 'as is' and 'as available' basis without implied warranties. Always retain backups of irreplaceable source footage before batch conversions or exports.",
         ],
       },
     ],
@@ -1458,38 +1583,38 @@ export const legalPages: LegalPage[] = [
   {
     slug: "cookies",
     title: "Cookie Policy",
-    description: "How and why CodeLove uses cookies and local storage: theme preferences, Google Analytics, advertising cookies, and how you can control or delete them.",
-    updated: "October 2026",
+    description: "Detailed explanation of essential local storage, Google Analytics cookies, AdSense advertising cookies, and browser opt-out options.",
+    updated: "November 2026",
     intro:
-      "This page explains the small amount of browser storage CodeLove relies on and what each part is for.",
+      "This Cookie Policy explains what cookies and browser storage keys CodeLove sets, why they exist, and how you can inspect or disable them at any time.",
     sections: [
       {
-        heading: "Essential storage",
+        heading: "Essential local storage keys",
         paragraphs: [
-          "We use local storage for essentials like remembering your theme preference. These are required for the site to work the way you expect and cannot be turned off from within the app.",
+          "Core interface features rely on browser localStorage (rather than tracking cookies) for remembering your light/dark theme choice (codelove-theme) and tool preferences on your own device.",
         ],
       },
       {
-        heading: "Analytics",
+        heading: "Analytics & performance measurement",
         paragraphs: [
-          "Some CodeLove sites use Google Analytics, which sets cookies to measure how the site is used and which tools are useful. This data is aggregated and not used to personally identify you.",
+          "Aggregate analytics scripts record page views, session durations, and device form factors so we can prioritize performance improvements on high-traffic tutorials and spot broken pages quickly.",
         ],
       },
       {
         heading: "Advertising cookies",
         paragraphs: [
-          "We use, or may use, Google AdSense to show ads. Google and other third-party vendors use cookies to serve ads based on your prior visits to this website or other websites. You can opt out of personalised advertising at any time using the links below.",
+          "Google AdSense and certified advertising partners may store cookies or device signals to deliver relevant advertisements, measure ad impressions, and enforce frequency caps so you do not see identical banners repeatedly.",
         ],
         links: [
           { label: "Google Ads Settings", href: "https://adssettings.google.com" },
           { label: "Opt out of personalised advertising (aboutads.info)", href: "https://www.aboutads.info" },
-          { label: "How Google uses information from sites that use its services", href: "https://policies.google.com/technologies/partner-sites" },
+          { label: "Google Privacy & Terms for Partner Sites", href: "https://policies.google.com/technologies/partner-sites" },
         ],
       },
       {
-        heading: "Managing cookies",
+        heading: "How to block or clear cookies",
         paragraphs: [
-          "You can delete or block cookies and local storage in your browser settings at any time. Doing so may reset preferences such as your chosen theme.",
+          "Modern browsers allow blocking third-party cookies or clearing site data per domain in Privacy & Security settings. Blocking advertising cookies will still keep interactive CodeLove tools working normally.",
         ],
       },
     ],
@@ -1497,27 +1622,27 @@ export const legalPages: LegalPage[] = [
   {
     slug: "disclaimer",
     title: "Disclaimer",
-    description: "Important notes about relying on CodeLove tools and content: tools provided as is, guides that are not professional advice, and links to third-party sites.",
-    updated: "July 2026",
+    description: "General usage disclaimer covering browser tool variance, technical guides, external assets, third-party games, and AI features.",
+    updated: "November 2026",
     intro:
-      "CodeLove aims to be accurate and helpful, but our tools and articles are provided for general use and information only.",
+      "CodeLove tools, calculators, and technical documentation are published in good faith for educational and productivity workflows.",
     sections: [
       {
-        heading: "Tools",
+        heading: "Browser tools & numerical estimates",
         paragraphs: [
-          "Our utilities are provided in good faith and “as is.” Results can vary depending on your input and browser. Please verify important output yourself, especially for anything critical.",
+          "Calculations in utilities such as the Video Bitrate Calculator and Safe-Zone Planner rely on standard encoding math (H.264/HEVC/AV1 approximations and common mobile viewport guidelines). Actual final file sizes after encoding depend on scene complexity, VBR keyframes, and encoder profiles.",
         ],
       },
       {
-        heading: "Content",
+        heading: "Technical articles & compliance notes",
         paragraphs: [
-          "Articles and guides reflect our understanding at the time of writing and may become outdated. Nothing here is professional, legal or financial advice.",
+          "Guides about SEO, Core Web Vitals, web APIs, and creator workflows reflect hands-on testing at the time shown in each article's Last Updated stamp. Nothing on CodeLove constitutes formal legal, tax, or regulatory advice.",
         ],
       },
       {
-        heading: "External links",
+        heading: "External sites & embedded content",
         paragraphs: [
-          "We sometimes link to third-party sites and services. We are not responsible for their content, policies or availability.",
+          "Products such as VOLTARC embed third-party HTML5 games with attribution via official publisher partner agreements, and documentation pages occasionally reference external standards bodies or tools. We review partner integrations carefully but are not responsible for external sites' availability or privacy terms.",
         ],
       },
     ],
@@ -1525,27 +1650,27 @@ export const legalPages: LegalPage[] = [
   {
     slug: "editorial-policy",
     title: "Editorial Policy",
-    description: "How we research, write, fact-check and update the guides, tutorials and blog posts on CodeLove, and how to report a mistake.",
-    updated: "July 2026",
+    description: "CodeLove's standards for technical accuracy, hands-on verification, transparent updates, AI disclosure, and reader corrections.",
+    updated: "November 2026",
     intro:
-      "We want everything you read on CodeLove to be clear, current and genuinely useful. Here is how we approach it.",
+      "Every tutorial, benchmark, and product guide on CodeLove is written to solve real creator and web developer problems clearly — without filler paragraphs or copied claims.",
     sections: [
       {
-        heading: "How we write",
+        heading: "Hands-on authorship & verification",
         paragraphs: [
-          "Our guides are written and reviewed by people who actually use these tools and techniques. We favour plain language, practical steps and honest trade-offs over hype.",
+          "Guides are drafted and checked against live CodeLove tools by developer Gowthamraj on real desktop and mobile browsers before publication. Technical specifications — such as codec support, JPEG vs WebP file weights, and pixel bounds — are tested rather than copied blindly.",
         ],
       },
       {
-        heading: "Accuracy & updates",
+        heading: "Transparent publishing dates & updates",
         paragraphs: [
-          "Technology moves quickly, so we revisit and update articles as things change. Each article shows when it was published and last updated.",
+          "Browser APIs, video platform limits, and SEO best practices change frequently. Every article on codelove.in clearly displays both its original publish date and latest substantive revision date.",
         ],
       },
       {
-        heading: "Corrections",
+        heading: "Corrections & feedback workflow",
         paragraphs: [
-          "If you spot a mistake or something out of date, tell us — we will review and fix it. Getting it right matters more to us than being first.",
+          "If a reader reports an inaccurate bit of math, a broken screenshot, or an outdated recommendation through support@codelove.in or our Contact page, we verify the fix in code and update the article promptly.",
         ],
       },
     ],
@@ -1558,23 +1683,23 @@ export const footerColumns = [
   {
     title: "Products",
     links: [
-      { label: "Insta Downloader", href: "/products/downloader" },
-      { label: "Link in Bio", href: "/products/linkinbio" },
-      { label: "3D Models", href: "/products/models" },
-      { label: "Video to GIF", href: "/products/videotogif" },
-      { label: "Video to Images", href: "/products/videotoimages" },
-      { label: "Video Cut", href: "/products/videocut" },
+      { label: "Built-In Toolkit", href: "/tools" },
       { label: "Video Maker", href: "/products/videomaker" },
-      { label: "3D Games", href: "/products/games" },
-      { label: "UTubeFlow", href: "/products/utubeflow" },
-      { label: "JavaPlay", href: "/products/javaplay" },
-      { label: "Webly (Analytics & SEO)", href: "https://webly.codelove.in" },
+      { label: "Video Cut", href: "/products/videocut" },
+      { label: "ILoveConvert", href: "/products/iloveconvert" },
+      { label: "3D Models", href: "/products/models" },
+      { label: "VOLTARC Arcade", href: "/products/voltarc" },
+      { label: "Webly (SEO)", href: "/products/webly" },
+      { label: "Satisfying Video Maker", href: "/products/satisfying-video-maker" },
+      { label: "Link in Bio", href: "/products/linkinbio" },
+      { label: "Video to GIF", href: "/products/videotogif" },
       { label: "All Products", href: "/products" },
     ],
   },
   {
     title: "Resources",
     links: [
+      { label: "Interactive Tools", href: "/tools" },
       { label: "Resource Hub", href: "/resources" },
       { label: "Learning Center", href: "/learn" },
       { label: "Blog & Articles", href: "/blog" },
@@ -1585,7 +1710,6 @@ export const footerColumns = [
     links: [
       { label: "Video Guides", href: "/learn/video" },
       { label: "Image Guides", href: "/learn/image" },
-      { label: "Download Guides", href: "/learn/downloads" },
       { label: "Creator Guides", href: "/learn/creator" },
       { label: "3D Model Guides", href: "/learn/3d-models" },
       { label: "YouTube & Shorts Guides", href: "/learn/youtube" },
@@ -1649,45 +1773,6 @@ export const blogs: Article[] = [
         paragraphs: [
           "We did not make these models. They are the work of their original authors, published under open licences that allow anyone to use them, including in commercial projects. Some ask for a credit, and each model page tells you exactly which licence applies.",
           "You will find the library at models.codelove.in, or through the Products page here on CodeLove."
-        ]
-      }
-    ]
-  },
-  {
-    slug: "downloader-instagram-and-pinterest",
-    title: "The Downloader: Focused on Instagram and Pinterest",
-    excerpt: "What the CodeLove Downloader supports today, how the single and multi-link modes work, and how to use it responsibly.",
-    category: "Updates",
-    readingTime: "3 min read",
-    author: "Gowtham",
-    published: "Oct 10, 2026",
-    updated: "Oct 10, 2026",
-    gradient: "from-blue-500 to-indigo-600",
-    icon: "download",
-    featured: false,
-    image: "/images/products/downloader.jpg",
-    intro: "The CodeLove Downloader now concentrates on two platforms: Instagram and Pinterest. Here is what it does today.",
-    takeaways: ["Instagram videos and Reels", "Pinterest videos and images", "Single and multi-link modes", "Public content only"],
-    content: [
-      {
-        heading: "What is supported",
-        image: "/images/products/downloader.jpg",
-        paragraphs: [
-          "There are three downloaders: one for Instagram videos and Reels, one for Pinterest videos and one for Pinterest images. Each works the same way — paste a link, check the preview, and save the file.",
-          "You do not need an account, and the Downloader never asks for your Instagram or Pinterest password."
-        ]
-      },
-      {
-        heading: "One link or several",
-        paragraphs: [
-          "Every downloader has a multi-link mode. Instead of fetching posts one at a time, you can paste several links and fetch them together, which is useful when you are collecting your own posts or gathering references for a project."
-        ]
-      },
-      {
-        heading: "Public content, used responsibly",
-        paragraphs: [
-          "The Downloader only works with publicly available posts. Private accounts and restricted content cannot be fetched, and that is deliberate.",
-          "Everything you save still belongs to the person who made it. Saving your own posts, or media you have permission to reuse, is what the tool is for. Republishing someone else's work without asking is not."
         ]
       }
     ]
@@ -1894,42 +1979,41 @@ export const blogs: Article[] = [
   },
   {
     slug: "designing-for-creators",
-    title: "Designing Tools for the Creator Economy",
-    excerpt: "The UI and UX principles behind our Link in Bio and Social Downloader tools.",
+    title: "Designing Fast Browser Tools for Creators",
+    excerpt: "The UI and UX principles behind our split-studio converters, Link in Bio builder, and responsive video workflows.",
     category: "Design",
     readingTime: "5 min read",
     author: "Gowtham",
     published: "Jun 15, 2026",
-    updated: "Jun 16, 2026",
+    updated: "Nov 26, 2026",
     gradient: "from-fuchsia-500 to-rose-600",
     icon: "palette",
     featured: false,
     image: "/images/products/linkinbio.jpg",
-    intro: "Creators are busy. They need tools that get out of the way and just work. Here is how we designed our creator suite.",
-    takeaways: ["Mobile first design", "Minimal friction", "Bold but clean aesthetics", "Speed as a feature"],
+    intro: "Creators do not want five sign-up walls just to optimize an image or update a bio link. Here is how we design zero-friction browser interfaces across CodeLove.",
+    takeaways: ["Mobile-first split studio layout", "Minimal click friction", "Clear primary actions", "Speed & local feedback"],
     content: [
       {
-        heading: "Speed is the ultimate feature",
+        heading: "Speed is the primary feature",
         image: "/images/products/linkinbio.jpg",
         paragraphs: [
-          "When a creator needs to download a reel for a reaction video, or update their bio link to point to a new sponsor, they want it done in seconds. Every extra click is a point of friction.",
-          "We designed our tools to require the absolute minimum number of interactions. Paste a link, hit enter, get your file. No accounts required, no popups, no hidden menus."
+          "When a creator needs to compress a thumbnail to WebP, check Shorts safe zones, or update a link-in-bio page before publishing, every extra wizard step slows the workflow down.",
+          "Across CodeLove tools we keep the upload or input panel on the left, live output preview on the right, and clear one-click exports — with zero popups or forced logins."
         ]
       },
       {
-        heading: "Aesthetics that inspire trust",
-        image: "/images/products/downloader.jpg",
+        heading: "Clarity builds user trust",
+        image: "/images/products/iloveconvert.svg",
         paragraphs: [
-          "Many free online tools look like spam sites from 2010. They are covered in flashing banner ads and fake download buttons. We took the opposite approach.",
-          "We use a dark, premium aesthetic with smooth gradients and high-quality typography. By making our free tools look like expensive enterprise software, we build immediate trust with our users."
+          "Many utility sites confuse visitors with cluttered sidebars and misleading download buttons. We organize every interface around one clear workspace, legible typography, and explicit privacy feedback showing work stays inside the browser.",
+          "Consistent navigation, light and dark modes, and predictable button placement ensure users always know what will happen before clicking."
         ]
       },
       {
-        heading: "Mobile-first by necessity",
+        heading: "Mobile-first touch targets",
         image: "/images/products/linkinbio.jpg",
         paragraphs: [
-          "Over 80% of the traffic to our Link in Bio and Downloader tools comes from mobile devices. If a UI element is difficult to tap on an iPhone, the design has failed.",
-          "We rigorously test every interface on actual mobile hardware to ensure touch targets are large, animations are smooth, and the layout feels native."
+          "Because many creators edit clips and check analytics straight from their phones, every split workspace collapses gracefully into clean stacked cards with large tap targets on Android and iOS."
         ]
       }
     ]
@@ -1943,9 +2027,9 @@ export const blogCategories = ["All", "Announcements", "Updates", "Engineering",
 /*  Stats                                                              */
 /* ------------------------------------------------------------------ */
 export const stats: Stat[] = [
-  { get value() { return products.length; }, suffix: "+", label: "Products & tools" },
-  { get value() { return articles.length; }, suffix: "+", label: "Guides & articles" },
-  { value: 10, suffix: "K+", label: "Monthly users" },
-  { value: 1.5, suffix: "M+", label: "Files processed" },
-  { value: 2, suffix: "M+", label: "Hours saved" },
+  { get value() { return products.length; }, suffix: "", label: "Live web apps" },
+  { get value() { return articles.length + blogs.length; }, suffix: "", label: "Guides & articles" },
+  { value: 4, suffix: "", label: "On-site utilities" },
+  { value: 100, suffix: "%", label: "Free & browser-based" },
+  { value: 0, suffix: "", label: "Sign-ups required" },
 ];

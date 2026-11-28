@@ -6,7 +6,6 @@ import { ADSENSE_CLIENT, GA_MEASUREMENT_ID } from "@/lib/adsense";
 import Script from "next/script";
 import NextTopLoader from "nextjs-toploader";
 import SmoothScroll from "@/components/SmoothScroll";
-import AdSenseScript from "@/components/AdSenseScript";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -28,13 +27,12 @@ const geistMono = Geist_Mono({
 
 const SITE = "https://codelove.in";
 const DESCRIPTION =
-  "CodeLove tools: free online tools for code lovers and creators. Free video tools, AI video maker, 3D GLB models, browser games, link in bio. No sign-up.";
+  "CodeLove: built-in browser developer utilities, free video & image tools, AI video maker, 3D GLB models, and in-depth technical guides. Zero sign-ups.";
 
 const NETWORK_URLS = [
   "https://gowtham.codelove.in",
   "https://models.codelove.in",
   "https://games.codelove.in",
-  "https://downloader.codelove.in",
   "https://linkinbio.codelove.in",
   "https://videotogif.codelove.in",
   "https://videotoimages.codelove.in",
@@ -42,9 +40,11 @@ const NETWORK_URLS = [
   "https://videomaker.codelove.in",
   "https://utubeflow.codelove.in",
   "https://javaplay.codelove.in",
+  "https://webly.codelove.in",
   "https://satisfying-video-maker.codelove.in",
   "https://voltarc.codelove.in",
   "https://iloveconvert.codelove.in",
+  "https://apps.codelove.in",
 ];
 // Default social preview image (public/og.png, 1200x630). Pages without their own image fall back to it.
 const OG_IMAGE = { url: "/og.png", width: 1200, height: 630, alt: "CodeLove — free online tools for creators and developers" };
@@ -60,9 +60,7 @@ export const metadata: Metadata = {
     "CodeLove",
     "codelove",
     "code love",
-    "code of love",
     "code with love",
-    "code lovers",
     "codelove tools",
     "free video tools",
     "gowtham codelove",
@@ -74,8 +72,8 @@ export const metadata: Metadata = {
     "video cut",
     "video shorts cutter",
     "video compressor",
-    "instagram downloader",
-    "pinterest downloader",
+    "image compression webp",
+    "browser developer tools",
     "link in bio",
     "link in bio free",
     "free 3d models",
@@ -148,7 +146,8 @@ const themeScript = `
 `;
 
 const SITE_NAV = [
-  { name: "All Products & Tools", description: "Browse all 10+ free CodeLove web apps and tools.", url: `${SITE}/products` },
+  { name: "Interactive Tools", description: "Run local image compression, bitrate planning, safe-zone cropping, and JSON/SEO checks directly on codelove.in.", url: `${SITE}/tools` },
+  { name: "All Products & Tools", description: "Browse all free CodeLove web apps and creative studios.", url: `${SITE}/products` },
   { name: "Free AI Video Maker", description: "Type a script, get a talking cartoon or text video with AI voices — free, no watermark.", url: "https://videomaker.codelove.in" },
   { name: "Video Cut — Shorts Cutter", description: "Split and crop videos into 9:16 YouTube Shorts & Reels.", url: "https://videocut.codelove.in" },
   { name: "Free 3D Models (GLB)", description: "6,900+ free GLB/glTF 3D models with live viewer.", url: "https://models.codelove.in" },
@@ -176,7 +175,7 @@ const jsonLd = {
       "@id": `${SITE}/#organization`,
       name: "CodeLove",
       legalName: "CodeLove",
-      alternateName: ["Code Love", "Code With Love", "Code of Love", "CodeLove Tools"],
+      alternateName: ["Code Love", "CodeLove Tools"],
       slogan: "Everything You Need. One Platform.",
       foundingDate: "2024",
       foundingLocation: { "@type": "Country", name: "India" },
@@ -193,9 +192,9 @@ const jsonLd = {
         ...products.filter((p) => p.image).map((p) => `${SITE}${p.image}`),
       ],
       description:
-        "CodeLove builds free online tools: media downloader, video shorts cutter, video compressor, video and image tools, link-in-bio builder, 3D model library, 3D games, YouTube automation and Java phone games.",
+        "CodeLove builds browser-based developer and creator utilities: local image/file converters, video shorts cutter, video compressor, AI video maker, link-in-bio builder, 3D model library, 3D games, YouTube scheduler and SEO auditor.",
       founder: { "@id": "https://gowtham.codelove.in/#person" },
-      knowsAbout: ["Video Editing", "Web Tools", "3D GLB Models", "Browser Games", "Creator Economy", "YouTube Automation"],
+      knowsAbout: ["Video Editing", "Web Tools", "3D GLB Models", "Browser Games", "Creator Economy", "Technical SEO"],
       owns: products.map((p) => ({
         "@type": "WebApplication",
         name: p.name,
@@ -214,7 +213,7 @@ const jsonLd = {
       "@id": `${SITE}/#website`,
       url: SITE,
       name: "CodeLove",
-      alternateName: ["Code Love", "Code of Love", "codelove.in"],
+      alternateName: ["Code Love", "codelove.in"],
       description: DESCRIPTION,
       creator: { "@id": "https://gowtham.codelove.in/#person" },
       publisher: { "@id": `${SITE}/#organization` },
@@ -270,10 +269,18 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        {/* Google AdSense — only rendered once a publisher ID is set in src/lib/adsense.ts */}
-        {ADSENSE_CLIENT ? <meta name="google-adsense-account" content={ADSENSE_CLIENT} /> : null}
-        {/* CodeLove Analytics (admin.codelove.in). async, not defer: React treats <script async src> as a resource and
-            skips it during hydration; a defer script gets compared with the script AdSense inserts into <head>. */}
+        {/* Google AdSense — rendered directly in static HTML head for reliable crawler verification */}
+        {ADSENSE_CLIENT ? (
+          <>
+            <meta name="google-adsense-account" content={ADSENSE_CLIENT} />
+            <script
+              async
+              src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
+              crossOrigin="anonymous"
+            />
+          </>
+        ) : null}
+        {/* CodeLove Analytics (admin.codelove.in). */}
         <script async src="https://admin.codelove.in/t.js" />
       </head>
       <body className="min-h-full">
@@ -289,7 +296,6 @@ export default function RootLayout({
           shadow="0 0 10px #2563eb, 0 0 5px #7c3aed"
         />
         <SmoothScroll />
-        {ADSENSE_CLIENT ? <AdSenseScript client={ADSENSE_CLIENT} /> : null}
         {/* Google Analytics — only once a measurement ID is set in src/lib/adsense.ts */}
         {GA_MEASUREMENT_ID ? (
           <>

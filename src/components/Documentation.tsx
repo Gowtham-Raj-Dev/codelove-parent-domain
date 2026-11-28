@@ -1,3 +1,4 @@
+import Link from "next/link";
 import SectionHeading from "./SectionHeading";
 import Reveal from "./Reveal";
 import Icon from "./Icon";
@@ -10,15 +11,15 @@ export default function Documentation() {
       <div className="container-px mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Documentation"
-          title={<>Step-by-step guides for <span className="text-gradient">every product</span></>}
-          description="Clear, structured documentation that walks you through each tool from your first click to advanced workflows — no guesswork, no jargon."
+          title={<>Step-by-step guides for <span className="text-gradient">every workflow</span></>}
+          description="Clear, practical documentation walking through formats, compression settings, 3D licences, and browser-local workflows."
         />
 
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {docs.map((d, i) => (
             <Reveal key={d.title} delay={(i % 3) * 70}>
-              <a
-                href="#learning"
+              <Link
+                href={d.href}
                 className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-[var(--surface-border)] bg-[var(--bg-elevated)] p-6 shadow-[var(--shadow-soft)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[var(--shadow-glow)]"
               >
                 <div className="flex items-center justify-between">
@@ -34,7 +35,7 @@ export default function Documentation() {
                 <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition group-hover:gap-2.5">
                   Read the guide <Icon name="arrowRight" size={15} />
                 </span>
-              </a>
+              </Link>
             </Reveal>
           ))}
         </div>
