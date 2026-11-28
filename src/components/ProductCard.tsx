@@ -53,14 +53,14 @@ export default function ProductCard({ product, featured = false }: { product: Pr
         </ul>
 
         {/* mt-auto pins the buttons to the bottom of every card; two equal columns keep them on one line. */}
-        <div className="mt-auto grid grid-cols-2 gap-2.5 pt-6">
+        <div className="mt-auto grid grid-cols-2 gap-2 pt-6">
           <Link
             href={`/products/${product.slug}`}
             aria-label={`Explore ${product.name} features and guide`}
-            className="group/btn inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl border border-[var(--surface-border)] bg-[var(--surface)] px-3 py-2.5 text-sm font-semibold transition hover:border-transparent hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white"
+            className="group/btn inline-flex items-center justify-center gap-1.5 whitespace-nowrap rounded-xl border border-[var(--surface-border)] bg-[var(--surface)] px-2.5 py-2.5 text-[13px] font-semibold transition hover:border-transparent hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white"
           >
             Learn more
-            <Icon name="arrowRight" size={16} className="transition group-hover/btn:translate-x-0.5" />
+            <Icon name="arrowRight" size={15} className="shrink-0 transition group-hover/btn:translate-x-0.5" />
           </Link>
           {isLive ? (
             <a
@@ -68,10 +68,10 @@ export default function ProductCard({ product, featured = false }: { product: Pr
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`${product.cta ?? "Open"} ${product.name} (opens ${product.domain})`}
-              className="group/tool inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl px-3 py-2.5 text-sm font-semibold text-[var(--text-muted)] transition hover:text-primary"
+              className="group/tool inline-flex items-center justify-center gap-1.5 whitespace-nowrap rounded-xl px-2 py-2.5 text-[13px] font-semibold text-[var(--text-muted)] transition hover:text-primary"
             >
-              {product.cta ?? "Open tool"}
-              <Icon name="arrowUpRight" size={16} className="transition group-hover/tool:translate-x-0.5 group-hover/tool:-translate-y-0.5" />
+              <span className="truncate">{product.cta ?? "Open tool"}</span>
+              <Icon name="arrowUpRight" size={15} className="shrink-0 transition group-hover/tool:translate-x-0.5 group-hover/tool:-translate-y-0.5" />
             </a>
           ) : (
             <span className="inline-flex cursor-not-allowed items-center justify-center gap-2 whitespace-nowrap rounded-xl px-3 py-2.5 text-sm font-semibold text-[var(--text-faint)]">

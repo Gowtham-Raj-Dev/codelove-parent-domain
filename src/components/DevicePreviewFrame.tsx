@@ -1,9 +1,10 @@
 import type { Product } from "@/lib/data";
+import PhoneMockup from "./PhoneMockup";
 
 type PreviewMode = "both" | "desktop" | "mobile";
 
 type DevicePreviewFrameProps = {
-  product: Pick<Product, "name" | "domain" | "status" | "image" | "screens" | "phone">;
+  product: Pick<Product, "slug" | "name" | "domain" | "status" | "image" | "screens" | "phone">;
   featured?: boolean;
   mode?: PreviewMode;
   className?: string;
@@ -39,26 +40,13 @@ export default function DevicePreviewFrame({
       >
         {mode === "mobile" ? (
           <div className="relative flex h-full max-h-[260px] items-center justify-center py-1">
-            <div className="relative aspect-[390/820] h-full overflow-hidden rounded-[22px] border-[4.5px] border-slate-900 bg-slate-950 shadow-[0_18px_40px_rgba(0,0,0,0.3)] ring-1 ring-black/15 dark:border-zinc-700 dark:bg-black dark:shadow-[0_20px_48px_rgba(0,0,0,0.85)] dark:ring-white/15">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={phoneSrc}
-                alt={`${product.name} mobile view`}
-                width={390}
-                height={844}
-                loading="lazy"
-                decoding="async"
-                className="h-full w-full object-cover object-top"
-              />
-              <div
-                aria-hidden
-                className="pointer-events-none absolute left-1/2 top-1.5 h-[4.5px] w-[28%] -translate-x-1/2 rounded-full bg-slate-950/90 ring-1 ring-white/15"
-              />
-              <div
-                aria-hidden
-                className="pointer-events-none absolute bottom-1 left-1/2 h-[2.5px] w-[32%] -translate-x-1/2 rounded-full bg-slate-900/35 dark:bg-white/40"
-              />
-            </div>
+            <PhoneMockup
+              slug={product.slug}
+              src={phoneSrc}
+              alt={`${product.name} mobile view`}
+              size="md"
+              className="h-full"
+            />
           </div>
         ) : (
           /* Vertically centered Desktop + Mobile device lockup so nothing leaves dead gaps or gets cropped */
@@ -96,28 +84,12 @@ export default function DevicePreviewFrame({
             {/* Mobile Frame — tucked cleanly onto the bottom-right corner of the desktop frame */}
             {mode === "both" && (
               <div className="absolute -bottom-3 right-0 z-10 w-[23.5%] min-w-[70px] max-w-[106px] transition-transform duration-500 group-hover:-translate-y-1">
-                <div className="relative overflow-hidden rounded-[15px] border-[3.5px] border-slate-900 bg-slate-950 shadow-[0_16px_36px_rgba(0,0,0,0.38)] ring-1 ring-black/15 dark:border-zinc-700 dark:bg-black dark:shadow-[0_20px_44px_rgba(0,0,0,0.88)] dark:ring-white/20">
-                  <div className="relative aspect-[390/810] w-full overflow-hidden rounded-[10px]">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={phoneSrc}
-                      alt={`${product.name} mobile interface`}
-                      width={390}
-                      height={844}
-                      loading="lazy"
-                      decoding="async"
-                      className="h-full w-full object-cover object-top"
-                    />
-                    <div
-                      aria-hidden
-                      className="pointer-events-none absolute left-1/2 top-1 h-[3.5px] w-[30%] -translate-x-1/2 rounded-full bg-slate-950/90 ring-1 ring-white/15"
-                    />
-                    <div
-                      aria-hidden
-                      className="pointer-events-none absolute bottom-1 left-1/2 h-[2px] w-[34%] -translate-x-1/2 rounded-full bg-slate-900/35 dark:bg-white/40"
-                    />
-                  </div>
-                </div>
+                <PhoneMockup
+                  slug={product.slug}
+                  src={phoneSrc}
+                  alt={`${product.name} mobile interface`}
+                  size="sm"
+                />
               </div>
             )}
           </div>
