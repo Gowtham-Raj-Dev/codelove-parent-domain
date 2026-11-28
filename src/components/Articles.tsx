@@ -6,21 +6,35 @@ import { articles, type Article } from "@/lib/data";
 
 function Thumb({ article, big = false }: { article: Article; big?: boolean }) {
   return (
-    <div className={`relative overflow-hidden ${big ? "h-full min-h-[16rem]" : "h-44"}`}>
-      <div className={`flex h-full items-center justify-center bg-gradient-to-br ${article.gradient}`}>
+    <div
+      className={`relative overflow-hidden border-b border-slate-200/80 bg-slate-50 dark:border-white/10 dark:bg-[#050507] ${
+        big ? "h-full min-h-[16rem] sm:border-b-0 sm:border-r" : "h-44"
+      }`}
+    >
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:16px_16px] opacity-35 dark:bg-[radial-gradient(rgba(255,255,255,0.1)_1px,transparent_1px)] dark:opacity-30"
+      />
+      <div className="relative flex h-full w-full items-center justify-center p-3.5 sm:p-4">
         {article.image ? (
-          <img src={article.image} alt={article.title} width={800} height={500} loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+          <div className="h-full w-full overflow-hidden rounded-xl border border-slate-200/90 bg-white shadow-sm dark:border-white/15 dark:bg-[#0b0d12]">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={article.image}
+              alt={article.title}
+              width={800}
+              height={500}
+              loading="lazy"
+              decoding="async"
+              className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-[1.03]"
+            />
+          </div>
         ) : (
-          <>
-            <div aria-hidden className="absolute inset-0">
-              <div className="absolute -right-8 -top-10 h-32 w-32 rounded-full bg-white/20 blur-2xl" />
-              <div className="absolute bottom-0 left-4 h-24 w-24 rounded-full bg-black/10 blur-2xl" />
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.28),transparent_55%)]" />
-            </div>
-            <Icon name={article.icon} size={big ? 64 : 40} className="relative text-white/85 transition duration-500 group-hover:scale-110" />
-          </>
+          <div className="flex h-full w-full items-center justify-center rounded-xl border border-slate-200/90 bg-white dark:border-white/15 dark:bg-[#0b0d12]">
+            <Icon name={article.icon} size={big ? 52 : 34} className="text-[var(--text-muted)] transition duration-500 group-hover:scale-110" />
+          </div>
         )}
-        <span className="absolute left-4 top-4 rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-slate-800 backdrop-blur">
+        <span className="absolute right-5 top-5 rounded-full border border-slate-200/90 bg-white/95 px-2.5 py-0.5 text-[11px] font-semibold text-slate-800 shadow-sm backdrop-blur dark:border-white/15 dark:bg-[#0d1017]/95 dark:text-slate-100">
           {article.category}
         </span>
       </div>
@@ -32,7 +46,7 @@ function Meta({ article }: { article: Article }) {
   return (
     <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-[var(--text-faint)]">
       <span className="inline-flex items-center gap-1.5">
-        <span className="grid h-6 w-6 place-items-center rounded-full bg-gradient-to-br from-primary to-secondary text-[9px] font-bold text-white">
+        <span className="grid h-6 w-6 place-items-center rounded-full border border-slate-200 bg-slate-100 text-[9px] font-bold text-slate-800 dark:border-white/15 dark:bg-white/10 dark:text-white">
           CL
         </span>
         {article.author}
@@ -52,7 +66,6 @@ export default function Articles() {
 
   return (
     <section id="articles" className="relative overflow-hidden py-[50px]">
-      <div aria-hidden className="pointer-events-none absolute right-0 top-20 -z-10 h-72 w-72 rounded-full bg-[var(--glow-primary)] blur-[120px]" />
       <div className="container-px mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Blog & Articles"
@@ -88,14 +101,25 @@ export default function Articles() {
               <Reveal key={a.title} delay={i * 70}>
                 <Link
                   href={`/learn/guide/${a.slug}`}
-                  className="group flex overflow-hidden rounded-3xl border border-[var(--surface-border)] bg-[var(--bg-elevated)] shadow-[var(--shadow-soft)] transition-all duration-500 hover:-translate-y-1"
+                  className="group flex overflow-hidden rounded-3xl border border-[var(--surface-border)] bg-[var(--bg-elevated)] shadow-[var(--shadow-soft)] transition-all duration-500 hover:-translate-y-1 hover:border-primary/35"
                 >
-                  <div className="relative w-28 shrink-0 overflow-hidden sm:w-40">
-                    <div className={`flex h-full items-center justify-center bg-gradient-to-br ${a.gradient}`}>
+                  <div className="relative w-32 shrink-0 overflow-hidden border-r border-slate-200/80 bg-slate-50 p-2 dark:border-white/10 dark:bg-[#050507] sm:w-44">
+                    <div className="relative h-full w-full overflow-hidden rounded-xl border border-slate-200/90 bg-white dark:border-white/15 dark:bg-[#0b0d12]">
                       {a.image ? (
-                        <img src={a.image} alt={a.title} width={400} height={300} loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          src={a.image}
+                          alt={a.title}
+                          width={400}
+                          height={300}
+                          loading="lazy"
+                          decoding="async"
+                          className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-105"
+                        />
                       ) : (
-                        <Icon name={a.icon} size={30} className="text-white/85" />
+                        <div className="flex h-full w-full items-center justify-center">
+                          <Icon name={a.icon} size={28} className="text-[var(--text-muted)]" />
+                        </div>
                       )}
                     </div>
                   </div>

@@ -20,7 +20,7 @@ export const newArticles: Article[] = [
     gradient: "from-orange-500 to-rose-600",
     icon: "scissors",
     featured: true,
-    image: "/images/products/videocut.jpg",
+    image: "/images/screens/videocut-1.jpg",
     intro:
       "A podcast, a stream or a long tutorial already holds a dozen good Shorts. The hard part is the cutting: opening a heavy editor, framing every clip for a phone screen and exporting them one by one. Video Cut does that whole job in a browser tab, for free.",
     takeaways: [
@@ -132,7 +132,7 @@ export const newArticles: Article[] = [
     gradient: "from-orange-500 to-amber-500",
     icon: "sparkles",
     featured: true,
-    image: "/images/products/videomaker.jpg",
+    image: "/images/screens/videomaker-1.jpg",
     intro:
       "Funny family dialogues, classroom jokes and two-line punchlines do very well as Shorts — but animating them used to take hours. Video Maker turns a typed script into a talking cartoon video in a few minutes, right in your browser.",
     takeaways: [
@@ -242,7 +242,7 @@ export const newArticles: Article[] = [
     gradient: "from-red-500 to-rose-600",
     icon: "youtube",
     featured: true,
-    image: "/images/products/utubeflow.jpg",
+    image: "/images/screens/utubeflow-1.jpg",
     intro:
       "Posting every day is what grows a channel, and it is also what burns creators out. Batch your work instead: make a week of Shorts on Sunday, upload them all at once, and let them publish on their own. UTubeFlow does this for free.",
     takeaways: [
@@ -339,7 +339,7 @@ export const newArticles: Article[] = [
     gradient: "from-emerald-500 to-teal-600",
     icon: "smartphone",
     featured: true,
-    image: "/images/products/javaplay.jpg",
+    image: "/images/screens/javaplay-1.jpg",
     intro:
       "Before app stores there were Java games: tiny .jar files for Nokia, Sony Ericsson and Samsung phones, played with a keypad. Modern phones cannot run them — JavaPlay can, with the same soft keys, D-pad and number keys.",
     takeaways: [
@@ -391,7 +391,7 @@ export const newArticles: Article[] = [
     updated: "Nov 16, 2026",
     gradient: "from-amber-500 to-orange-600",
     icon: "play",
-    image: "/images/products/games.jpg",
+    image: "/images/screens/games-1.jpg",
     intro:
       "Not every game needs a 50 GB install. CodeLove Games is a collection of free 3D games that load in seconds in your browser, with keyboard, mouse or touch — and no sign-up.",
     takeaways: [
@@ -492,7 +492,7 @@ export const newBlogs: Article[] = [
     gradient: "from-orange-500 to-amber-500",
     icon: "sparkles",
     featured: true,
-    image: "/images/products/videomaker.jpg",
+    image: "/images/screens/videomaker-1.jpg",
     intro:
       "CodeLove's newest product turns writing into video. If you can type a funny two-person conversation, you can now publish it as an animated Short.",
     takeaways: ["66 characters, 30 voices", "Lip sync from the real sound", "Text-only caption videos", "MP4 up to 4K, no watermark"],
@@ -532,7 +532,7 @@ export const newBlogs: Article[] = [
     gradient: "from-orange-500 to-rose-600",
     icon: "scissors",
     featured: true,
-    image: "/images/products/videocut.jpg",
+    image: "/images/screens/videocut-1.jpg",
     intro:
       "Repurposing a long video into Shorts is one of the best ways to grow a channel, and one of the most tedious. Video Cut makes it a two-minute job.",
     takeaways: ["Equal parts or timed Shorts", "Blur fill, crop or letterbox", "Pick the audio language", "One ZIP, no watermark"],
@@ -571,7 +571,7 @@ export const newBlogs: Article[] = [
     gradient: "from-red-500 to-rose-600",
     icon: "youtube",
     featured: false,
-    image: "/images/products/utubeflow.jpg",
+    image: "/images/screens/utubeflow-1.jpg",
     intro:
       "Scheduling tools for YouTube usually cost a monthly fee. UTubeFlow is free, because it runs on the free tools Google already gives every creator.",
     takeaways: ["Bulk upload 100 videos", "Smart daily time slots", "Autopilot with your PC off", "₹0 forever"],
@@ -610,7 +610,7 @@ export const newBlogs: Article[] = [
     gradient: "from-emerald-500 to-teal-600",
     icon: "smartphone",
     featured: false,
-    image: "/images/products/javaplay.jpg",
+    image: "/images/screens/javaplay-1.jpg",
     intro:
       "Many of us played our first mobile games on a keypad phone. JavaPlay brings those Java games back on today's phones and computers.",
     takeaways: ["163 free open-license games", "Real keypad: soft keys, D-pad, 0–9", "Android, Windows and browser", "No ads, no sign-up"],
@@ -644,7 +644,7 @@ export const newBlogs: Article[] = [
     gradient: "from-amber-500 to-orange-600",
     icon: "play",
     featured: false,
-    image: "/images/products/games.jpg",
+    image: "/images/screens/games-1.jpg",
     intro:
       "The 3D Models library started as a place to download assets. It turned into a test: how many good games can be made using only those free models? The answer so far is fourteen.",
     takeaways: ["14 games, 14 genres", "No download, no sign-up", "PC and phone", "859 library models used"],

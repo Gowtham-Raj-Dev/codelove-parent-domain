@@ -62,7 +62,7 @@ export const products: Product[] = [
     category: "Creator",
     logo: "/logos/videomaker.svg",
     ...shots("videomaker", ["Turn a script into a talking cartoon video", "The editor: script on the left, live preview and a voice/scene/music timeline", "Write the dialogue, pick characters, export an MP4"]),
-    cardImage: "/images/products/videomaker.jpg",
+    cardImage: "/images/screens/videomaker-1.jpg",
     cta: "Make a Video",
   },
   {
@@ -86,7 +86,7 @@ export const products: Product[] = [
     category: "Media",
     logo: "/logos/videocut.svg",
     ...shots("videocut", ["Split long videos into parts and 9:16 Shorts", "The VideoCut Studio editor with a clip loaded: trim, split, frame and add text", "See how VideoCut works in a two-minute guide"]),
-    cardImage: "/images/products/videocut.jpg",
+    cardImage: "/images/screens/videocut-1.jpg",
     cta: "Open Video Cut",
   },
   {
@@ -138,7 +138,7 @@ export const products: Product[] = [
     category: "Creator",
     logo: "/logos/linkinbio.png",
     ...shots("linkinbio", ["Build one free page for every link you share", "Icons for every network, ready for any kind of creator", "Pages for creators, freelancers, musicians and small shops"]),
-    cardImage: "/images/products/linkinbio.jpg",
+    cardImage: "/images/screens/linkinbio-1.jpg",
   },
   {
     slug: "models",
@@ -161,7 +161,7 @@ export const products: Product[] = [
     category: "3D",
     logo: "/logos/models.svg",
     ...shots("models", ["6,700+ free 3D models with a live preview on the home page", "Browse by category — here, free vehicle models", "The full catalogue: filter by category and download GLB files"]),
-    cardImage: "/images/products/models.jpg",
+    cardImage: "/images/screens/models-1.jpg",
   },
   {
     slug: "voltarc",
@@ -182,7 +182,7 @@ export const products: Product[] = [
     accent: "#ff1e42",
     status: "New",
     category: "Games",
-    logo: "/logos/voltarc.svg",
+    logo: "/logos/voltarc.svg?v=2",
     ...shots("voltarc", [
       "Over 3,080 instant-play HTML5 and 3D WebGL browser games with zero installs",
       "Trending spotlight stage, instant search & daily synced arcade deck",
@@ -268,7 +268,7 @@ export const products: Product[] = [
     category: "Media",
     logo: "/logos/videotogif.svg",
     ...shots("videotogif", ["Convert and edit GIFs and videos right in your browser", "The Video to GIF tool: drop a clip, trim it and set the size", "Every GIF and video tool in one place"]),
-    cardImage: "/images/products/videotogif.jpg",
+    cardImage: "/images/screens/videotogif-1.jpg",
   },
   {
     slug: "videotoimages",
@@ -291,7 +291,7 @@ export const products: Product[] = [
     category: "Media",
     logo: "/logos/videotoimages.svg",
     ...shots("videotoimages", ["Process videos and images privately, in your browser", "Video to Frame: turn any clip into crisp JPG, PNG or WebP frames", "The full media toolkit: frames, MP3, compress, crop and resize"]),
-    cardImage: "/images/products/videotoimages.jpg",
+    cardImage: "/images/screens/videotoimages-1.jpg",
   },
   {
     slug: "games",
@@ -314,7 +314,7 @@ export const products: Product[] = [
     category: "Games",
     logo: "/logos/games.svg",
     ...shots("games", ["Free 3D games that run in your browser — just press play", "Every game has its own page: Night Heist, a stealth game", "The full game list, from racing to tower defense"]),
-    cardImage: "/images/products/games.jpg",
+    cardImage: "/images/screens/games-1.jpg",
     cta: "Play Games",
   },
   {
@@ -338,7 +338,7 @@ export const products: Product[] = [
     category: "Creator",
     logo: "/logos/utubeflow.svg",
     ...shots("utubeflow", ["Upload once, post every day — free YouTube automation", "Make your videos inside UTubeFlow with VideoCut and Video Maker", "Bulk uploads, Autopilot and smart daily time slots"]),
-    cardImage: "/images/products/utubeflow.jpg",
+    cardImage: "/images/screens/utubeflow-1.jpg",
   },
   {
     slug: "javaplay",
@@ -361,7 +361,7 @@ export const products: Product[] = [
     category: "Games",
     logo: "/logos/javaplay.svg",
     ...shots("javaplay", ["Old Java phone games, back on your PC and phone", "163 free open-license Java games, ready to play", "Pick a game and play it with the on-screen keypad"]),
-    cardImage: "/images/products/javaplay.jpg",
+    cardImage: "/images/screens/javaplay-1.jpg",
     cta: "Play Java Games",
   },
   {
@@ -731,7 +731,7 @@ export const articles: Article[] = [
     gradient: "from-indigo-500 to-violet-600",
     icon: "box",
     featured: true,
-    image: "/images/products/models.jpg",
+    image: "/images/screens/models-1.jpg",
     intro:
       "If you have downloaded a 3D model recently, there is a good chance it ended in .glb. The format has quietly become the standard way to move 3D models between tools and onto web pages. Here is what it is and why it took over.",
     takeaways: [
@@ -829,7 +829,7 @@ export const articles: Article[] = [
     updated: "Oct 10, 2026",
     gradient: "from-fuchsia-500 to-rose-600",
     icon: "image",
-    image: "/images/products/videotoimages.jpg",
+    image: "/images/screens/videotoimages-1.jpg",
     intro:
       "A video is just a long stack of still images shown quickly. Pulling those images back out is useful more often than you might expect — for thumbnails, storyboards, reference stills or simply grabbing the one perfect moment.",
     takeaways: [
@@ -880,7 +880,7 @@ export const articles: Article[] = [
     updated: "Jul 2, 2026",
     gradient: "from-pink-500 to-rose-600",
     icon: "download",
-    image: "/images/products/downloader.jpg",
+    image: "/images/screens/iloveconvert-1.jpg",
     intro:
       "Saving your own reels, backing up a client's carousel, or archiving content you created — there are plenty of legitimate reasons to download Instagram media. This guide covers how it works and how to do it responsibly.",
     takeaways: [
@@ -925,7 +925,7 @@ export const articles: Article[] = [
     updated: "Oct 10, 2026",
     gradient: "from-violet-500 to-fuchsia-600",
     icon: "layers",
-    image: "/images/products/models.jpg",
+    image: "/images/screens/models-1.jpg",
     intro:
       "Free 3D model libraries can save weeks of work on a game, a prototype or a web experience. Getting real value from them comes down to three things: picking models that suit real-time use, understanding the licence, and keeping your credits in order.",
     takeaways: [
@@ -1120,7 +1120,7 @@ export const articles: Article[] = [
     updated: "Oct 10, 2026",
     gradient: "from-rose-500 to-pink-600",
     icon: "scissors",
-    image: "/images/products/videotogif.jpg",
+    image: "/images/screens/videotogif-1.jpg",
     intro:
       "A five-second GIF can easily weigh more than a minute of video. That is not a mistake in your export — it is how the format works. Once you know what drives the size, shrinking a GIF becomes a matter of choosing what to give up.",
     takeaways: [
@@ -1171,7 +1171,7 @@ export const articles: Article[] = [
     updated: "Oct 10, 2026",
     gradient: "from-red-500 to-rose-600",
     icon: "download",
-    image: "/images/products/downloader.jpg",
+    image: "/images/screens/iloveconvert-1.jpg",
     intro:
       "Pinterest is built for collecting ideas, but its boards only work while you are online and signed in. Saving a pin to your device is useful for mood boards, client references and offline planning — as long as you respect who made it.",
     takeaways: [
@@ -1267,7 +1267,7 @@ export const articles: Article[] = [
     updated: "Oct 10, 2026",
     gradient: "from-violet-500 to-fuchsia-600",
     icon: "link",
-    image: "/images/products/linkinbio.jpg",
+    image: "/images/screens/linkinbio-1.jpg",
     intro:
       "A link in bio page can hold as many links as you like, which is exactly the trap. The pages that work are the ones that make a visitor's next step obvious within a couple of seconds.",
     takeaways: [
@@ -1783,13 +1783,13 @@ export const blogs: Article[] = [
     gradient: "from-indigo-500 to-violet-600",
     icon: "box",
     featured: true,
-    image: "/images/products/models.jpg",
+    image: "/images/screens/models-1.jpg",
     intro: "CodeLove has a new product, and it is a different kind of tool from the ones before it. 3D Models is a library of free 3D assets you can inspect in your browser and download for your own projects.",
     takeaways: ["6,700+ free models", "Live 3D preview", "Open licences shown on every model", "Single-file GLB downloads"],
     content: [
       {
         heading: "What is in the library",
-        image: "/images/products/models.jpg",
+        image: "/images/screens/models-1.jpg",
         paragraphs: [
           "The library holds more than 6,700 models: rigged characters and animals, vehicles, buildings, furniture, food, nature and space. They are organised into categories and collections, so you can browse a whole matching kit instead of hunting for pieces one at a time.",
           "Every model has its own page with a live 3D preview, its triangle count, its file size and its licence."
@@ -1823,13 +1823,13 @@ export const blogs: Article[] = [
     gradient: "from-blue-500 to-indigo-600",
     icon: "download",
     featured: false,
-    image: "/images/products/downloader.jpg",
+    image: "/images/screens/iloveconvert-1.jpg",
     intro: "The CodeLove Downloader now concentrates on two platforms: Instagram and Pinterest. Here is what it does today.",
     takeaways: ["Instagram videos and Reels", "Pinterest videos and images", "Single and multi-link modes", "Public content only"],
     content: [
       {
         heading: "What is supported",
-        image: "/images/products/downloader.jpg",
+        image: "/images/screens/iloveconvert-1.jpg",
         paragraphs: [
           "There are three downloaders: one for Instagram videos and Reels, one for Pinterest videos and one for Pinterest images. Each works the same way — paste a link, check the preview, and save the file.",
           "You do not need an account, and the Downloader never asks for your Instagram or Pinterest password."
@@ -1862,13 +1862,13 @@ export const blogs: Article[] = [
     gradient: "from-fuchsia-500 to-rose-600",
     icon: "film",
     featured: false,
-    image: "/images/products/videotoimages.jpg",
+    image: "/images/screens/videotoimages-1.jpg",
     intro: "Video to Frame started as one tool that did one job. It now sits alongside seven others, so the product has a new name to match: Video to Images.",
     takeaways: ["Eight tools in one place", "Video and image editing", "Nothing is uploaded", "Free, with no watermark"],
     content: [
       {
         heading: "What is included",
-        image: "/images/products/videotoimages.jpg",
+        image: "/images/screens/videotoimages-1.jpg",
         paragraphs: [
           "For video there are five tools: Video to Frame for extracting stills, Video to MP3 for saving the audio track, and Video Compressor, Video Crop and Video Resize for getting a clip to the right size and shape.",
           "For images there are three: Image Compressor, Image Crop and Image Resize."
@@ -1901,13 +1901,13 @@ export const blogs: Article[] = [
     gradient: "from-rose-500 to-pink-600",
     icon: "play",
     featured: false,
-    image: "/images/products/videotogif.jpg",
+    image: "/images/screens/videotogif-1.jpg",
     intro: "Making a GIF is rarely a single step. You convert the clip, notice it is too large, crop out the edges and shrink it again. Video to GIF now covers that whole loop.",
     takeaways: ["Eight GIF and video tools", "Convert in both directions", "Crop, resize and compress", "Runs in your browser"],
     content: [
       {
         heading: "The tools",
-        image: "/images/products/videotogif.jpg",
+        image: "/images/screens/videotogif-1.jpg",
         paragraphs: [
           "Alongside the original Video to GIF converter there is now GIF to Video, which turns an animated GIF into a much lighter MP4. GIF Resize, GIF Crop and GIF Compressor handle the clean-up after a conversion.",
           "Three matching tools work on the source clip before you convert it: Video Crop, Video Resize and Video Compressor."
@@ -2002,7 +2002,7 @@ export const blogs: Article[] = [
       },
       {
         heading: "Available today",
-        image: "/images/products/videotogif.jpg",
+        image: "/images/screens/videotogif-1.jpg",
         paragraphs: [
           "Both Video to GIF and Video to Frame are available starting today, completely free of charge and without watermarks. Try them out in the Products section and let us know what you think!"
         ]
@@ -2062,13 +2062,13 @@ export const blogs: Article[] = [
     gradient: "from-fuchsia-500 to-rose-600",
     icon: "palette",
     featured: false,
-    image: "/images/products/linkinbio.jpg",
+    image: "/images/screens/linkinbio-1.jpg",
     intro: "Creators are busy. They need tools that get out of the way and just work. Here is how we designed our creator suite.",
     takeaways: ["Mobile first design", "Minimal friction", "Bold but clean aesthetics", "Speed as a feature"],
     content: [
       {
         heading: "Speed is the ultimate feature",
-        image: "/images/products/linkinbio.jpg",
+        image: "/images/screens/linkinbio-1.jpg",
         paragraphs: [
           "When a creator needs to download a reel for a reaction video, or update their bio link to point to a new sponsor, they want it done in seconds. Every extra click is a point of friction.",
           "We designed our tools to require the absolute minimum number of interactions. Paste a link, hit enter, get your file. No accounts required, no popups, no hidden menus."
@@ -2076,7 +2076,7 @@ export const blogs: Article[] = [
       },
       {
         heading: "Aesthetics that inspire trust",
-        image: "/images/products/downloader.jpg",
+        image: "/images/screens/iloveconvert-1.jpg",
         paragraphs: [
           "Many free online tools look like spam sites from 2010. They are covered in flashing banner ads and fake download buttons. We took the opposite approach.",
           "We use a dark, premium aesthetic with smooth gradients and high-quality typography. By making our free tools look like expensive enterprise software, we build immediate trust with our users."
@@ -2084,7 +2084,7 @@ export const blogs: Article[] = [
       },
       {
         heading: "Mobile-first by necessity",
-        image: "/images/products/linkinbio.jpg",
+        image: "/images/screens/linkinbio-1.jpg",
         paragraphs: [
           "Over 80% of the traffic to our Link in Bio and Downloader tools comes from mobile devices. If a UI element is difficult to tap on an iPhone, the design has failed.",
           "We rigorously test every interface on actual mobile hardware to ensure touch targets are large, animations are smooth, and the layout feels native."
@@ -2103,7 +2103,7 @@ export const blogCategories = ["All", "Announcements", "Updates", "Engineering",
 export const stats: Stat[] = [
   { get value() { return products.length; }, suffix: "+", label: "Products & tools" },
   { get value() { return articles.length; }, suffix: "+", label: "Guides & articles" },
-  { value: 10, suffix: "K+", label: "Monthly users" },
-  { value: 1.5, suffix: "M+", label: "Files processed" },
-  { value: 2, suffix: "M+", label: "Hours saved" },
+  { value: 8, suffix: "", label: "Built-in browser tools" },
+  { value: 100, suffix: "%", label: "Free · no sign-up" },
+  { value: 0, suffix: "", label: "Paywalls or watermarks" },
 ];
