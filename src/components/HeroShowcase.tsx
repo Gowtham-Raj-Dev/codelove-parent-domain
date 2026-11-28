@@ -154,20 +154,26 @@ export default function HeroShowcase() {
                 <div
                   className={`${
                     viewMode === "mobile" ? "w-[220px] sm:w-[238px]" : "w-full"
-                  } overflow-hidden rounded-[26px] border-[5px] border-slate-900 bg-slate-950 p-[3px] shadow-[0_20px_48px_rgba(0,0,0,0.3)] ring-1 ring-black/10 dark:border-zinc-700 dark:bg-black dark:shadow-[0_24px_56px_rgba(0,0,0,0.9)] dark:ring-white/15`}
+                  } relative overflow-hidden rounded-[26px] border-[5px] border-slate-900 bg-slate-950 shadow-[0_20px_48px_rgba(0,0,0,0.32)] ring-1 ring-black/15 dark:border-zinc-700 dark:bg-black dark:shadow-[0_24px_56px_rgba(0,0,0,0.9)] dark:ring-white/20`}
                 >
-                  <div
-                    aria-hidden
-                    className="mx-auto my-1 h-1.5 w-10 rounded-full bg-slate-800 dark:bg-zinc-800"
-                  />
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={phoneSrc}
-                    alt={`${active.name} mobile view`}
-                    width={390}
-                    height={844}
-                    className="aspect-[390/820] w-full rounded-[19px] object-cover object-top"
-                  />
+                  <div className="relative aspect-[390/810] w-full overflow-hidden rounded-[20px]">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={phoneSrc}
+                      alt={`${active.name} mobile view`}
+                      width={390}
+                      height={844}
+                      className="h-full w-full object-cover object-top"
+                    />
+                    <div
+                      aria-hidden
+                      className="pointer-events-none absolute left-1/2 top-2 h-1.5 w-[28%] -translate-x-1/2 rounded-full bg-slate-950/90 ring-1 ring-white/15"
+                    />
+                    <div
+                      aria-hidden
+                      className="pointer-events-none absolute bottom-1.5 left-1/2 h-[3px] w-[32%] -translate-x-1/2 rounded-full bg-slate-900/35 dark:bg-white/40"
+                    />
+                  </div>
                 </div>
 
                 {viewMode === "mobile" && (

@@ -328,8 +328,10 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                 </div>
                 <Reveal delay={200} className="mx-auto w-full max-w-[15rem]">
                   <figure>
-                    <div className="overflow-hidden rounded-[2.2rem] border-[7px] border-slate-900 bg-slate-900 shadow-[var(--shadow-glow)] ring-1 ring-[var(--surface-border)]">
+                    <div className="relative overflow-hidden rounded-[2.2rem] border-[7px] border-slate-900 bg-slate-950 shadow-[var(--shadow-glow)] ring-1 ring-black/15 dark:border-zinc-700 dark:bg-black dark:ring-white/20">
                       <img src={product.phone} alt={`${product.name} on a phone`} width={520} height={1126} loading="lazy" decoding="async" className="aspect-[390/844] w-full rounded-[1.7rem] object-cover object-top" />
+                      <div aria-hidden className="pointer-events-none absolute left-1/2 top-2.5 h-2 w-14 -translate-x-1/2 rounded-full bg-slate-950/90 ring-1 ring-white/15" />
+                      <div aria-hidden className="pointer-events-none absolute bottom-2 left-1/2 h-1 w-16 -translate-x-1/2 rounded-full bg-slate-900/35 dark:bg-white/40" />
                     </div>
                     <figcaption className="mt-3 text-center text-sm text-[var(--text-muted)]">Works on your phone too</figcaption>
                   </figure>
