@@ -4,9 +4,10 @@ import { useEffect, useMemo, useState } from "react";
 import { flushSync } from "react-dom";
 import Link from "next/link";
 import Icon from "./Icon";
+import { DesktopNavMenus, MobileNavMenus } from "./NavbarMenus";
 import ProductLogo from "./ProductLogo";
 import Logo from "./Logo";
-import { navLinks, products, articles } from "@/lib/data";
+import { products, articles } from "@/lib/data";
 
 function ThemeToggle() {
   const [dark, setDark] = useState(false);
@@ -222,18 +223,8 @@ export default function Navbar() {
             </div>
 
             {/* Desktop nav */}
-
-            {/* Desktop nav */}
             <nav className="hidden items-center gap-1 lg:flex">
-              {navLinks.map((l) => (
-                <Link
-                  key={l.href}
-                  href={l.href}
-                  className="rounded-lg px-3.5 py-2 text-sm font-medium text-[var(--text-muted)] transition hover:bg-[var(--surface)] hover:text-[var(--text)]"
-                >
-                  {l.label}
-                </Link>
-              ))}
+              <DesktopNavMenus />
             </nav>
 
             {/* Actions */}
@@ -266,20 +257,11 @@ export default function Navbar() {
           {/* Mobile menu */}
           {open && (
             <div className="mt-2 overflow-hidden rounded-2xl border border-[var(--surface-border)] bg-[var(--bg-elevated)] p-2 shadow-[var(--shadow-soft)] lg:hidden">
-              {navLinks.map((l) => (
-                <Link
-                  key={l.href}
-                  href={l.href}
-                  onClick={() => setOpen(false)}
-                  className="block rounded-xl px-4 py-3 text-sm font-medium text-[var(--text-muted)] transition hover:bg-[var(--surface)] hover:text-[var(--text)]"
-                >
-                  {l.label}
-                </Link>
-              ))}
+              <MobileNavMenus onClose={() => setOpen(false)} />
               <Link
                 href="/products"
                 onClick={() => setOpen(false)}
-                className="mt-1 flex items-center justify-center gap-1.5 rounded-xl bg-gradient-to-r from-primary to-secondary px-4 py-3 text-sm font-semibold text-white"
+                className="mt-2 flex items-center justify-center gap-1.5 rounded-xl bg-gradient-to-r from-primary to-secondary px-4 py-3 text-sm font-semibold text-white"
               >
                 Get Started <Icon name="arrowRight" size={16} />
               </Link>

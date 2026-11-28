@@ -3,19 +3,22 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import QuickToolsWorkbench from "@/components/QuickToolsWorkbench";
+import SubdomainDirectory from "@/components/SubdomainDirectory";
 import Icon from "@/components/Icon";
 import { pageMetadata, SITE_URL } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
   title: "Free Online Creator & Developer Tools",
   description:
-    "Run local browser tools directly on codelove.in: WebP/JPG/PNG image compression, video bitrate & MP4 size calculation, Shorts 9:16 safe-zone sizing, and JSON/SEO validation.",
+    "Run 8 browser-local utilities on codelove.in: WebP image compression, social aspect cropping, video bitrate & MP4 size calculation, Shorts safe-zones, JSON, SERP/OG, WCAG contrast, and slug/UUID tools.",
   path: "/tools",
   keywords: [
     "online image compressor",
+    "social aspect ratio cropper",
     "video bitrate calculator",
     "youtube shorts aspect ratio calculator",
     "json formatter",
+    "wcag contrast checker",
     "meta tag preview tool",
     "browser developer tools",
   ],
@@ -24,7 +27,7 @@ export const metadata: Metadata = pageMetadata({
 const toolFaqs = [
   {
     q: "Are images and text processed on your server?",
-    a: "No. All four tools run purely inside your browser tab using standard HTML5 Canvas, JavaScript math, and local DOM APIs. Uploaded graphics and pasted JSON never cross the network.",
+    a: "No. All eight utilities run purely inside your browser tab using standard HTML5 Canvas, Web Crypto, JavaScript math, and local DOM APIs. Uploaded graphics and pasted JSON never cross the network.",
   },
   {
     q: "Why does converting PNG screenshots to WebP save so much space?",
@@ -91,8 +94,7 @@ export default function ToolsPage() {
                 Interactive Creator &amp; <span className="text-gradient">Developer Toolkit</span>
               </h1>
               <p className="mt-4 text-base leading-relaxed text-[var(--text-muted)] sm:text-lg">
-                Optimize images to WebP, estimate MP4 bitrates before exporting, check 9:16 vertical safe-zone dimensions,
-                or validate JSON and Google search snippet lengths right here on codelove.in.
+                Compress images to WebP, crop exact social covers, plan MP4 bitrates &amp; 9:16 safe zones, format JSON, check WCAG contrast, build Google SERP tags, or launch any dedicated CodeLove subdomain.
               </p>
             </div>
           </div>
@@ -173,7 +175,11 @@ export default function ToolsPage() {
               </p>
             </article>
           </div>
+        </section>
 
+        <SubdomainDirectory />
+
+        <section className="mx-auto max-w-6xl px-4 pb-20 sm:px-6">
           <div className="mx-auto max-w-4xl">
             <h2 className="text-center font-[family-name:var(--font-display)] text-2xl font-bold tracking-tight sm:text-3xl">
               Frequently Asked Questions

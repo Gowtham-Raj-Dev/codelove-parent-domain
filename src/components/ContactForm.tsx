@@ -1,20 +1,21 @@
 "use client";
 
 import { useState } from "react";
+import CustomSelect from "./CustomSelect";
 import Icon from "./Icon";
 
-const TOPICS = [
-  "Bug report",
-  "Feature idea",
-  "Tool feedback",
-  "Licensing / attribution",
-  "Partnerships & press",
+const TOPIC_OPTIONS = [
+  { value: "Bug report", label: "Bug report", hint: "Broken page, conversion error, or visual issue" },
+  { value: "Feature idea", label: "Feature idea", hint: "Suggest a tool or improvement" },
+  { value: "Tool feedback", label: "Tool feedback", hint: "General experience & usability note" },
+  { value: "Licensing / attribution", label: "Licensing / attribution", hint: "3D models, J2ME games, or credit enquiries" },
+  { value: "Partnerships & press", label: "Partnerships & press", hint: "Collaborations & media enquiries" },
 ];
 
 export default function ContactForm({ supportEmail }: { supportEmail: string }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [topic, setTopic] = useState(TOPICS[0]);
+  const [topic, setTopic] = useState(TOPIC_OPTIONS[0].value);
   const [pageUrl, setPageUrl] = useState("");
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState<{ type: "ok" | "err"; text: string } | null>(null);
@@ -100,21 +101,13 @@ export default function ContactForm({ supportEmail }: { supportEmail: string }) 
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2">
-        <div>
-          <label htmlFor="cf-topic" className="block text-xs font-semibold uppercase tracking-wider text-[var(--text-faint)]">
-            Topic
-          </label>
-          <select
-            id="cf-topic"
-            value={topic}
-            onChange={(e) => setTopic(e.target.value)}
-            className="mt-1.5 w-full rounded-xl border border-[var(--surface-border)] bg-[var(--surface)] px-3.5 py-2.5 text-sm outline-none focus:border-primary"
-          >
-            {TOPICS.map((t) => (
-              <option key={t} value={t}>{t}</option>
-            ))}
-          </select>
-        </div>
+        <CustomSelect
+          id="cf-topic"
+          label="Topic"
+          value={topic}
+          onChange={setTopic}
+          options={TOPIC_OPTIONS}
+        />
         <div>
           <label htmlFor="cf-url" className="block text-xs font-semibold uppercase tracking-wider text-[var(--text-faint)]">
             Related Tool or Page (optional)
