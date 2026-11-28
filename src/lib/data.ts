@@ -61,7 +61,7 @@ export const products: Product[] = [
     status: "New",
     category: "Creator",
     logo: "/logos/videomaker.svg",
-    ...shots("videomaker", ["Turn a script into a talking cartoon video","The editor: script on the left, live preview and a voice/scene/music timeline","Write the dialogue, pick characters, export an MP4"]),
+    ...shots("videomaker", ["Turn a script into a talking cartoon video", "The editor: script on the left, live preview and a voice/scene/music timeline", "Write the dialogue, pick characters, export an MP4"]),
     cardImage: "/images/products/videomaker.jpg",
     cta: "Make a Video",
   },
@@ -85,7 +85,7 @@ export const products: Product[] = [
     status: "New",
     category: "Media",
     logo: "/logos/videocut.svg",
-    ...shots("videocut", ["Split long videos into parts and 9:16 Shorts","The VideoCut Studio editor with a clip loaded: trim, split, frame and add text","See how VideoCut works in a two-minute guide"]),
+    ...shots("videocut", ["Split long videos into parts and 9:16 Shorts", "The VideoCut Studio editor with a clip loaded: trim, split, frame and add text", "See how VideoCut works in a two-minute guide"]),
     cardImage: "/images/products/videocut.jpg",
     cta: "Open Video Cut",
   },
@@ -109,10 +109,12 @@ export const products: Product[] = [
     status: "New",
     category: "Utilities",
     logo: "/logos/iloveconvert.svg",
-    image: "/images/products/iloveconvert.svg",
-    cardImage: "/images/products/iloveconvert.svg",
-    screens: [],
-    phone: "",
+    ...shots("iloveconvert", [
+      "54 local image, PDF, audio, developer & color utilities in one browser studio",
+      "Filter across categories or press Ctrl+K to jump straight to any converter",
+      "Drop files locally with instant auto-detection, batch export & zero uploads",
+    ]),
+    cardImage: "/images/screens/iloveconvert-1.jpg",
     cta: "Open ILoveConvert",
   },
   {
@@ -135,7 +137,7 @@ export const products: Product[] = [
     status: "Live",
     category: "Creator",
     logo: "/logos/linkinbio.png",
-    ...shots("linkinbio", ["Build one free page for every link you share","Icons for every network, ready for any kind of creator","Pages for creators, freelancers, musicians and small shops"]),
+    ...shots("linkinbio", ["Build one free page for every link you share", "Icons for every network, ready for any kind of creator", "Pages for creators, freelancers, musicians and small shops"]),
     cardImage: "/images/products/linkinbio.jpg",
   },
   {
@@ -158,7 +160,7 @@ export const products: Product[] = [
     status: "Live",
     category: "3D",
     logo: "/logos/models.svg",
-    ...shots("models", ["6,700+ free 3D models with a live preview on the home page","Browse by category — here, free vehicle models","The full catalogue: filter by category and download GLB files"]),
+    ...shots("models", ["6,700+ free 3D models with a live preview on the home page", "Browse by category — here, free vehicle models", "The full catalogue: filter by category and download GLB files"]),
     cardImage: "/images/products/models.jpg",
   },
   {
@@ -181,11 +183,41 @@ export const products: Product[] = [
     status: "New",
     category: "Games",
     logo: "/logos/voltarc.svg",
-    image: "/images/products/voltarc.svg",
-    cardImage: "/images/products/voltarc.svg",
-    screens: [],
-    phone: "",
+    ...shots("voltarc", [
+      "Over 3,080 instant-play HTML5 and 3D WebGL browser games with zero installs",
+      "Trending spotlight stage, instant search & daily synced arcade deck",
+      "Browse 190+ categories across desktop theater and portrait phone modes",
+    ]),
+    cardImage: "/images/screens/voltarc-1.jpg",
     cta: "Open Arcade",
+  },
+  {
+    slug: "apps",
+    name: "CodeLove Apps",
+    icon: "smartphone",
+    domain: "apps.codelove.in",
+    url: "https://apps.codelove.in",
+    tagline: "Free Android games & utility APKs",
+    description:
+      "Download free offline 3D Android games and mobile utilities including Kingdom Clash, Turbo Karts, Video Cut, Video to GIF, and JavaPlay emulator APKs directly with zero accounts or paywalls.",
+    features: [
+      "13+ full-screen landscape 3D Android game APKs",
+      "Video Cut, Video to GIF, LinkInBio & JavaPlay tools",
+      "One CodeLove Hub app with all games & tools inside",
+      "100% free APK downloads with zero sign-up",
+    ],
+    gradient: "from-blue-600 to-sky-500",
+    accent: "#2158fe",
+    status: "New",
+    category: "Android Apps",
+    logo: "/logos/apps.svg?v=2",
+    ...shots("apps", [
+      "Official CodeLove Android store for free offline 3D games and creator utilities",
+      "Browse 19+ Android games and tools with one-tap clean APK downloads",
+      "Dedicated Android app pages with install steps, screenshots & version info",
+    ]),
+    cardImage: "/images/screens/apps-1.jpg",
+    cta: "Browse APKs",
   },
   {
     slug: "satisfying-video-maker",
@@ -206,11 +238,13 @@ export const products: Product[] = [
     accent: "#10b981",
     status: "New",
     category: "Media",
-    logo: "/logos/satisfying-video-maker.svg",
-    image: "/images/products/satisfying-video-maker.svg",
-    cardImage: "/images/products/satisfying-video-maker.svg",
-    screens: [],
-    phone: "",
+    logo: "/logos/satisfying-video-maker.svg?v=2",
+    ...shots("satisfying-video-maker", [
+      "Interactive 60 FPS geometric physics playground and ASMR canvas studio",
+      "Tune gravity, restitution, trails & harmonic MIDI collision notes live",
+      "Explore 97+ playable physics presets & export clean 9:16 Reels clips",
+    ]),
+    cardImage: "/images/screens/satisfying-video-maker-1.jpg",
     cta: "Launch Studio",
   },
   {
@@ -233,7 +267,7 @@ export const products: Product[] = [
     status: "Live",
     category: "Media",
     logo: "/logos/videotogif.svg",
-    ...shots("videotogif", ["Convert and edit GIFs and videos right in your browser","The Video to GIF tool: drop a clip, trim it and set the size","Every GIF and video tool in one place"]),
+    ...shots("videotogif", ["Convert and edit GIFs and videos right in your browser", "The Video to GIF tool: drop a clip, trim it and set the size", "Every GIF and video tool in one place"]),
     cardImage: "/images/products/videotogif.jpg",
   },
   {
@@ -256,7 +290,7 @@ export const products: Product[] = [
     status: "Live",
     category: "Media",
     logo: "/logos/videotoimages.svg",
-    ...shots("videotoimages", ["Process videos and images privately, in your browser","Video to Frame: turn any clip into crisp JPG, PNG or WebP frames","The full media toolkit: frames, MP3, compress, crop and resize"]),
+    ...shots("videotoimages", ["Process videos and images privately, in your browser", "Video to Frame: turn any clip into crisp JPG, PNG or WebP frames", "The full media toolkit: frames, MP3, compress, crop and resize"]),
     cardImage: "/images/products/videotoimages.jpg",
   },
   {
@@ -279,7 +313,7 @@ export const products: Product[] = [
     status: "New",
     category: "Games",
     logo: "/logos/games.svg",
-    ...shots("games", ["Free 3D games that run in your browser — just press play","Every game has its own page: Night Heist, a stealth game","The full game list, from racing to tower defense"]),
+    ...shots("games", ["Free 3D games that run in your browser — just press play", "Every game has its own page: Night Heist, a stealth game", "The full game list, from racing to tower defense"]),
     cardImage: "/images/products/games.jpg",
     cta: "Play Games",
   },
@@ -303,7 +337,7 @@ export const products: Product[] = [
     status: "New",
     category: "Creator",
     logo: "/logos/utubeflow.svg",
-    ...shots("utubeflow", ["Upload once, post every day — free YouTube automation","Make your videos inside UTubeFlow with VideoCut and Video Maker","Bulk uploads, Autopilot and smart daily time slots"]),
+    ...shots("utubeflow", ["Upload once, post every day — free YouTube automation", "Make your videos inside UTubeFlow with VideoCut and Video Maker", "Bulk uploads, Autopilot and smart daily time slots"]),
     cardImage: "/images/products/utubeflow.jpg",
   },
   {
@@ -326,7 +360,7 @@ export const products: Product[] = [
     status: "New",
     category: "Games",
     logo: "/logos/javaplay.svg",
-    ...shots("javaplay", ["Old Java phone games, back on your PC and phone","163 free open-license Java games, ready to play","Pick a game and play it with the on-screen keypad"]),
+    ...shots("javaplay", ["Old Java phone games, back on your PC and phone", "163 free open-license Java games, ready to play", "Pick a game and play it with the on-screen keypad"]),
     cardImage: "/images/products/javaplay.jpg",
     cta: "Play Java Games",
   },
@@ -350,10 +384,12 @@ export const products: Product[] = [
     status: "Live",
     category: "Analytics & SEO",
     logo: "/logos/webly.svg",
-    image: "/images/products/webly.svg",
-    cardImage: "/images/products/webly.svg",
-    screens: [],
-    phone: "",
+    ...shots("webly", [
+      "Google Analytics, Search Console & AdSense dashboard for every domain",
+      "9 dedicated SEO utilities: 30+ point site audit, broken links & PageSpeed checks",
+      "Real-time traffic insights, keyword rankings & copy-paste technical fixes",
+    ]),
+    cardImage: "/images/screens/webly-1.jpg",
     cta: "Open Webly",
   },
 ];
@@ -472,6 +508,23 @@ export const productDetails: Record<string, ProductDetail> = {
       { q: "Do VOLTARC games work on mobile phones?", a: "Yes. You can filter the library specifically for Android and iOS touch-compatible or portrait-mode games." },
       { q: "Are downloads or plugins required?", a: "No. Every title runs natively inside modern browsers using HTML5 and WebGL." },
       { q: "Where are my favorites stored?", a: "Favorites and play history stay privately in your browser's local storage with no account needed." },
+    ],
+  },
+  apps: {
+    overview:
+      "CodeLove Apps (apps.codelove.in) is the official Android APK distribution hub for CodeLove's offline 3D games and creator utilities. Install Kingdom Clash, Turbo Karts, Crypt Knight, Cannon Cove, Video Cut, Video to GIF, Link in Bio, and JavaPlay — or get the all-in-one CodeLove Hub APK — completely free with no account required.",
+    highlights: ["Free Android APKs", "13+ 3D mobile games", "Mobile video tools", "Zero accounts needed"],
+    steps: [
+      { icon: "search", title: "Pick an app or game", text: "Browse Android 3D games, strategy titles, and creator utilities on apps.codelove.in." },
+      { icon: "download", title: "Download the APK", text: "Tap Download APK on any app page to save the verified Android package directly." },
+      { icon: "smartphone", title: "Allow & install once", text: "Open the APK from Downloads on Android and tap Install when prompted." },
+      { icon: "play", title: "Play or edit offline", text: "Launch full-screen landscape 3D games or use Android video utilities right on your phone." },
+    ],
+    faqs: [
+      { q: "Are all APKs on apps.codelove.in free?", a: "Yes. Every CodeLove Android game and tool APK is 100% free with no paywalls or subscriptions." },
+      { q: "What is the CodeLove Hub app?", a: "CodeLove Hub bundles every CodeLove 3D game and browser tool into one lightweight Android shell (~3 MB) so you can launch everything without separate installs." },
+      { q: "Do games support full-screen landscape touch controls?", a: "Yes. Every Android game opens directly in full-screen landscape with dedicated mobile touch controls." },
+      { q: "How do updates work for installed APKs?", a: "Just download the newer APK from apps.codelove.in and tap Install — Android updates cleanly right over the existing app." },
     ],
   },
   "satisfying-video-maker": {
@@ -631,6 +684,7 @@ export type Category = {
 export const categories: Category[] = [
   { icon: "film", title: "Video", slug: "video", blurb: "GIFs, frames, formats & compression.", gradient: "from-rose-500 to-pink-600" },
   { icon: "image", title: "Image", slug: "image", blurb: "Formats, compression, cropping & resizing.", gradient: "from-purple-500 to-violet-600" },
+  { icon: "download", title: "Downloads", slug: "downloads", blurb: "Saving Instagram & Pinterest media responsibly.", gradient: "from-blue-500 to-indigo-600" },
   { icon: "link", title: "Creator", slug: "creator", blurb: "Link-in-bio pages & growing your audience.", gradient: "from-violet-500 to-fuchsia-600" },
   { icon: "box", title: "3D Models", slug: "3d-models", blurb: "GLB files, licences & using models in projects.", gradient: "from-indigo-500 to-violet-600" },
   { icon: "youtube", title: "YouTube & Shorts", slug: "youtube", blurb: "Cutting Shorts, AI cartoon videos & scheduling uploads.", gradient: "from-red-500 to-orange-600" },
@@ -815,53 +869,46 @@ export const articles: Article[] = [
     ],
   },
   {
-    slug: "how-browser-media-tools-work-wasm-webcodecs",
-    title: "How Browser-Based Media Tools Work: WebAssembly, Canvas & WebCodecs",
+    slug: "complete-instagram-downloader-guide",
+    title: "The Complete Instagram Downloader Guide (2026)",
     excerpt:
-      "An inside look at how modern web apps resize images, split MP4 videos, and analyze frames locally in your tab with zero server uploads.",
-    category: "Video",
-    readingTime: "8 min read",
+      "How Instagram media works, what you can and can't download, and how to save reels, photos and carousels responsibly for your own content.",
+    category: "Downloads",
+    readingTime: "10 min read",
     author: "Gowtham",
-    published: "Nov 18, 2026",
-    updated: "Nov 26, 2026",
-    gradient: "from-blue-500 to-indigo-600",
-    icon: "code",
-    featured: true,
-    image: "/images/videocomp_spatial.png",
+    published: "Jun 22, 2026",
+    updated: "Jul 2, 2026",
+    gradient: "from-pink-500 to-rose-600",
+    icon: "download",
+    image: "/images/products/downloader.jpg",
     intro:
-      "Ten years ago, compressing a 200 MB video or converting fifty PNG screenshots to WebP required uploading everything to a cloud server queue. Modern browser engines now expose three core primitives — HTML5 Canvas, WebAssembly, and WebCodecs — that move heavy media work cleanly onto the user's own hardware.",
+      "Saving your own reels, backing up a client's carousel, or archiving content you created — there are plenty of legitimate reasons to download Instagram media. This guide covers how it works and how to do it responsibly.",
     takeaways: [
-      "HTML5 Canvas decodes and re-encodes raster images to WebP, JPG, and PNG in milliseconds.",
-      "WebAssembly runs native C/Rust codecs such as FFmpeg cleanly inside sandboxed browser threads.",
-      "Local object URLs (URL.createObjectURL) let previews update instantly without network traffic.",
-      "Zero server uploads reduce bandwidth costs while keeping user files strictly private.",
+      "Instagram serves media as standard files behind its interface.",
+      "Downloaders fetch the original, watermark-free version of a post.",
+      "Reels, photos, carousels and profile pictures can all be saved.",
+      "Always respect copyright and only download content you may use.",
     ],
     content: [
       {
-        heading: "1. Fast image transforms with HTML5 Canvas",
+        heading: "How Instagram media works",
         paragraphs: [
-          "For still images, browsers already include hardware-accelerated decoders for PNG, JPEG, WebP, and AVIF. Drawing a local File onto an off-screen Canvas element automatically applies GPU-backed bilinear or Lanczos scaling when width or height changes.",
-          "Calling canvas.toBlob(callback, 'image/webp', 0.82) triggers the browser's built-in libwebp encoder directly in memory. Memory cleanup via URL.revokeObjectURL prevents leaks even during multi-image batch workflows like ILoveConvert.",
+          "Every reel, photo and carousel on Instagram is ultimately a standard video or image file hosted on Meta's servers and delivered to your browser or app. The platform wraps these files in its own interface, but the underlying media is retrievable when you have the post's link.",
+          "A downloader simply requests that original file and hands it to you directly, without the app's compression or on-screen watermarks.",
         ],
       },
       {
-        heading: "2. Sandboxed video multiplexing via WebAssembly",
+        heading: "What you can download",
         paragraphs: [
-          "Video containers such as MP4 and MKV store separate compressed video and audio streams interleaved in chunks. Compiled WebAssembly modules allow a single-tab studio like Video Cut to inspect streams, strip unused dubbed audio tracks, or remux keyframe segments losslessly in roughly a second.",
-          "Running compilation inside a dedicated Web Worker keeps the timeline UI smooth at 60 FPS while encoding happens in the background.",
+          "Modern tools handle the full range of public content: single-photo posts, multi-image carousels, reels, video posts and even high-resolution profile pictures. For carousels, a good downloader lets you grab every slide at once rather than one at a time.",
+          "The process is usually the same: copy the share link from the post's menu, paste it into the downloader, preview the media and save it in its original quality.",
         ],
       },
       {
-        heading: "3. Real-time synthesis with Canvas + WebAudio",
+        heading: "Downloading responsibly",
         paragraphs: [
-          "Physics sandboxes and motion generators take the opposite path: instead of decoding camera footage, a deterministic simulation loop renders vector frames onto a high-DPI 2D or WebGL canvas while scheduling collision notes on the Web Audio API timeline.",
-          "Combining MediaStreamTrack capture with synced AudioContext routing produces clean vertical 9:16 exports without external capture tools.",
-        ],
-      },
-      {
-        heading: "Trade-offs to plan for",
-        paragraphs: [
-          "Local-first architectures depend on the device's available RAM and browser tab limits. Keeping peak image resolution capped when exporting web thumbnails, snapping video widths to even integers for YUV 4:2:0 encoding, and releasing temporary blobs immediately ensure reliable performance even on mid-range Android phones.",
+          "Downloading content you created, own the rights to, or have permission to reuse is perfectly reasonable. Downloading someone else's work to republish as your own is not — it can breach copyright and Instagram's terms.",
+          "Treat downloaders as a convenience for legitimate backup and reuse, always credit creators, and never redistribute private or copyrighted material without consent.",
         ],
       },
     ],
@@ -1113,53 +1160,52 @@ export const articles: Article[] = [
     ],
   },
   {
-    slug: "technical-seo-and-core-web-vitals-checklist",
-    title: "Technical SEO & Core Web Vitals Checklist for Fast Web Apps (2026)",
+    slug: "how-to-download-pinterest-videos-and-images",
+    title: "How to Download Pinterest Videos and Images",
     excerpt:
-      "A practical engineering checklist covering SSR HTML text, canonical consistency, sitemap hygiene, LCP image sizing, and zero broken assets.",
-    category: "Creator",
-    readingTime: "8 min read",
+      "Save pins for offline reference the right way. Learn how pin links work, how to save videos and images, and what you may do with them.",
+    category: "Downloads",
+    readingTime: "6 min read",
     author: "Gowtham",
-    published: "Nov 22, 2026",
-    updated: "Nov 27, 2026",
-    gradient: "from-indigo-500 to-purple-600",
-    icon: "globe",
-    featured: true,
-    image: "/images/products/webly.svg",
+    published: "Oct 10, 2026",
+    updated: "Oct 10, 2026",
+    gradient: "from-red-500 to-rose-600",
+    icon: "download",
+    image: "/images/products/downloader.jpg",
     intro:
-      "Fast interactive web apps frequently lose search visibility not from bad writing, but from quiet technical mistakes: empty client-rendered HTML shells, duplicate URLs across trailing slashes, missing canonical tags, or broken static images. This checklist mirrors the exact checks we audit across CodeLove sites.",
+      "Pinterest is built for collecting ideas, but its boards only work while you are online and signed in. Saving a pin to your device is useful for mood boards, client references and offline planning — as long as you respect who made it.",
     takeaways: [
-      "Render primary headings, copy, and key metrics in initial server HTML — never empty 0-value states.",
-      "Keep canonical URLs, sitemap <loc> paths, and trailing slashes strictly identical.",
-      "Exclude utility shell routes (like personal favorites or empty filter states) from indexable sitemaps.",
-      "Verify every image, SVG icon, and script link returns HTTP 200 after static builds.",
+      "Every pin has a share link you can copy.",
+      "Video pins and image pins are saved with different tools.",
+      "The full pin URL is more reliable than a short link.",
+      "Saved pins are for reference, not for republishing.",
     ],
     content: [
       {
-        heading: "Server HTML readability and word depth",
+        heading: "How pin links work",
         paragraphs: [
-          "Even though modern crawlers execute JavaScript, initial indexing and quality classifiers inspect static HTML immediately on download. Interactive tools should surround workspaces with clear introductory text, workflow instructions, reference tables, and FAQs rendered directly in server markup.",
-          "Avoid rendering placeholder counters like 0 or loading spinners inside initial HTML snapshots when static numbers are already known at build time.",
+          "Each pin lives at its own address. In the app or on the website, the share menu gives you a link you can copy. Pinterest often shortens these to a pin.it address, which redirects to the full pin URL.",
+          "Both normally work, but if a short link fails, open the pin in a browser and copy the full address from the address bar instead.",
         ],
       },
       {
-        heading: "Canonical consistency & sitemap hygiene",
+        heading: "Saving a video or an image",
         paragraphs: [
-          "Every indexable page in sitemap.xml must return HTTP 200 without redirect chains, match the <link rel='canonical'> path character-for-character (including trailing slash rules), and carry a unique <title> and meta description.",
-          "Pages with thin personal state — such as saved favorites or local history views — should carry noindex robots rules and stay out of public sitemaps so crawl budget concentrates on substantive guides and tools.",
+          "The steps are the same for both: copy the pin's link, paste it into the downloader, check the preview to confirm it is the right pin, and save the file. The CodeLove Downloader has a Pinterest Video Downloader for video pins and a Pinterest Image Downloader for image pins.",
+          "If you are collecting several pins for one project, the multi-link mode lets you paste a list of links and fetch them together instead of one at a time.",
         ],
       },
       {
-        heading: "Asset integrity and CLS prevention",
+        heading: "What you can and cannot save",
         paragraphs: [
-          "Every <img> and SVG card should declare explicit width and height dimensions and return HTTP 200 cleanly. Missing asset paths hurt both user trust and automated Core Web Vitals scoring.",
-          "Pair crisp WebP thumbnails sized cleanly around 800–1280 px with priority fetch attributes only on true above-the-fold hero visuals.",
+          "Downloaders work with public pins. Pins on secret boards and content that requires you to be signed in cannot be fetched, and that is by design.",
         ],
       },
       {
-        heading: "Verify continuously after every deploy",
+        heading: "Using saved pins responsibly",
         paragraphs: [
-          "Automating simple checks in CI — fetching sitemap URLs, validating meta tags, and testing every local image asset against HTTP 200 — catches regressions before search crawlers or ad reviewers ever visit your site.",
+          "A pin usually belongs to the photographer, designer or creator who made it, not to the person who pinned it. Saving it for your own reference, a private mood board or a client conversation is a reasonable use.",
+          "Republishing it as your own, or using it commercially without permission, is not. When in doubt, follow the pin back to its source and ask.",
         ],
       },
     ],
@@ -1405,19 +1451,18 @@ export const activeCategories = categoriesWithCounts.filter((c) => c.count > 0);
 /* ------------------------------------------------------------------ */
 export type Doc = { icon: IconName; title: string; text: string; steps: number; href: string };
 export const docs: Doc[] = [
-  { icon: "rocket", title: "Built-In Browser Toolkit", text: "Compress images to WebP, estimate MP4 bitrates, plan Shorts ratios, and validate JSON right on codelove.in.", steps: 4, href: "/tools" },
-  { icon: "film", title: "Cutting & Editing Shorts", text: "Split long videos into vertical 9:16 clips with Blur Fill framing and audio track selection.", steps: 5, href: "/learn/guide/how-to-cut-a-long-video-into-youtube-shorts" },
-  { icon: "box", title: "Using 3D GLB Models", text: "Find, preview and download GLB models, and check each licence before you use them.", steps: 5, href: "/learn/guide/how-to-use-free-3d-models" },
-  { icon: "image", title: "Web Image Optimization", text: "Choose cleanly between JPG, PNG, and WebP and resize images before publishing.", steps: 4, href: "/learn/guide/jpg-vs-png-vs-webp" },
-  { icon: "code", title: "Browser Media Engineering", text: "Understand how Canvas, WebAssembly, and WebAudio run media tools locally without server uploads.", steps: 4, href: "/learn/guide/how-browser-media-tools-work-wasm-webcodecs" },
-  { icon: "globe", title: "Technical SEO & Vitals", text: "Audit HTML rendering depth, canonical tags, sitemaps, and broken assets systematically.", steps: 4, href: "/learn/guide/technical-seo-and-core-web-vitals-checklist" },
+  { icon: "rocket", title: "Getting Started", text: "Understand the CodeLove ecosystem and find the right web studio or built-in tool in minutes.", steps: 4, href: "/products" },
+  { icon: "sliders", title: "Built-In Browser Tools", text: "Compress WebP images, crop social ratios, estimate MP4 bitrates, and check SEO meta locally.", steps: 8, href: "/tools" },
+  { icon: "box", title: "Using 3D Models", text: "Find, preview and download GLB models, and check each licence before you use them.", steps: 5, href: "/learn/3d-models" },
+  { icon: "film", title: "Editing Video", text: "Crop, resize, compress and cut Shorts cleanly right inside your browser.", steps: 7, href: "/learn/video" },
+  { icon: "image", title: "Making GIFs & Frames", text: "Turn clips into GIFs and extract image frames while keeping your files private.", steps: 5, href: "/learn/image" },
+  { icon: "link", title: "Building a Bio Page", text: "Create, theme and publish your personal Link in Bio profile.", steps: 6, href: "/learn/creator" },
 ];
 
 /* ------------------------------------------------------------------ */
 /*  Navigation                                                        */
 /* ------------------------------------------------------------------ */
 export const navLinks = [
-  { label: "Tools", href: "/tools" },
   { label: "Products", href: "/products" },
   { label: "Learning Center", href: "/learn" },
   { label: "Blog", href: "/blog" },
@@ -1463,10 +1508,10 @@ export const resourceHub: ResourceCard[] = [
   },
   {
     icon: "zap",
-    title: "Built-In & Studio Tools",
-    blurb: "Run image compression, bitrate math, and JSON checks directly on codelove.in/tools, or launch dedicated video, 3D, and game apps.",
-    href: "/tools",
-    cta: "Open toolkit",
+    title: "Free Tools",
+    blurb: "Every CodeLove product on its own fast, free subdomain — a media downloader, video and image tools, a link-in-bio builder and a 3D model library.",
+    href: "/products",
+    cta: "Explore tools",
     gradient: "from-amber-500 to-orange-600",
   },
   {
@@ -1501,46 +1546,40 @@ export const legalPages: LegalPage[] = [
   {
     slug: "privacy",
     title: "Privacy Policy",
-    description: "How CodeLove handles local browser processing, analytics, cookies, user privacy rights, and Google AdSense advertising.",
-    updated: "November 2026",
+    description: "How CodeLove handles the limited data involved in using our tools, including analytics, cookies and advertising.",
+    updated: "October 2026",
     intro:
-      "CodeLove is built around local-first browser execution so your media files, scripts, and JSON inputs stay on your own device. This Privacy Policy describes what data we do and do not process across codelove.in and linked CodeLove web applications.",
+      "CodeLove is built privacy-first. Most of our tools run entirely in your browser, and we collect as little as possible. This page explains what that means in plain language.",
     sections: [
       {
-        heading: "Local-first file & input handling",
+        heading: "What we collect",
         paragraphs: [
-          "Built-in utilities on codelove.in/tools and most CodeLove web apps process your images, video clips, text, and configuration payloads entirely in your browser tab using HTML5 Canvas, WebAssembly, and WebAudio. Files processed locally never touch or remain on a CodeLove backend server.",
-          "For optional authenticated workflows (such as saving Link in Bio profiles or scheduling uploads via UTubeFlow with Google OAuth), only the tokens and fields necessary to perform the action you requested are stored.",
+          "Many CodeLove tools process your files and data directly in your browser — those files are never uploaded to us. For features that do require a server, we only handle what is strictly needed to perform the task, and we do not keep your content afterwards.",
+          "Some CodeLove sites use Google Analytics to collect aggregated usage data (such as which pages are visited) so we can understand what is useful and improve the product. We do not sell your data.",
         ],
       },
       {
-        heading: "Analytics & aggregate traffic telemetry",
+        heading: "Cookies & local storage",
         paragraphs: [
-          "CodeLove uses Google Analytics (GA4) and privacy-minded first-party page telemetry to measure page visits, broken routes, and device performance across tools. These aggregate counts never sell personal profiles, store passwords, or expose private user uploads.",
+          "We use local storage for small preferences such as your light/dark theme. Analytics and advertising cookies are described below and on our Cookie Policy page.",
         ],
       },
       {
-        heading: "Cookies & browser local storage",
+        heading: "Advertising",
         paragraphs: [
-          "We store simple preferences (such as dark/light color theme selection, saved favorite tools, or recently viewed items) in your browser's local storage so pages keep working comfortably across visits. See our Cookie Policy for full browser controls.",
-        ],
-      },
-      {
-        heading: "Advertising & Google AdSense",
-        paragraphs: [
-          "CodeLove displays or plans to display advertisements via Google AdSense. Third-party vendors, including Google, use cookies or local identifiers to serve ads based on a visitor's prior visits to codelove.in or other sites on the web.",
-          "Users in the EEA, UK, or eligible regions can review personalized ad settings or opt out of personalized advertising anytime via Google Ads Settings and YourAdChoices.",
+          "We use, or may use, Google AdSense to show ads on CodeLove sites. Third-party vendors, including Google, use cookies to serve ads based on your prior visits to this website or other websites. Google's use of advertising cookies enables it and its partners to serve ads to you based on your visits to our sites and other sites on the Internet.",
+          "You can opt out of personalised advertising in Google Ads Settings, and opt out of other vendors' use of cookies for personalised advertising at aboutads.info.",
         ],
         links: [
           { label: "Google Ads Settings", href: "https://adssettings.google.com" },
           { label: "Opt out of personalised advertising (aboutads.info)", href: "https://www.aboutads.info" },
-          { label: "How Google uses information from partner sites", href: "https://policies.google.com/technologies/partner-sites" },
+          { label: "How Google uses information from sites that use its services", href: "https://policies.google.com/technologies/partner-sites" },
         ],
       },
       {
-        heading: "Your rights & direct contact",
+        heading: "Your choices",
         paragraphs: [
-          "You may clear browser storage or block cookies at any time using your browser settings. To request account deletion for authenticated CodeLove apps or ask privacy questions, email support@codelove.in.",
+          "You can clear cookies and local storage from your browser at any time. If you have a question about your data or want something removed, contact us and we will help.",
         ],
       },
     ],
@@ -1548,34 +1587,28 @@ export const legalPages: LegalPage[] = [
   {
     slug: "terms",
     title: "Terms of Service",
-    description: "Terms of Service covering lawful personal and commercial usage, intellectual property rights, output ownership, and liability limits on CodeLove.",
-    updated: "November 2026",
+    description: "The terms for using CodeLove's free online tools and websites: fair and lawful use, your rights to the files you process, availability, changes and liability.",
+    updated: "July 2026",
     intro:
-      "By accessing codelove.in or running any built-in or linked CodeLove utility, you agree to these Terms of Service. These rules protect platform uptime and clarify ownership of files you create.",
+      "By using CodeLove, you agree to these terms. They are intentionally short and reasonable — use the tools fairly and they stay free and fast for everyone.",
     sections: [
       {
-        heading: "Ownership of your exports & creative output",
+        heading: "Using our tools",
         paragraphs: [
-          "CodeLove claims zero ownership or watermark rights over images, compressed videos, Shorts clips, JSON payloads, or animations you create or transform using our browser utilities.",
-          "Where tools bundle third-party open-licensed assets (such as 3D GLB files on models.codelove.in or open-license J2ME titles on javaplay.codelove.in), you agree to honor the individual license displayed alongside each asset, including CC BY attribution requirements where applicable.",
+          "CodeLove tools are provided for lawful personal and commercial use. You are responsible for the content you process and for having the rights to it. Do not use our tools to break the law or infringe on others.",
+          "We may apply fair-use limits to protect the service and keep it available for everyone.",
         ],
       },
       {
-        heading: "Acceptable & lawful use",
+        heading: "Availability & changes",
         paragraphs: [
-          "You agree to use CodeLove tools and educational content strictly for lawful purposes and only process content you created or hold permission to modify. Automated scraping, denial-of-service abuse, or redistribution of embedded game/third-party content outside intended platform terms is prohibited.",
+          "CodeLove is a young and evolving product. Tools may change, move or be temporarily unavailable, and we may update these terms as the platform grows. Continued use means you accept the current version.",
         ],
       },
       {
-        heading: "Service availability & API limits",
+        heading: "Liability",
         paragraphs: [
-          "All utilities are provided free of charge and evolve continuously as browsers ship new capabilities. We may modify features, update educational guides, or enforce reasonable rate limits on API-connected services to protect stability.",
-        ],
-      },
-      {
-        heading: "Warranty disclaimer & liability",
-        paragraphs: [
-          "CodeLove software and tutorials are delivered on an 'as is' and 'as available' basis without implied warranties. Always retain backups of irreplaceable source footage before batch conversions or exports.",
+          "Our tools are provided “as is” without warranties. To the extent permitted by law, CodeLove is not liable for any loss arising from use of the tools. Always keep your own backups of important files.",
         ],
       },
     ],
@@ -1583,38 +1616,38 @@ export const legalPages: LegalPage[] = [
   {
     slug: "cookies",
     title: "Cookie Policy",
-    description: "Detailed explanation of essential local storage, Google Analytics cookies, AdSense advertising cookies, and browser opt-out options.",
-    updated: "November 2026",
+    description: "How and why CodeLove uses cookies and local storage: theme preferences, Google Analytics, advertising cookies, and how you can control or delete them.",
+    updated: "October 2026",
     intro:
-      "This Cookie Policy explains what cookies and browser storage keys CodeLove sets, why they exist, and how you can inspect or disable them at any time.",
+      "This page explains the small amount of browser storage CodeLove relies on and what each part is for.",
     sections: [
       {
-        heading: "Essential local storage keys",
+        heading: "Essential storage",
         paragraphs: [
-          "Core interface features rely on browser localStorage (rather than tracking cookies) for remembering your light/dark theme choice (codelove-theme) and tool preferences on your own device.",
+          "We use local storage for essentials like remembering your theme preference. These are required for the site to work the way you expect and cannot be turned off from within the app.",
         ],
       },
       {
-        heading: "Analytics & performance measurement",
+        heading: "Analytics",
         paragraphs: [
-          "Aggregate analytics scripts record page views, session durations, and device form factors so we can prioritize performance improvements on high-traffic tutorials and spot broken pages quickly.",
+          "Some CodeLove sites use Google Analytics, which sets cookies to measure how the site is used and which tools are useful. This data is aggregated and not used to personally identify you.",
         ],
       },
       {
         heading: "Advertising cookies",
         paragraphs: [
-          "Google AdSense and certified advertising partners may store cookies or device signals to deliver relevant advertisements, measure ad impressions, and enforce frequency caps so you do not see identical banners repeatedly.",
+          "We use, or may use, Google AdSense to show ads. Google and other third-party vendors use cookies to serve ads based on your prior visits to this website or other websites. You can opt out of personalised advertising at any time using the links below.",
         ],
         links: [
           { label: "Google Ads Settings", href: "https://adssettings.google.com" },
           { label: "Opt out of personalised advertising (aboutads.info)", href: "https://www.aboutads.info" },
-          { label: "Google Privacy & Terms for Partner Sites", href: "https://policies.google.com/technologies/partner-sites" },
+          { label: "How Google uses information from sites that use its services", href: "https://policies.google.com/technologies/partner-sites" },
         ],
       },
       {
-        heading: "How to block or clear cookies",
+        heading: "Managing cookies",
         paragraphs: [
-          "Modern browsers allow blocking third-party cookies or clearing site data per domain in Privacy & Security settings. Blocking advertising cookies will still keep interactive CodeLove tools working normally.",
+          "You can delete or block cookies and local storage in your browser settings at any time. Doing so may reset preferences such as your chosen theme.",
         ],
       },
     ],
@@ -1622,27 +1655,27 @@ export const legalPages: LegalPage[] = [
   {
     slug: "disclaimer",
     title: "Disclaimer",
-    description: "General usage disclaimer covering browser tool variance, technical guides, external assets, third-party games, and AI features.",
-    updated: "November 2026",
+    description: "Important notes about relying on CodeLove tools and content: tools provided as is, guides that are not professional advice, and links to third-party sites.",
+    updated: "July 2026",
     intro:
-      "CodeLove tools, calculators, and technical documentation are published in good faith for educational and productivity workflows.",
+      "CodeLove aims to be accurate and helpful, but our tools and articles are provided for general use and information only.",
     sections: [
       {
-        heading: "Browser tools & numerical estimates",
+        heading: "Tools",
         paragraphs: [
-          "Calculations in utilities such as the Video Bitrate Calculator and Safe-Zone Planner rely on standard encoding math (H.264/HEVC/AV1 approximations and common mobile viewport guidelines). Actual final file sizes after encoding depend on scene complexity, VBR keyframes, and encoder profiles.",
+          "Our utilities are provided in good faith and “as is.” Results can vary depending on your input and browser. Please verify important output yourself, especially for anything critical.",
         ],
       },
       {
-        heading: "Technical articles & compliance notes",
+        heading: "Content",
         paragraphs: [
-          "Guides about SEO, Core Web Vitals, web APIs, and creator workflows reflect hands-on testing at the time shown in each article's Last Updated stamp. Nothing on CodeLove constitutes formal legal, tax, or regulatory advice.",
+          "Articles and guides reflect our understanding at the time of writing and may become outdated. Nothing here is professional, legal or financial advice.",
         ],
       },
       {
-        heading: "External sites & embedded content",
+        heading: "External links",
         paragraphs: [
-          "Products such as VOLTARC embed third-party HTML5 games with attribution via official publisher partner agreements, and documentation pages occasionally reference external standards bodies or tools. We review partner integrations carefully but are not responsible for external sites' availability or privacy terms.",
+          "We sometimes link to third-party sites and services. We are not responsible for their content, policies or availability.",
         ],
       },
     ],
@@ -1650,27 +1683,27 @@ export const legalPages: LegalPage[] = [
   {
     slug: "editorial-policy",
     title: "Editorial Policy",
-    description: "CodeLove's standards for technical accuracy, hands-on verification, transparent updates, AI disclosure, and reader corrections.",
-    updated: "November 2026",
+    description: "How we research, write, fact-check and update the guides, tutorials and blog posts on CodeLove, and how to report a mistake.",
+    updated: "July 2026",
     intro:
-      "Every tutorial, benchmark, and product guide on CodeLove is written to solve real creator and web developer problems clearly — without filler paragraphs or copied claims.",
+      "We want everything you read on CodeLove to be clear, current and genuinely useful. Here is how we approach it.",
     sections: [
       {
-        heading: "Hands-on authorship & verification",
+        heading: "How we write",
         paragraphs: [
-          "Guides are drafted and checked against live CodeLove tools by developer Gowthamraj on real desktop and mobile browsers before publication. Technical specifications — such as codec support, JPEG vs WebP file weights, and pixel bounds — are tested rather than copied blindly.",
+          "Our guides are written and reviewed by people who actually use these tools and techniques. We favour plain language, practical steps and honest trade-offs over hype.",
         ],
       },
       {
-        heading: "Transparent publishing dates & updates",
+        heading: "Accuracy & updates",
         paragraphs: [
-          "Browser APIs, video platform limits, and SEO best practices change frequently. Every article on codelove.in clearly displays both its original publish date and latest substantive revision date.",
+          "Technology moves quickly, so we revisit and update articles as things change. Each article shows when it was published and last updated.",
         ],
       },
       {
-        heading: "Corrections & feedback workflow",
+        heading: "Corrections",
         paragraphs: [
-          "If a reader reports an inaccurate bit of math, a broken screenshot, or an outdated recommendation through support@codelove.in or our Contact page, we verify the fix in code and update the article promptly.",
+          "If you spot a mistake or something out of date, tell us — we will review and fix it. Getting it right matters more to us than being first.",
         ],
       },
     ],
@@ -1683,23 +1716,23 @@ export const footerColumns = [
   {
     title: "Products",
     links: [
-      { label: "Built-In Toolkit", href: "/tools" },
-      { label: "Video Maker", href: "/products/videomaker" },
-      { label: "Video Cut", href: "/products/videocut" },
-      { label: "ILoveConvert", href: "/products/iloveconvert" },
-      { label: "3D Models", href: "/products/models" },
-      { label: "VOLTARC Arcade", href: "/products/voltarc" },
-      { label: "Webly (SEO)", href: "/products/webly" },
-      { label: "Satisfying Video Maker", href: "/products/satisfying-video-maker" },
+      { label: "Insta Downloader", href: "/products/downloader" },
       { label: "Link in Bio", href: "/products/linkinbio" },
+      { label: "3D Models", href: "/products/models" },
       { label: "Video to GIF", href: "/products/videotogif" },
+      { label: "Video to Images", href: "/products/videotoimages" },
+      { label: "Video Cut", href: "/products/videocut" },
+      { label: "Video Maker", href: "/products/videomaker" },
+      { label: "3D Games", href: "/products/games" },
+      { label: "UTubeFlow", href: "/products/utubeflow" },
+      { label: "JavaPlay", href: "/products/javaplay" },
+      { label: "Webly (Analytics & SEO)", href: "https://webly.codelove.in" },
       { label: "All Products", href: "/products" },
     ],
   },
   {
     title: "Resources",
     links: [
-      { label: "Interactive Tools", href: "/tools" },
       { label: "Resource Hub", href: "/resources" },
       { label: "Learning Center", href: "/learn" },
       { label: "Blog & Articles", href: "/blog" },
@@ -1710,6 +1743,7 @@ export const footerColumns = [
     links: [
       { label: "Video Guides", href: "/learn/video" },
       { label: "Image Guides", href: "/learn/image" },
+      { label: "Download Guides", href: "/learn/downloads" },
       { label: "Creator Guides", href: "/learn/creator" },
       { label: "3D Model Guides", href: "/learn/3d-models" },
       { label: "YouTube & Shorts Guides", href: "/learn/youtube" },
@@ -1773,6 +1807,45 @@ export const blogs: Article[] = [
         paragraphs: [
           "We did not make these models. They are the work of their original authors, published under open licences that allow anyone to use them, including in commercial projects. Some ask for a credit, and each model page tells you exactly which licence applies.",
           "You will find the library at models.codelove.in, or through the Products page here on CodeLove."
+        ]
+      }
+    ]
+  },
+  {
+    slug: "downloader-instagram-and-pinterest",
+    title: "The Downloader: Focused on Instagram and Pinterest",
+    excerpt: "What the CodeLove Downloader supports today, how the single and multi-link modes work, and how to use it responsibly.",
+    category: "Updates",
+    readingTime: "3 min read",
+    author: "Gowtham",
+    published: "Oct 10, 2026",
+    updated: "Oct 10, 2026",
+    gradient: "from-blue-500 to-indigo-600",
+    icon: "download",
+    featured: false,
+    image: "/images/products/downloader.jpg",
+    intro: "The CodeLove Downloader now concentrates on two platforms: Instagram and Pinterest. Here is what it does today.",
+    takeaways: ["Instagram videos and Reels", "Pinterest videos and images", "Single and multi-link modes", "Public content only"],
+    content: [
+      {
+        heading: "What is supported",
+        image: "/images/products/downloader.jpg",
+        paragraphs: [
+          "There are three downloaders: one for Instagram videos and Reels, one for Pinterest videos and one for Pinterest images. Each works the same way — paste a link, check the preview, and save the file.",
+          "You do not need an account, and the Downloader never asks for your Instagram or Pinterest password."
+        ]
+      },
+      {
+        heading: "One link or several",
+        paragraphs: [
+          "Every downloader has a multi-link mode. Instead of fetching posts one at a time, you can paste several links and fetch them together, which is useful when you are collecting your own posts or gathering references for a project."
+        ]
+      },
+      {
+        heading: "Public content, used responsibly",
+        paragraphs: [
+          "The Downloader only works with publicly available posts. Private accounts and restricted content cannot be fetched, and that is deliberate.",
+          "Everything you save still belongs to the person who made it. Saving your own posts, or media you have permission to reuse, is what the tool is for. Republishing someone else's work without asking is not."
         ]
       }
     ]
@@ -1979,41 +2052,42 @@ export const blogs: Article[] = [
   },
   {
     slug: "designing-for-creators",
-    title: "Designing Fast Browser Tools for Creators",
-    excerpt: "The UI and UX principles behind our split-studio converters, Link in Bio builder, and responsive video workflows.",
+    title: "Designing Tools for the Creator Economy",
+    excerpt: "The UI and UX principles behind our Link in Bio and Social Downloader tools.",
     category: "Design",
     readingTime: "5 min read",
     author: "Gowtham",
     published: "Jun 15, 2026",
-    updated: "Nov 26, 2026",
+    updated: "Jun 16, 2026",
     gradient: "from-fuchsia-500 to-rose-600",
     icon: "palette",
     featured: false,
     image: "/images/products/linkinbio.jpg",
-    intro: "Creators do not want five sign-up walls just to optimize an image or update a bio link. Here is how we design zero-friction browser interfaces across CodeLove.",
-    takeaways: ["Mobile-first split studio layout", "Minimal click friction", "Clear primary actions", "Speed & local feedback"],
+    intro: "Creators are busy. They need tools that get out of the way and just work. Here is how we designed our creator suite.",
+    takeaways: ["Mobile first design", "Minimal friction", "Bold but clean aesthetics", "Speed as a feature"],
     content: [
       {
-        heading: "Speed is the primary feature",
+        heading: "Speed is the ultimate feature",
         image: "/images/products/linkinbio.jpg",
         paragraphs: [
-          "When a creator needs to compress a thumbnail to WebP, check Shorts safe zones, or update a link-in-bio page before publishing, every extra wizard step slows the workflow down.",
-          "Across CodeLove tools we keep the upload or input panel on the left, live output preview on the right, and clear one-click exports — with zero popups or forced logins."
+          "When a creator needs to download a reel for a reaction video, or update their bio link to point to a new sponsor, they want it done in seconds. Every extra click is a point of friction.",
+          "We designed our tools to require the absolute minimum number of interactions. Paste a link, hit enter, get your file. No accounts required, no popups, no hidden menus."
         ]
       },
       {
-        heading: "Clarity builds user trust",
-        image: "/images/products/iloveconvert.svg",
+        heading: "Aesthetics that inspire trust",
+        image: "/images/products/downloader.jpg",
         paragraphs: [
-          "Many utility sites confuse visitors with cluttered sidebars and misleading download buttons. We organize every interface around one clear workspace, legible typography, and explicit privacy feedback showing work stays inside the browser.",
-          "Consistent navigation, light and dark modes, and predictable button placement ensure users always know what will happen before clicking."
+          "Many free online tools look like spam sites from 2010. They are covered in flashing banner ads and fake download buttons. We took the opposite approach.",
+          "We use a dark, premium aesthetic with smooth gradients and high-quality typography. By making our free tools look like expensive enterprise software, we build immediate trust with our users."
         ]
       },
       {
-        heading: "Mobile-first touch targets",
+        heading: "Mobile-first by necessity",
         image: "/images/products/linkinbio.jpg",
         paragraphs: [
-          "Because many creators edit clips and check analytics straight from their phones, every split workspace collapses gracefully into clean stacked cards with large tap targets on Android and iOS."
+          "Over 80% of the traffic to our Link in Bio and Downloader tools comes from mobile devices. If a UI element is difficult to tap on an iPhone, the design has failed.",
+          "We rigorously test every interface on actual mobile hardware to ensure touch targets are large, animations are smooth, and the layout feels native."
         ]
       }
     ]
@@ -2027,9 +2101,9 @@ export const blogCategories = ["All", "Announcements", "Updates", "Engineering",
 /*  Stats                                                              */
 /* ------------------------------------------------------------------ */
 export const stats: Stat[] = [
-  { get value() { return products.length; }, suffix: "", label: "Live web apps" },
-  { get value() { return articles.length + blogs.length; }, suffix: "", label: "Guides & articles" },
-  { value: 4, suffix: "", label: "On-site utilities" },
-  { value: 100, suffix: "%", label: "Free & browser-based" },
-  { value: 0, suffix: "", label: "Sign-ups required" },
+  { get value() { return products.length; }, suffix: "+", label: "Products & tools" },
+  { get value() { return articles.length; }, suffix: "+", label: "Guides & articles" },
+  { value: 10, suffix: "K+", label: "Monthly users" },
+  { value: 1.5, suffix: "M+", label: "Files processed" },
+  { value: 2, suffix: "M+", label: "Hours saved" },
 ];

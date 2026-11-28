@@ -1,11 +1,11 @@
 # CodeLove
 
-> CodeLove builds free, zero-signup browser utilities, video tools, 3D model libraries, browser games, and developer learning guides.
+> CodeLove builds free, zero-signup browser utilities, video tools, 3D model libraries, browser games, Android APK apps, and developer learning guides.
 
 ## Main Pages
-- [Home](https://codelove.in): Overview of CodeLove tools, built-in browser utilities, and engineering guides.
-- [Interactive Tools](https://codelove.in/tools): Built-in browser utilities on codelove.in (Image Compressor & Converter, Video Bitrate Calculator, Aspect Ratio Safe-Zone Planner, JSON & Meta Previewer).
-- [Products](https://codelove.in/products): Directory of all CodeLove web apps with tutorials, features, and direct links.
+- [Home](https://codelove.in): Overview of CodeLove tools, built-in browser utilities, Desktop/Mobile product showcase, and engineering guides.
+- [Interactive Tools](https://codelove.in/tools): 8 built-in browser utilities on codelove.in (Image Compressor & Converter, Social Aspect Cropper, Video Bitrate Calculator, 9:16 Safe-Zone Guide, JSON Formatter & Sorter, SERP/Open Graph Builder, WCAG Contrast & Gradient Lab, URL Slug/Base64/UUID Toolkit).
+- [Products](https://codelove.in/products): Directory of all 14 CodeLove apps and studios with Desktop/Mobile screenshots, tutorials, features, and direct links.
 - [Learning Center](https://codelove.in/learn): Tutorials and technical guides for video editing, image compression, 3D models, web performance, and creator workflows.
 - [Blog](https://codelove.in/blog): Engineering articles, platform updates, and practical how-tos.
 - [Resources](https://codelove.in/resources): Combined directory of guides, documentation, and free tools.
@@ -13,13 +13,14 @@
 - [Contact](https://codelove.in/contact): Direct support and feedback channels.
 
 ## CodeLove Network Products
-- [Video Maker](https://videomaker.codelove.in): Free AI video maker — type a script, get a talking cartoon or text-only video with AI voices, lip sync, subtitles and music (Tamil, Hindi, Telugu, English), no watermark.
-- [Video Cut](https://videocut.codelove.in): Free in-browser video shorts cutter and splitter (9:16 Shorts/Reels, equal parts, ZIP export).
-- [ILoveConvert](https://iloveconvert.codelove.in): 54+ browser-local image, PDF, audio, and file conversion utilities with zero server uploads.
-- [Free 3D Models](https://models.codelove.in): 6,900+ free GLB/glTF 3D models with live in-browser viewer and texture recoloring.
-- [VOLTARC](https://voltarc.codelove.in): Instant-play browser arcade featuring 3,000+ HTML5 and 3D WebGL games with zero downloads.
+- [VOLTARC](https://voltarc.codelove.in): Instant-play browser arcade featuring 3,080+ HTML5 and 3D WebGL games with zero downloads.
+- [CodeLove Apps](https://apps.codelove.in): Free Android games & creator utility APKs including Kingdom Clash, Turbo Karts, VideoCut, and JavaPlay.
 - [Satisfying Video Maker](https://satisfying-video-maker.codelove.in): Interactive 60 FPS browser physics & ASMR video simulation studio.
 - [Webly](https://webly.codelove.in): Technical SEO audit, Search Console, Analytics, and AdSense site-health inspector.
+- [ILoveConvert](https://iloveconvert.codelove.in): 54+ browser-local image, PDF, audio, and file conversion utilities with zero server uploads.
+- [Video Maker](https://videomaker.codelove.in): Free AI video maker — type a script, get a talking cartoon or text-only video with AI voices, lip sync, subtitles and music (Tamil, Hindi, Telugu, English), no watermark.
+- [Video Cut](https://videocut.codelove.in): Free in-browser video shorts cutter and splitter (9:16 Shorts/Reels, equal parts, ZIP export).
+- [Free 3D Models](https://models.codelove.in): 6,900+ free GLB/glTF 3D models with live in-browser viewer and texture recoloring.
 - [Free 3D Games](https://games.codelove.in): 14+ free browser 3D games powered by WebGL with mobile touch support.
 - [Link in Bio](https://linkinbio.codelove.in): Free link-in-bio page builder with themes and click analytics.
 - [Video to GIF](https://videotogif.codelove.in): Convert, trim, crop, compress, and optimize GIFs directly in your browser.

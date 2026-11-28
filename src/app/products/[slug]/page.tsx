@@ -10,19 +10,53 @@ import { products, getProduct, isProductLive } from "@/lib/data";
 import { productJsonLd } from "@/lib/seo";
 
 const PRODUCT_KEYWORDS: Record<string, string[]> = {
-  iloveconvert: ["iloveconvert", "online image converter", "pdf tools", "background remover", "free browser converter"],
-  voltarc: ["voltarc", "instant browser games", "html5 cloud arcade", "webgl games"],
-  "satisfying-video-maker": ["satisfying video maker", "physics simulation studio", "asmr canvas generator"],
-  webly: ["webly", "website analytics", "technical seo audit", "adsense health check"],
-  linkinbio: ["link in bio", "free link in bio", "link in bio creator", "bio page analytics"],
-  models: ["free glb models", "free 3d models glb", "glb animations free", "glb characters free"],
-  videotogif: ["video to gif", "online video compressor", "mp4 to gif free"],
-  videotoimages: ["video to frames", "video frame extractor", "online video compressor", "crop and compress image"],
-  videocut: ["video cut", "video shorts cutter", "video splitter online free", "cut video for youtube shorts"],
+  iloveconvert: [
+    "iloveconvert",
+    "online image converter",
+    "pdf tools free no upload",
+    "background remover free",
+    "compress image webp online",
+    "free browser converter",
+  ],
+  voltarc: [
+    "voltarc",
+    "instant browser games",
+    "play free online games no download",
+    "html5 cloud arcade",
+    "webgl games free",
+    "unblocked browser games",
+  ],
+  apps: [
+    "codelove apps",
+    "free android games apk",
+    "android apk download free",
+    "offline 3d android games",
+    "video cutter apk android",
+    "java emulator android apk",
+  ],
+  "satisfying-video-maker": [
+    "satisfying video maker",
+    "physics simulation studio",
+    "asmr canvas video generator",
+    "bouncing ball simulation maker",
+    "tiktok physics loop creator",
+  ],
+  webly: [
+    "webly",
+    "free website analytics dashboard",
+    "technical seo audit tool free",
+    "adsense health checker",
+    "broken link checker online",
+  ],
+  linkinbio: ["link in bio", "free link in bio creator", "bio page analytics", "creator profile page free"],
+  models: ["free glb models", "free 3d models glb", "glb animations free", "glb characters free", "download free 3d models"],
+  videotogif: ["video to gif", "mp4 to gif free online", "online video compressor", "gif maker no watermark"],
+  videotoimages: ["video to frames", "video frame extractor", "extract images from video", "video to mp3 online", "crop and compress image"],
+  videocut: ["video cut", "video shorts cutter", "video splitter online free", "cut video for youtube shorts", "trim video online no watermark"],
   videomaker: ["free ai video maker", "free video maker", "ai video maker free", "free video making online", "script to video", "cartoon video maker", "codelove video maker"],
   games: ["games", "free games", "3d games free no download", "free 3d browser games"],
-  utubeflow: ["free youtube automation", "youtube automation tool"],
-  javaplay: ["java games online", "javaplay", "free java games"],
+  utubeflow: ["free youtube automation", "youtube shorts scheduler free", "youtube automation tool"],
+  javaplay: ["java games online", "javaplay", "free java games", "j2me emulator online", "play jar games android"],
 };
 
 /* Pre-render every product page at build time. */
@@ -219,7 +253,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                     </div>
 
                     {/* window body */}
-                    <div className={`relative grid w-full place-items-center bg-gradient-to-br ${product.gradient} ${product.image ? 'p-0' : 'p-10 sm:p-14'}`}>
+                    <div className={`relative grid w-full place-items-center bg-slate-50 dark:bg-[#050507] ${product.image ? 'p-0' : 'p-10 sm:p-14'}`}>
                       {product.image ? (
                         <img src={product.image} alt={`${product.name} at ${product.domain}`} width={1280} height={800} fetchPriority="high" className="aspect-[16/10] w-full object-cover object-top" />
                       ) : (

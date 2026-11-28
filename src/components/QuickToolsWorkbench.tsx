@@ -131,6 +131,14 @@ const SUBDOMAINS: Record<string, SubdomainLink> = {
     desc: "Playable web arcade with curated HTML5 games",
     icon: "zap",
   },
+  apps: {
+    name: "CodeLove Apps",
+    host: "apps.codelove.in",
+    href: "https://apps.codelove.in",
+    detailHref: "/products/apps",
+    desc: "Free Android 3D games & utility APKs",
+    icon: "smartphone",
+  },
   javaplay: {
     name: "JavaPlay",
     host: "javaplay.codelove.in",
@@ -220,7 +228,7 @@ export const TOOLS_META: ToolMeta[] = [
     badge: "Crypto / UTM",
     description:
       "Clean SEO URL slugs with UTM tracking params, UTF-8 safe Base64 encoding/decoding, and cryptographic UUID v4 tokens.",
-    relatedApps: [SUBDOMAINS.javaplay, SUBDOMAINS.voltarc, SUBDOMAINS.iloveconvert],
+    relatedApps: [SUBDOMAINS.javaplay, SUBDOMAINS.voltarc, SUBDOMAINS.apps],
   },
 ];
 
@@ -2005,7 +2013,7 @@ function WorkbenchInner() {
             href="/products"
             className="inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline"
           >
-            View all 13 CodeLove Apps <Icon name="arrowRight" size={13} />
+            View all 14 CodeLove Apps <Icon name="arrowRight" size={13} />
           </Link>
         </div>
 

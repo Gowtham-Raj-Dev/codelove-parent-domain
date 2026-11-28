@@ -31,10 +31,10 @@ const GROUPS: SubdomainGroup[] = [
     slugs: ["iloveconvert", "webly", "linkinbio", "javaplay"],
   },
   {
-    title: "3D Models & Instant Play",
-    subtitle: "Interactive WebGL PBR models and curated zero-install HTML5 game portals.",
+    title: "3D Models, Android Apps & Games",
+    subtitle: "Free Android game/tool APKs, WebGL PBR models and curated browser game portals.",
     icon: "box",
-    slugs: ["models", "voltarc", "games"],
+    slugs: ["apps", "models", "voltarc", "games"],
   },
 ];
 

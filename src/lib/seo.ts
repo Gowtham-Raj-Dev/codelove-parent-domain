@@ -101,8 +101,17 @@ export function productJsonLd(product: ProductWithDetail) {
       url: pageUrl,
       sameAs: product.url,
       image: `${SITE_URL}${product.image ?? DEFAULT_OG_IMAGE}`,
-      applicationCategory: product.category === "Games" ? "GameApplication" : "WebApplication",
-      operatingSystem: "Any",
+      ...(product.screens.length > 0
+        ? { screenshot: product.screens.map((s) => `${SITE_URL}${s.src}`) }
+        : {}),
+      featureList: product.features,
+      applicationCategory:
+        product.category === "Games"
+          ? "GameApplication"
+          : product.category === "Android Apps"
+          ? "MobileApplication"
+          : "WebApplication",
+      operatingSystem: product.category === "Android Apps" ? "Android 8.0+" : "Any",
       isAccessibleForFree: true,
       offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
       creator: { "@id": "https://gowtham.codelove.in/#person" },

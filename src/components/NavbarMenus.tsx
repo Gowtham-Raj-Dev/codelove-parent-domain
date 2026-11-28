@@ -35,9 +35,9 @@ const APP_GROUPS: AppGroup[] = [
     slugs: ["iloveconvert", "webly", "linkinbio", "javaplay"],
   },
   {
-    title: "3D Models & Games",
+    title: "3D, Android & Games",
     icon: "box",
-    slugs: ["models", "voltarc", "games"],
+    slugs: ["apps", "models", "voltarc", "games"],
   },
 ];
 
@@ -170,7 +170,7 @@ export function DesktopNavMenus() {
             <div className="mb-3 flex items-center justify-between border-b border-slate-200/80 pb-2.5 dark:border-white/10">
               <div>
                 <p className="text-xs font-bold uppercase tracking-wider text-primary">
-                  CodeLove Subdomain Ecosystem (13 Apps)
+                  CodeLove Subdomain Ecosystem ({products.length} Apps)
                 </p>
                 <p className="text-[11px] text-slate-500 dark:text-slate-400">
                   Launch specialized video, converter, web, 3D &amp; game subdomains directly
@@ -335,7 +335,7 @@ export function MobileNavMenus({ onClose }: { onClose: () => void }) {
             onClick={onClose}
             className="flex items-center justify-between rounded-lg border border-primary/25 bg-primary/10 px-3 py-2 text-xs font-semibold text-primary"
           >
-            <span>All 13 Apps &amp; Subdomain Guides</span>
+            <span>All {products.length} Apps &amp; Subdomain Guides</span>
             <Icon name="arrowRight" size={13} />
           </Link>
         </div>

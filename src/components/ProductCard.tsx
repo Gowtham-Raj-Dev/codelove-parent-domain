@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Icon from "./Icon";
 import ProductLogo from "./ProductLogo";
+import DevicePreviewFrame from "./DevicePreviewFrame";
 import { isProductLive, type Product } from "@/lib/data";
 
 export default function ProductCard({ product, featured = false }: { product: Product; featured?: boolean }) {
@@ -12,7 +13,6 @@ export default function ProductCard({ product, featured = false }: { product: Pr
       : "bg-amber-500/12 text-amber-500 ring-amber-500/20";
 
   const isLive = isProductLive(product);
-  const statusLabel = product.status === "Soon" ? "Coming soon" : product.status;
 
   return (
     <article
@@ -20,39 +20,8 @@ export default function ProductCard({ product, featured = false }: { product: Pr
         featured ? "lg:col-span-2 lg:flex-row" : ""
       }`}
     >
-      {/* Illustration */}
-      <div
-        className={`relative overflow-hidden ${featured ? "lg:w-[46%]" : ""}`}
-      >
-        {/* 4:3 keeps the whole illustration in view — a shorter strip cropped the square artwork to its middle. */}
-        <div className={`relative flex aspect-[4/3] items-center justify-center bg-gradient-to-br ${product.gradient} ${featured ? "lg:aspect-auto lg:h-full lg:min-h-[19rem]" : ""}`}>
-          {(product.cardImage ?? product.image) ? (
-            <img src={product.cardImage ?? product.image} alt={product.name} width={800} height={600} className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105" />
-          ) : (
-            <>
-              {/* decorative orbs */}
-              <div aria-hidden className="absolute inset-0 opacity-90">
-                <div className="absolute -left-6 -top-8 h-28 w-28 rounded-full bg-white/20 blur-2xl" />
-                <div className="absolute bottom-2 right-6 h-24 w-24 rounded-full bg-black/10 blur-2xl" />
-                <div className="absolute right-8 top-6 h-2 w-2 rounded-full bg-white/70" />
-                <div className="absolute bottom-8 left-10 h-1.5 w-1.5 rounded-full bg-white/60" />
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.25),transparent_55%)]" />
-              </div>
-              {/* glass icon tile */}
-              <div className="relative grid h-20 w-20 place-items-center rounded-2xl border border-white/30 bg-white/15 backdrop-blur-md transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6">
-                <Icon name={product.icon} size={36} className="text-white" />
-              </div>
-            </>
-          )}
-          {/* status badge */}
-          <span
-            className={`absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-slate-800 ring-1 ring-inset ring-black/5 backdrop-blur`}
-          >
-            <span className={`h-1.5 w-1.5 rounded-full ${isLive ? "animate-pulse bg-emerald-500" : "bg-amber-500"}`} />
-            {statusLabel}
-          </span>
-        </div>
-      </div>
+      {/* Theme-matched Desktop + Mobile preview frames */}
+      <DevicePreviewFrame product={product} featured={featured} />
 
       {/* Body */}
       <div className="flex flex-1 flex-col p-6">
